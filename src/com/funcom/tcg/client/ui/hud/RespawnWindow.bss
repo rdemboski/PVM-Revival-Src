@@ -1,0 +1,68 @@
+root {
+  /* window font color */
+  color: #FFFFFF;
+  font: "Screengem" bold 20;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}
+
+
+
+container {
+ background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy 73;
+  padding: 17;
+  /*border: 1 solid #FFFF88;*/
+}
+
+button.life {
+  background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+  padding: 17;
+  text-align: center;
+  vertical-align: center;
+  icon: image "gui/icons/items/currency/coin_item.png";
+}
+
+button.life:hover {
+  background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+button.life:down {
+  background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+button.life:disabled {
+  background: image "gui/v3/general/gray_wide.png" framexy 5 5 5 5;
+}
+
+button {
+  background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+  padding: 17;
+  text-align: center;
+  vertical-align: center;
+}
+
+button:hover {
+  background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+button:down {
+  background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+button:disabled {
+  background: image "gui/v3/general/gray_wide.png" framexy 5 5 5 5;
+}
+respawnwindow {
+  background: image "gui/die-screen-overlay.png" framexy;
+}
+
+respawnwindow.label {
+  font: "Screengem" bold 42;
+  text-align: center;
+    effect-size: 4;
+    vertical-align: bottom;
+}
+
+respawnwindow.innerwindow {
+    background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy 73;
+  /*padding: 17;*/
+}

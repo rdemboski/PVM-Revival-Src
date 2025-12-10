@@ -1,0 +1,50 @@
+root {
+  color: #FFFFFFFF;
+  font: "Screengem" bold 18;
+  color: #0C2A4B;
+  text-effect: "outline";
+  effect-size: 2;
+  /* window font color */
+  effect-color: #FFFFFF;
+  text-align: center;
+  vertical-align: center;
+}
+
+window.topbutton { 
+}
+
+button.home{
+  background: image "gui/v2/icons/interface/floating_icons/home_topright.png" scalexy;
+  tooltip: tooltip;
+}
+
+button.home:hover{
+  background: image "gui/v2/icons/interface/floating_icons/hover_home_topright.png" scalexy;
+}
+
+button.home:disabled{
+  background: image "gui/v2/icons/interface/floating_icons/inactive_home_topright.png" scalexy;
+}
+
+button.pause{
+  background: image "gui/v2/icons/interface/floating_icons/pause_topright.png" scalexy;
+  tooltip: tooltip;
+}
+
+button.pause:hover{
+  background: image "gui/v2/icons/interface/floating_icons/hover_pause_topright.png" scalexy;
+}
+
+button.pause:selected{
+  background: image "gui/v2/icons/interface/floating_icons/hover_pause_topright.png" scalexy;
+}
+
+tooltip {
+	background: solid #6096ffff;
+	font: "Tahoma" bold 14;
+  text-align: left;
+  vertical-align: top;
+  color: #caf2f6;
+  padding: 10;
+  text-effect: "none";
+}

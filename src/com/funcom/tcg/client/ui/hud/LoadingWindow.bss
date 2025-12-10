@@ -1,0 +1,104 @@
+loadingscreen {
+  background: image "gui/v3/char_creation/blue-background.jpg" scalexy;
+}
+
+loadingscreen.label {
+  font: "Tahoma" bold 36;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: top;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #ffffff55;
+}
+
+loadingscreen.waitlabel {
+  text-align: center;
+  vertical-align: top;
+  color: #ffffff55;
+  font: "Tahoma" bold 32;
+}
+
+loadingscreen.waitlabelwhite {
+  text-align: center;
+  vertical-align: top;
+  color: #ffffff;
+  font: "Tahoma" bold 32;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #00000055;
+}
+
+loadingscreen.titlelabel {
+  text-align: center;
+  color: #ffff00;
+  font: "Tahoma" bold 48;
+  text-effect: "outline";
+  effect-color: #9C8947;
+}
+
+loadingscreen.container {
+  padding: 10;
+}
+
+loadingscreen.progress{
+  progress_list: "gui/v3/general/loadingbar_progress.png" scalexy;
+}
+
+loadingscreen.progress.download{
+  progress_list: "gui/v3/general/loadingbar_progress_download.png" scalexy;
+}
+
+loadingscreen.progress.background{
+  background: image "gui/v3/general/loadingbar_holder.png" framexy 10 10 10 10;
+}
+
+loadingscreen.progress.gloss{
+  background: image "gui/v3/general/loadingbar_gloss.png" scalexy;
+}
+
+loadingscreen.label.pet.1{
+  background: image "gui/v3/general/loading_pet_01.png" scalexy;
+}
+
+loadingscreen.label.pet.2{
+  background: image "gui/v3/general/loading_pet_02.png" scalexy;
+}
+
+loadingscreen.label.pet.3{
+  background: image "gui/v3/general/loading_pet_03.png" scalexy;
+}
+
+loadingscreen.label.pet.4{
+  background: image "gui/v3/general/loading_pet_04.png" scalexy;
+}
+
+loadingscreen.label.pet.5{
+  background: image "gui/v3/general/loading_pet_05.png" scalexy;
+}
+
+loadingscreen.label.pet.6{
+  background: image "gui/v3/general/loading_pet_06.png" scalexy;
+}
+
+loadingscreen.label.pet.7{
+  background: image "gui/v3/general/loading_pet_07.png" scalexy;
+}
+
+loadingscreen.label.pet.8{
+  background: image "gui/v3/general/loading_pet_08.png" scalexy;
+}
+
+loadingscreen.label.pet.9{
+  background: image "gui/v3/general/loading_pet_09.png" scalexy;
+}
+
+loadingscreen.label.pet.10{
+  background: image "gui/v3/general/loading_pet_10.png" scalexy;
+}
+
+loadingscreen.label.pet.11{
+  background: image "gui/v3/general/loading_pet_11.png" scalexy;
+}
+
+

@@ -1,0 +1,40 @@
+experience-bar {
+  color: #FFFFFFFF;
+  /*border: 1 solid #FFFFFFFF;*/
+  /*background: solid #FFFFFFFF;*/
+
+  text-align: center;
+  vertical-align: center;
+}
+
+level-label {
+  font: "Screengem" bold 36;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 5;
+  padding: -10 -2 5 0;
+  background: image "gui/v2/interface/main_screen/xpbar_star.png" centerxy;
+  tooltip: tooltip;
+}
+
+xp-progress {
+  progress_list: "gui/v2/interface/main_screen/xpbar_active.png" framexy;
+  active_progress_list: "gui/v2/interface/main_screen/xpbar_active_new.png" framexy;
+}
+
+xp-background {
+  background: image "gui/v2/interface/main_screen/xpbar_frame.png" framexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}

@@ -1,0 +1,166 @@
+prev-button {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/char_creation/left_default.png" scalexy ;
+}
+
+prev-button:down {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/char_creation/left_pressed.png" scalexy ;
+}
+
+prev-button:selected {
+	background: image "gui/v3/char_creation/boy_selected.png" scalexy ;
+}
+
+prev-button:hover {
+	background: image "gui/v3/char_creation/left_hover.png" scalexy ;
+}
+
+next-button {
+	background: image "gui/v3/char_creation/right_default.png" scalexy ;
+}
+
+next-button:down {
+	background: image "gui/v3/char_creation/right_pressed.png" scalexy ;
+}
+
+next-button:selected {
+	background: image "gui/v3/char_creation/boy_selected.png" scalexy ;
+}
+
+next-button:hover {
+	background: image "gui/v3/char_creation/right_hover.png" scalexy ;
+}
+
+
+root {
+	vertical-align:  center;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "tahoma" plain 12;
+	/*background: solid #1C4BA5;*/
+}
+
+text_label {
+	background: image "gui/v3/general/comic_number.png" scalexy;
+	color:  #FFFFFFFF;
+	font: "tahoma" bold 32;
+	effect-size:  4;
+	text-effect:  outline;
+	effect-color:  #FFFFFF55;
+	padding: 0 0 0 5;
+}
+
+button_skip {
+	color:  #ffffffff;
+	font: "Tahoma" bold 30;
+	background: image "gui/v3/general/skip_default.png" framexy 10 100 10 20;
+	text-effect:  outline;
+	effect-size:  4;
+	effect-color:  #000000ff;
+	text-align: left;
+	padding: 0 0 5 20;
+}
+
+button_skip:down {
+	background: image "gui/v3/general/skip_pressed.png" framexy 10 100 10 20;
+}
+
+button_skip:hover {
+	background: image "gui/v3/general/skip_hover.png" framexy 10 100 10 20;
+}
+
+button_skip_no {
+	color:  #ffffffff;
+	font: "Tahoma" bold 22;
+	background: image "gui/v3/general/skip_default.png" framexy 10 100 10 20;
+	text-effect:  outline;
+	effect-size:  3;
+	effect-color:  #000000ff;
+	text-align: left;
+	padding: 0 0 5 20;
+}
+
+button_skip_no:down {
+	background: image "gui/v3/general/skip_pressed.png" framexy 10 100 10 20;
+}
+
+button_skip_no:hover {
+	background: image "gui/v3/general/skip_hover.png" framexy 10 100 10 20;
+}
+
+window {
+	background: image "gui/v3/char_creation/blue-background.jpg" scalexy;
+}
+
+button {
+}
+
+container {
+	font: "Tahoma" plain 12;
+	effect-size:  1;
+}
+
+main_container {
+	font: "Tahoma" plain 12;
+	effect-size:  1;
+	effect-color:  #7c6d38ff;
+}
+
+top_container {
+	background: solid #00000000;
+}
+
+button_back {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 50;
+	effect-color:  #000000ff;
+	background: image "gui/v3/general/button_back_default.png"  framexy 10 20 10 40;
+}
+
+button_back:down {
+  background: image "gui/v3/general/button_back_pressed.png"  framexy 10 20 10 40;
+}
+
+button_back:hover {
+  background: image "gui/v3/general/button_back_hover.png"  framexy 10 20 10 40;
+}
+
+button_continue {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	background: image "gui/v3/char_creation/play_default.png" framexy 10 40 10 20;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 20;
+	effect-color:  #000000ff;
+}
+
+button_continue:hover {
+	background: image "gui/v3/char_creation/play_hover.png" framexy 10 40 10 20;
+}
+
+button_continue:down {
+	background: image "gui/v3/char_creation/play_pressed.png" framexy 10 40 10 20;
+}
+
+button_continue:down {
+	background: image "gui/v3/char_creation/play_pressed.png" framexy 10 40 10 20;
+}
+
+label_toggle{
+    background: image "gui/v3/general/page_not_selected.png" scalexy;
+}
+
+label_toggle:hover{
+    background: image "gui/v3/general/page_hover.png" scalexy;
+}
+
+label_toggle:selected{
+    background: image "gui/v3/general/page_selected.png" scalexy;
+}

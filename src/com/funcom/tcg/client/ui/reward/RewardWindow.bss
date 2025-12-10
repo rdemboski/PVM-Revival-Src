@@ -1,0 +1,23 @@
+root {
+  /*background: solid #FF0000FF;*/
+  /*border:  1 solid #FFFFFFFF;*/
+  text-align: center; // XX = left|center|right
+  vertical-align: center; // XX = top|center|bottom
+  color: #2EFF03;
+  text-effect: "outline";
+  effect-size: 6;
+  /* window font color */
+  effect-color: #026400;
+}
+
+geomview-frame {
+
+}
+
+label.small {
+  font: "Screengem" bold 48;
+}
+
+label.big {
+  font: "Screengem" bold 72;
+}

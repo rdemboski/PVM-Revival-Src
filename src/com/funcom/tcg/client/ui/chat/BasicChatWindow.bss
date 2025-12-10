@@ -1,0 +1,302 @@
+root {
+	vertical-align:  center;
+	color:  #00ffffff;
+	text-align:  center;
+	font: "Tahoma" bold 12;
+	background: solid #1c4ba555;
+	tooltip: tooltip;
+}
+
+label-move-bgd{
+    text-align:  left;
+    vertical-align: center;
+	font: "Tahoma" bold 14;
+	color:  #AAAAAA;
+	background: solid #1c4ba5AA;
+	padding: 0 0 0 15;
+}
+
+label-move{
+    text-align:  left;
+    vertical-align: center;
+	font: "Tahoma" bold 14;
+	color:  #AAAAAA;
+	background: image "gui/v3/general/chat_move.png" scalexy;
+	padding: 0 0 0 15;
+}
+
+label-move:hover{
+    text-align:  left;
+    vertical-align: center;
+	font: "Tahoma" bold 14;
+	color:  #FFFFFF;
+	background: image "gui/v3/general/chat_move_hover.png" scalexy;
+	padding: 0 0 0 15;
+}
+
+label-move:pressed{
+    text-align:  left;
+    vertical-align: center;
+	font: "Tahoma" bold 14;
+	color:  #FFFFFF;
+	background: image "gui/v3/general/chat_move_hover.png" scalexy;
+	padding: 0 0 0 15;
+}
+
+chatwindow-window{
+	font: "Tahoma" plain 12;
+	background: solid #00000000;
+	border: 2 solid #5ec1f4;
+}
+
+chatwindow-scroll{
+	font: "Tahoma" plain 12;
+	background: solid #00000000;
+}
+
+textfield_chat {
+	text-align:  left;
+	font: "Tahoma" bold 12;
+	color:  #E2FD21FF;
+	background: solid #1c4ba555;
+	text-effect: "outline";
+	effect-color: #000000ff;
+	effect-size: 2;
+	padding: 0 8 15 8; // t, r, b, l
+	border: 1 solid #5ec1f4;
+}
+
+textfield_tell {
+	text-align:  left;
+	font: "Tahoma" bold 12;
+	color:  #00C1C1FF;
+	background: solid #1c4ba555;
+	text-effect: "outline";
+	effect-color: #000000ff;
+	effect-size: 2;
+	padding: 0 8 15 90; // t, r, b, l
+	border: 1 solid #5ec1f4;
+}
+
+
+scrollbar_vwell {
+  background: image "gui/v3/general/chat_scroll_thumb.png" scalexy;
+}
+scrollbar_vless {
+  background: solid #00000000;
+}
+scrollbar_vless:hover {
+  background: solid #00000000;
+}
+scrollbar_vless:down {
+  background: solid #00000000;
+}
+scrollbar_vless:disabled {
+  background: solid #00000000;
+}
+
+scrollbar_vmore {
+  background: solid #00000000;
+}
+scrollbar_vmore:hover {
+  background: solid #00000000;
+}
+scrollbar_vmore:down {
+  background: solid #00000000;
+}
+scrollbar_vmore:disabled {
+  background: solid #00000000;
+}
+
+scrollbar_vthumb {
+ background: image "gui/v3/general/chat_scroll_thumb.png" framexy;
+ // background: solid #00000055;
+}
+scrollbar_vthumb:hover {
+ background: image "gui/v3/general/chat_scroll_thumb.png" framexy;
+ // background: solid #000000AA;
+}
+scrollbar_vthumb:down {
+ background: image "gui/v3/general/chat_scroll_thumb.png" framexy;
+ // background: solid #00000055;
+}
+scrollbar_vthumb:disabled {
+ background: image "gui/v3/general/chat_scroll_thumb.png" framexy;
+ // background: solid #00000000;
+}
+
+player_name {
+	font: "Comic Sans MS" bold 12;
+	padding: 0 0 0 5;
+	text-align:  left;
+	color:  #eeeeeeff;
+	background: image "gui/v3/general/chat_player_name.png" scalexy;
+}
+
+player_name:down {
+	color:  #eeeeeeff;
+	background: image "gui/v3/general/chat_player_name_pressed.png" scalexy;
+}
+
+player_name:hover {
+	color:  #d177ffff;
+	background: image "gui/v3/general/chat_player_name_hover.png" scalexy;
+}
+
+player_name: disabled {
+	color:  #aaaaaaff;
+	background: image "gui/v3/general/chat_player_name_disabled.png" scalexy;
+}
+
+tell_name {
+	font: "Comic Sans MS" bold 12;
+	padding: 0 0 0 5;
+	text-align:  left;
+	color:  #00C1C1FF;
+	background: image "gui/v3/general/chat_player_name.png" scalexy;
+}
+
+tell_name:down {
+	color:  #eeeeeeff;
+	background: image "gui/v3/general/chat_player_name_pressed.png" scalexy;
+}
+
+tell_name:hover {
+	color:  #FF0000FF;
+	background: image "gui/v3/general/chat_player_name_hover.png" scalexy;
+}
+
+tell_name: disabled {
+	color:  #aaaaaaff;
+	background: image "gui/v3/general/chat_player_name_disabled.png" scalexy;
+}
+
+window {
+	background: solid #00000000;
+}
+
+main_container {
+	vertical-align:  center;
+	text-align:  left;
+	font: "Tahoma" plain 12;
+	padding:  0 0 0 0;
+}
+
+player_message {                           
+	text-align:  left;
+	color:  #E2FD21FF;
+	font: "Tahoma" bold 12;
+	background: blank;
+}
+
+player_message_whisper {
+	text-align:  left;
+	color:  #00C1C1FF;
+	font: "Tahoma" bold 12;
+	background: blank;
+}
+
+player_message_error {
+	text-align:  left;
+	color:  #ff0000ff;
+	font: "Tahoma" bold 12;
+	background: blank;
+}
+
+player_message_tell {
+	text-align:  left;
+	color:  #00C1C1FF;
+	font: "Tahoma" bold 12;
+	background: blank;
+}
+
+player_message_own {
+	text-align:  left;
+	color:  #E2FD21FF;
+	font: "Tahoma" bold 12;
+	background: blank;
+}
+
+label_tell_player_name {
+	text-align:  left;
+	color:  #00C1C1FF;
+	font: "Tahoma" bold 12;
+	background: solid #000000AA;
+	padding: 0 0 0 8;
+}
+
+button_chat {
+	background: image "gui/v2/icons/interface/floating_icons/chat_default.png" scalexy ;
+}
+
+button_chat:down {
+	background: image "gui/v2/icons/interface/floating_icons/chat_default.png" scalexy ;
+}
+
+button_chat:hover {
+	background: image "gui/v2/icons/interface/floating_icons/chat_hover.png" scalexy ;
+}
+
+button.contextual.tell{
+    background: solid #1C4BA5;
+    text-effect: "outline";
+	effect-color: #00FFFF55;
+	effect-size: 1;
+    color:  #00C1C1FF;
+    font: "Tahoma" bold 10;
+    text-align:  left;
+    padding: 0 0 0 5;
+}
+
+button.contextual.tell:hover{
+    background: solid #4B69A3;
+}
+
+button.contextual.tell:down{
+    background: solid #1C3460;
+}
+
+button.contextual.block{
+    background: solid #1C4BA5;
+    color:  #FF0000;
+    text-effect: "outline";
+	effect-color: #FF000055;
+	effect-size: 1;
+    font: "Tahoma" bold 10;
+    text-align:  left;
+    padding: 0 0 0 5;
+}
+
+button.contextual.block:hover{
+    background: solid #4B69A3;
+}
+
+button.contextual.block:down{
+    background: solid #1C3460;
+}
+
+button.contextual.cancel {
+  background: image "gui/v3/general/close_mini_default.png" scalexy;
+}
+button.contextual.cancel:hover {
+  background: image "gui/v3/general/close_mini_hover.png" scalexy;
+}
+button.contextual.cancel:down {
+  background: image "gui/v3/general/close_mini_pressed.png" scalexy;
+}
+
+button.contextual.cancel:disabled {
+  background: image "gui/v3/general/close_mini_gray.png" scalexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}

@@ -1,0 +1,51 @@
+root{
+ color:  #ffffffff;
+    font: "Tahoma" bolditalic 16;
+	padding: 0 3 7 0;
+	effect-size:  3;
+	text-effect:  outline;
+	effect-color:  #00000055;
+	text-align: center;
+	vertical-align: bottom;	
+}
+
+button_arrow_up{
+    background: image "gui/v3/general/tutorial_arrow_up_high.png" scalexy;
+}
+
+button_arrow_up:hover{
+    background: image "gui/v3/general/tutorial_arrow_up_low.png" scalexy;
+    padding: 0 0 25 0;
+}
+
+button_arrow_left{
+    background: image "gui/v3/general/tutorial_arrow_left_high.png" scalexy;
+}
+
+button_arrow_left:hover{
+    background: image "gui/v3/general/tutorial_arrow_left_low.png" scalexy;
+}
+
+button_arrow_right{
+    background: image "gui/v3/general/tutorial_arrow_right_high.png" scalexy;
+}
+
+button_arrow_right:hover{
+    background: image "gui/v3/general/tutorial_arrow_right_low.png" scalexy;
+}
+
+button_arrow_down{
+    background: image "gui/v3/general/tutorial_arrow_down_high.png" scalexy;
+}
+
+button_arrow_down:hover{
+    background: image "gui/v3/general/tutorial_arrow_down_low.png" scalexy;
+}
+
+button_arrow_top_right{
+    background: image "gui/v3/general/tutorial_arrow_top_right_high.png" scalexy;
+}
+
+button_arrow_top_right:hover{
+    background: image "gui/v3/general/tutorial_arrow_top_right_low.png" scalexy;
+}

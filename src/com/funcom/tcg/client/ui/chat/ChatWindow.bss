@@ -1,0 +1,78 @@
+chatwindow-window{
+}
+
+chatwindow-window.container{
+}
+
+chatwindow-window.chatbutton{
+  background: solid #1c4ba5AA;
+}
+
+chatwindow-window.chatbutton:hover {
+  background: solid #CCCCCC;
+}
+
+chatwindow-window.chatbutton:selected {
+  background: solid #CCCCCC;
+}
+
+chatwindow-window.chatbutton:down {
+  background: solid #CCCCCC;
+  size: 30 160;  
+}
+
+chatwindow-window.chatbutton.label{  
+  font: "Screengem" bold 12;
+  color: #E2FD21FF;
+  text-align: left;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  padding: 0 10 0 10;
+}
+
+chatwindow-window.chatbutton.ico{
+  font: "Screengem" bold 12;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+chatwindow-window.friendbutton{
+  background: solid #11294CAA;
+}
+
+chatwindow-window.friendbutton:hover {
+  background: solid #CCCCCC;
+}
+
+chatwindow-window.friendbutton:selected {
+  background: solid #CCCCCC;
+}
+
+chatwindow-window.friendbutton.label{
+  font: "Screengem" bold 12;
+  color: #FFFFFF;
+  text-align: left;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  padding: 0 0 0 10;
+}
+
+chatwindow-window.friendbutton.ico{
+  font: "Screengem" bold 12;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+menubuttoncontainer {
+   background: solid #1c4ba5AA;
+   //background: image "gui/interface/skin/outer_lightblue_16.png" framexy;
+  font: "Screengem" bold 12;
+  color: #E2FD21FF;
+  text-align: left;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;  
+  padding: 5 3;
+}

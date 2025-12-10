@@ -1,0 +1,3 @@
+BCheckBox#stateDidChange should be moved to BToggleButton
+BButton#configureStyle should be moved to BLabel
+BToggleButton needs state for selected down

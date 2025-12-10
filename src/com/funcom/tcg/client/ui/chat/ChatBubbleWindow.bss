@@ -1,0 +1,18 @@
+chatbubble.window{
+}
+
+chatbubble.window.label{
+  background: image "gui/v3/general/chat_bubble.png" framexy;
+  font: "Screengem" bold 16;
+  color: #222222;
+  text-align: left;
+  padding: 10 10 10 10 ;
+}
+
+chatbubble.window.infolabel{
+  background: image "gui/v3/general/tooltip_enemy.png" framexy 6 9 5 10;
+  font: "Screengem" bold 16;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10 10 10 10 ;
+}

@@ -1,0 +1,185 @@
+root {
+  /* window font color */
+  color: #FFFFFF;
+  font: "Screengem" bold 18;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  tooltip: tooltip;
+}
+
+tooltip_window {
+  /*background: solid #11294CAA;*/
+  /*border: 2 solid #49618FAA;*/
+  /*padding: 5;*/
+}
+
+/**
+ * Base window components
+ */
+
+tcgwindow {
+  background: image "gui/v2/interface/skin/frame_main_blue_noshadow.png" framexy;
+
+  /*border: 1 solid #FFFF88;*/
+}
+
+tcgwindow.left {
+  background: image "gui/v2/interface/skin/frame_main_blue_noshadow.png" framexy;
+
+}
+
+tcgwindow.right {
+  background: image "gui/v2/interface/skin/frame_main_blue_noshadow.png" framexy;
+ 
+}
+
+title-label {
+  text-align: center;
+  font: "Screengem" bold 19;
+/*border: 1 solid #FFFF88;*/
+}
+
+clientarea {
+  padding: 16;
+}
+
+button {
+  background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+  padding: 17;
+  text-align: center;
+  vertical-align: center;
+}
+
+button:hover {
+  background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+  padding: 17;
+  text-align: center;
+  vertical-align: center;
+}
+
+button:down {
+  background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+  padding: 17;
+  text-align: center;
+  vertical-align: center;
+}
+
+close-button {
+  background: image "gui/v3/general/close_mini_default.png" framexy 5 5 5 5;
+}
+close-button:hover {
+  background: image "gui/v3/general/close_mini_hover.png" framexy 5 5 5 5;
+}
+close-button:down {
+  background: image "gui/v3/general/close_mini_pressed.png" framexy 5 5 5 5;
+}
+
+close-button:disabled {
+  background: image "gui/v3/general/close_mini_gray.png" framexy 5 5 5 5;
+}
+
+combobox {
+  parent: "button";
+  font: "Screengem" bold 12;
+  text-align: left;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+
+}
+
+combobox:hover {
+  parent: "button:hover";
+  text-align: left;
+}
+
+/* NOTE: TcgComboBox doesn't have _'down'_ pseudo style. */
+
+combobox-item {
+  parent: "button";
+  font: "Screengem" bold 12;
+  text-align: left;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}
+
+combobox-item:hover {
+  parent: "button:hover";
+  text-align: left;
+}
+
+/**
+ * Settings for other common components
+ */
+
+tcgcontainer {
+}
+
+tcgcontainer-background {
+  background: image "gui/v2/interface/skin/frame_main_blue_noshadow.png" framexy;
+}
+
+tcgcontainer-contentpane {
+}
+
+tcgcontainer-overlay {
+  background: image "gui/v2/interface/skin/borderframe_main_blue.png" framexy 73;
+  padding: 21;
+}
+
+default-tiered-button {
+  empty_star: "gui/v3/general/tutorial_highlight.png";
+  filled_star: "gui/v3/general/tutorial_highlight.png";
+}
+
+scrollbar_vwell {
+  background: image "gui/v3/general/scroll_bar.png" framexy;
+}
+scrollbar_vless {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+scrollbar_vless:hover {
+  background: image "gui/v3/general/arrow_up_large_hover.png" scalexy;
+}
+scrollbar_vless:down {
+  background: image "gui/v3/general/arrow_up_large_pressed.png" scalexy;
+}
+scrollbar_vless:disabled {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+
+scrollbar_vmore {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vmore:hover {
+  background: image "gui/v3/general/arrow_down_large_hover.png" scalexy;
+}
+scrollbar_vmore:down {
+  background: image "gui/v3/general/arrow_down_large_pressed.png" scalexy;
+}
+scrollbar_vmore:disabled {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vthumb {
+    background: image "gui/v3/general/scroll_bar_round_default.png" framexy;
+}
+scrollbar_vthumb:hover {
+    background: image "gui/v3/general/scroll_bar_round_selected.png" framexy;
+}
+scrollbar_vthumb:down {
+  background: image "gui/v3/general/scroll_bar_round_hit.png" framexy;
+}
+scrollbar_vthumb:disabled {
+  background: image "gui/v3/general/scroll_bar_round_default.png" framexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+}

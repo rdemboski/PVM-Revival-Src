@@ -1,0 +1,95 @@
+/********** CUSTOM WINDOWS **********/
+
+bwindowtcg {
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" scalexy;
+}
+
+bwindowtcg.titlelabel {
+  text-align: center;
+  font: "Screengem" bold 24;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-color: #000000AA;
+  effect-size: 2;
+}
+
+/*
+  Padding:
+  Distance from top to first button
+  Distance cut from right side of buttons (selected will draw full)
+  Distance removed between buttons for each row (selected image offset)
+*/
+bwindowtcg.tabcontainer {
+  padding: 40 5 12 0;
+}
+
+bwindowtcg.tab {
+  background: solid #00000000;
+  padding: 8 40 8 8;
+}
+
+bwindowtcg.tab:down {
+  background: solid #00000000;
+  padding: 8 40 8 8;
+}
+
+bwindowtcg.tab:selected {
+  color: #462300;
+  background: solid #00000000;
+  padding: 20 8 20 20;
+}
+
+bwindowtcg.tab_label {
+  background: solid #00000000;
+  padding: 7 7;
+}
+
+bscrollpanetcg:overlay {
+  background: solid #00000000;
+}
+
+
+button {
+  background: solid #00000000;
+  padding: 3 5;
+  text-align: center;
+  font: "Screengem" plain 24;
+  color: #BED4FF;
+}
+
+button:hover {
+  color: #FF00FF;
+}
+
+button:down {
+  background: solid #00000000;
+  padding: 4 4 2 6;
+}
+
+button:selected {
+  background: solid #00000000;
+  padding: 4 4 2 6;
+}
+
+button:disabled {
+  background: solid #00000000;
+  text-align: center;
+  color: #999999;
+}
+
+label {
+  background: solid #00000000;
+  text-align: left;
+  font: "Screengem" plain 24;
+  color: #BED4FF;
+}
+
+label_rightaligned {
+  parent: "label";
+  text-align: right;
+}
+
+label_centeraligned {
+  parent: "label";
+  text-align: center;
+}

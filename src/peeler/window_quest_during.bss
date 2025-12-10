@@ -1,0 +1,435 @@
+reward_pettoken {
+	color:  #c2d9ffff;
+	font: "Tahoma" bold 14;
+	background: image "gui/v3/pet_selection/pet_token.png" scalexy ;
+	padding:  0 0 0 0;
+}
+
+cont_reward {
+	font: "Tahoma" plain 12;
+}
+
+level-label-icon {
+  text-align: left;
+  icon: image "gui/v3/cards/card_green_star_small.png";
+}
+
+member-level-label-icon {
+  text-align: left;
+  icon: image "gui/v3/pet_selection/paw_mini.png";
+}
+
+level-label {
+  /*border: 1 solid #FF00FF;*/
+  font: "Screengem" bold 14;
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 2;
+  text-align: right;
+}
+
+gradient_box {
+	color:  #c2d9ffff;
+	font: "tahoma" bold 14;
+	background: image "gui/v3/quest_gui/inner_frame_goals.png" framexy ;
+	padding:  0 0 0 0;
+}
+
+quest_checkbox:disabled {
+	background: image "gui/v3/quest_gui/tick_boxes/ticked.png" scalexy ;
+}
+
+canvas {
+	font: "Tahoma" plain 12;
+}
+
+button_accept:hover {
+	background: image "gui/v3/general/check_large_hover.png" scalexy ;
+}
+
+text_currencyamount_token {
+	vertical-align:  center;
+	color:  #641990ff;
+	text-align:  left;
+	font: "tahoma" bold 18;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  3;
+	padding:  0 0 0 0;
+	effect-color:  #f0c30dAA;
+}
+
+text_notonquest {
+	vertical-align:  center;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "tahoma" bold 18;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  3;
+	padding:  0 3 0 3;
+	effect-color:  #000000aa;
+}
+
+button_accept:down {
+	background: image "gui/v3/general/check_large_pressed.png" scalexy ;
+}
+
+text_currencyamount_coin {
+	vertical-align:  center;
+	color:  #ffff66ff;
+	text-align:  left;
+	font: "tahoma" bold 18;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  3;
+	padding:  0 0 0 0;
+	effect-color:  #333333AA;
+}
+
+rewards_gradient_box {
+	color:  #c2d9ffff;
+	font: "tahoma" italic 14;
+	background: image "gui/v3/quest_gui/inner_frame_rewards.png" scalexy ;
+	padding:  0 0 0 0;
+}
+
+text_goalsheader {
+	vertical-align:  center;
+	text-align:  center;
+	color:  #ffffffff;
+	font: "tahoma" bold 18;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  3;
+	effect-color:  #000000aa;
+}
+
+text_daily {
+	vertical-align:  center;
+	text-align:  center;
+	color:  #ffffffff;
+	font: "tahoma" bold 14;
+	background: blank;
+	effect-size:  2;
+	text-effect:  outline;
+	padding:  0 0 0 0;
+	effect-color:  #000000aa;
+}
+
+text_goal {
+	vertical-align:  center;
+	text-align:  left;
+	color:  #ffffffff;
+	font: "tahoma" bold 14;
+	background: blank;
+	effect-size:  2;
+	text-effect:  outline;
+	padding:  0 0 0 0;
+	effect-color:  #000000aa;
+}
+
+main_container {
+	font: "Tahoma" plain 12;
+	background: blank;
+}
+
+text_questdescription {
+	color:  #ffffffff;
+	font: "tahoma" bold 14;
+	background: blank;
+	effect-size:  2;
+	text-effect:  outline;
+	padding:  0 0 0 0;
+	effect-color:  #000000aa;
+}
+
+text_questname {
+	color:  #FFFFFFff;
+	font: "tahoma" bold 20;
+	background: blank;
+	effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #000000aa;
+}
+
+container_background {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/quest_gui/window_background_quest.png" scalexy ;
+}
+
+container_shadow {
+	font: "Tahoma" plain 12;
+	background: blank;
+}
+
+reward_icon_currency {
+	color:  #c2d9ffff;
+	font: "Tahoma" bold 14;
+	background: image "gui/icons/items/currency/coin_item.png" scalexy ;
+	padding:  0 0 0 0;
+}
+
+button_accept {
+	font: "tahoma" plain 12;
+	background: image "gui/v3/general/check_large_default.png" scalexy ;
+}
+
+quest_checkbox {
+	color:  #c2d9ffff;
+	font: "Tahoma" italic 14;
+	background: image "gui/v3/quest_gui/tick_boxes/un_ticked.png" scalexy ;
+	padding:  0 0 0 0;
+}
+
+quest_icon {
+	color:  #c2d9ffff;
+	font: "Tahoma" italic 14;
+	background: solid #ccccccff;
+	padding:  0 0 0 0;
+}
+
+root {
+	vertical-align:  center;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "Tahoma" plain 12;
+	tooltip: tooltip;
+}
+
+text_rewardsheader {
+	vertical-align:  center;
+	text-align:  center;
+	color:  #ffffffff;
+	font: "tahoma" bold 18;
+	background: blank;
+	effect-size:  3;
+	text-effect:  outline;
+	padding:  0 0 0 0;
+	effect-color:  #000000AA;
+}
+
+text_quest_dailyheader {
+	vertical-align: center;
+	color:  #FFFFFF;
+	text-align:  center;
+	font: "tahoma" bold 20;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000AA;
+}
+
+pet-button-epic {
+  background: image "gui/v3/cards/card_pet_gold.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 3;
+  font: "Screengem" bold 16;
+}
+
+pet-button-epic:hover {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button-epic:selected {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button-epic:selected_hover {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button {
+  background: image "gui/v3/cards/card_pet_default.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 3;
+  font: "Screengem" bold 16;
+}
+
+pet-button:hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button:selected {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button:selected_hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+/*pet-button:disabled {*/
+  /*background: image "gui/v3/cards/card_pet_unknown.png" framexy;*/
+/*}*/
+
+pet-button-member {
+  background: image "gui/v3/cards/card_pet_default.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 3;
+  font: "Screengem" bold 16;
+}
+
+pet-button-member:hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button-member:selected {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button-member:selected_hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+equipment-button {
+  background: image "gui/v3/cards/item_cards/card_item_default.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 10;
+/*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 3;
+  filled_star: "gui/icons/interface/stats/level_star.png";
+}
+
+equipment-button:hover {
+  background: image "gui/v3/cards/item_cards/card_item_mouseover.png" scalexy;
+}
+
+equipment-button:selected {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button-level {
+  background: image "gui/v3/cards/item_cards/card_item_level_default.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 10;
+/*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 3;
+  filled_star: "gui/icons/interface/stats/level_star.png";
+}
+
+equipment-button-level:hover {
+  background: image "gui/v3/cards/item_cards/card_item_level_mouseover.png" scalexy;
+}
+
+equipment-button-level:selected {
+  background: image "gui/v3/cards/item_cards/card_item_level_selected.png" scalexy;
+}
+
+equipment-button-level:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_level_selected.png" scalexy;
+}
+
+
+equipment-button-member {
+  background: image "gui/v3/cards/item_cards/card_item_default_member.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 10;
+/*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 3;
+  filled_star: "gui/icons/interface/stats/level_star.png";
+}
+
+equipment-button-member:hover {
+  background: image "gui/v3/cards/item_cards/card_item_mouseover_member.png" scalexy;
+}
+
+equipment-button-member:selected {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button-member:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+/* The beveled frame on top of icons */
+icon-overlay {
+  image: "gui/v3/cards/card_pet_yellow_frame.png";
+}
+
+item_card_container {
+	background: image "gui/v3/cards/item_cards/card_item_default.png" framexy 2 2 2 2;
+}
+
+text_amount_tokens {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+}
+
+text_amount_coins {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+}
+
+text_amount_potions {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+}
+
+graphic_card_icon {
+	font: "Tahoma" plain 12;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}

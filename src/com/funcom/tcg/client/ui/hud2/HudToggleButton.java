@@ -1,0 +1,38 @@
+/*    */ package com.funcom.tcg.client.ui.hud2;
+/*    */ 
+/*    */ import com.funcom.commons.jme.bui.IrregularToggleButton;
+/*    */ import com.funcom.gameengine.jme.text.HTMLView2;
+/*    */ import com.funcom.gameengine.resourcemanager.ResourceManager;
+/*    */ import com.funcom.tcg.client.ui.TCGToolTipManager;
+/*    */ import com.jmex.bui.BComponent;
+/*    */ 
+/*    */ public class HudToggleButton
+/*    */   extends IrregularToggleButton
+/*    */ {
+/*    */   private TCGToolTipManager tooltipManager;
+/*    */   private ResourceManager resourceManager;
+/*    */   private String tooltipText;
+/*    */   
+/*    */   public HudToggleButton(String text, String tooltipText, TCGToolTipManager tooltipManager, ResourceManager resourceManager) {
+/* 17 */     super(text);
+/* 18 */     this.tooltipText = tooltipText;
+/* 19 */     this.tooltipManager = tooltipManager;
+/* 20 */     this.resourceManager = resourceManager;
+/*    */   }
+/*    */ 
+/*    */   
+/*    */   public String getTooltipText() {
+/* 25 */     return this.tooltipManager.getHudHtml(this.tooltipText);
+/*    */   }
+/*    */ 
+/*    */   
+/*    */   protected BComponent createTooltipComponent(String tiptext) {
+/* 30 */     return (BComponent)new HTMLView2(tiptext, this.resourceManager);
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\ryand\Desktop\PVM Revival\pvm-game-decomp\tcg-client.jar!\com\funcom\tcg\clien\\ui\hud2\HudToggleButton.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       1.1.3
+ */

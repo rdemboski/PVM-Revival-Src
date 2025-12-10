@@ -1,0 +1,47 @@
+waypointwindow.container{
+   
+}
+
+waypointwindow.button{
+    background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+    text-align: left;
+    vertical-align: center;
+    border: 1 blank;
+      padding: 21 21 21 10;
+	font: "Screengem" bold 14;	
+}
+
+waypointwindow.button:hover{
+    background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+waypointwindow.button:down{
+    background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+
+waypointwindow.button:disabled{
+    background: image "gui/v3/general/gray_wide.png" framexy 5 5 5 5;
+}
+
+waypointwindow.label.member.en{
+    background: image "gui/v3/general/memberstamp_en.png" scalexy;
+}
+
+waypointwindow.label.member.fr{
+    background: image "gui/v3/general/memberstamp_fr.png" scalexy;
+}
+
+waypointwindow.label.member.no{
+    background: image "gui/v3/general/memberstamp_no.png" scalexy;
+}
+
+waypointwindow.label.title{
+    color:  #FFFFFF;
+	font: "Tahoma" bold 20;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000aa;
+  text-align: center;
+  vertical-align: center;
+}

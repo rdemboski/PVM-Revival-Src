@@ -1,0 +1,101 @@
+root {
+  font: "Tahoma" bold 21;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+shadow-layer {
+  text-effect: "outline";
+  color: #1F017BAA;
+  effect-color: #1F017BAA;
+  effect-size: 4;
+}
+
+outline-layer {
+  text-effect: "outline";
+  color: #5E2831;
+  effect-color: #9D5203;
+  effect-size: 7;
+}
+
+gradient-layer {
+  font: "Tahoma|gradient|0,FFFFFF,0.28,FFFFBD,0.43,FFFF00,0.6,FFB800,0.64,FFB500,1,FFB500" bold 21;  
+}
+
+register-shadow-layer {
+  parent: "shadow-layer";
+  padding: 0 48 0 28;
+}
+
+register-outline-layer {
+  parent: "outline-layer";
+  padding: 0 48 2 28;
+}
+
+register-gradient-layer {
+  parent: "gradient-layer";
+  padding: 0 48 0 28;
+}
+
+subscribe-shadow-layer {
+  parent: "shadow-layer";
+  padding: 0 80 0 27;
+}
+
+subscribe-outline-layer {
+  parent: "outline-layer";
+  padding: 0 80 2 27;
+}
+
+subscribe-gradient-layer {
+  parent: "gradient-layer";
+  padding: 0 80 0 27;
+}
+
+button.subscribe{
+ background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+ font: "Screengem" bold 20;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  text-align: left;
+  padding: 0 0 0 55;
+}
+
+button.subscribe:hover{
+ background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+button.subscribe:down{
+ background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+
+button.subscribe.fr{
+ background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+ font: "Screengem" bold 16;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  text-align: left;
+  padding: 0 0 0 55;
+}
+
+button.subscribe.fr:hover{
+ background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+button.subscribe.fr:down{
+ background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+
+catface{
+    background: image "gui/v3/general/subscribe_cat.png" scalexy;
+}
+
+catface: hover{
+    background: image "gui/v3/general/subscribe_cat_hover.png" scalexy;
+}
+
+

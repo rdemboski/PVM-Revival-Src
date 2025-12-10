@@ -1,0 +1,26 @@
+tcgwindow {
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy ;
+
+  /*border: 1 solid #FFFF88;*/
+}
+
+
+tcgwindow.left {
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy;
+
+}
+
+tcgwindow.right {
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy;
+
+}
+
+tcgdialog {
+  parent: "tcgwindow";
+  background: image "gui/v3/char_creation/container_bgd.png" framexy 50 10 50 10;
+  size: 400 400;
+}
+
+messagelabel {
+  vertical-align: top;
+}

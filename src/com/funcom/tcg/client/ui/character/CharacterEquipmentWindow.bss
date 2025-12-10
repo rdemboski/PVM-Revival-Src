@@ -1,0 +1,501 @@
+character-view-container {
+
+}
+
+equipdoll-button-container {
+/*border: 1 solid #FF00FF;*/
+}
+
+equipment-stats-container {
+ background: image "gui/v3/character_equipment/item_preview.png" framexy;
+/*border: 1 solid #FF00FF;*/
+}
+
+inventory-equipments-container {
+
+}
+
+pinline {
+  background: solid #6DD4FF;
+}
+
+equipment-button {
+  background: image "gui/v3/cards/item_cards/card_item_default.png" framexy 2 2 2 2;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  color: #2EFF03;
+  effect-color: #026400;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 2;
+}
+
+equipment-button:hover {
+  background: image "gui/v3/cards/item_cards/card_item_mouseover.png" scalexy;
+}
+
+equipment-button:selected {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button-level {
+  background: image "gui/v3/cards/item_cards/card_item_level_default.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 7 7 7 7 ;
+  color: #2EFF03;
+  effect-color: #026400;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 2;
+}
+
+equipment-button-level:hover {
+  background: image "gui/v3/cards/item_cards/card_item_level_mouseover.png" scalexy;
+}
+
+equipment-button-level:selected {
+  background: image "gui/v3/cards/item_cards/card_item_level_selected.png" scalexy;
+}
+
+equipment-button-level:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_level_selected.png" scalexy;
+}
+
+
+equipment-button-member {
+  background: image "gui/v3/cards/item_cards/card_item_default_member.png" framexy 2 2 2 2;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 10;
+/*border: 1 solid #FF00FF;*/
+  color: #93F562;
+  effect-color: #003404;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 2;
+}
+
+equipment-button-member:hover {
+  background: image "gui/v3/cards/item_cards/card_item_mouseover_member.png" scalexy;
+}
+
+equipment-button-member:selected {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button-member:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-tab {
+  background: image "gui/v3/character_equipment/equipped_items_chr_slot_default.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 11 12 13 24;
+/*border: 1 solid #FF00FF;*/
+  color: #93F562;
+  effect-color: #003404;
+  font: "Tahoma" bold 28;
+  text-effect: "outline";
+  effect-size: 2;
+}
+
+equipment-tab:hover {
+  background: image "gui/v3/character_equipment/equipped_items_chr_slot_hover.png" scalexy;
+}
+
+equipment-tab:selected {
+  background: image "gui/v3/character_equipment/equipped_items_chr_slot_selected.png" scalexy;
+}
+
+equipment-tab:down {
+  background: image "gui/v3/character_equipment/equipped_items_chr_slot_selected.png" scalexy;
+}
+
+equipment-tab:selected_hover {
+  background: image "gui/v3/character_equipment/equipped_items_chr_slot_selected.png" scalexy;
+}
+
+equipment-tab:disabled {
+  background: image "gui/v3/character_equipment/equipped_items_chr_slot_gray.png" scalexy;
+}
+
+character-view {
+/*border: 1 solid #FF00FF;*/
+}
+
+character-name {
+  font: "Screengem" bold 20;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #57ADE6AA;
+  text-align: center;
+}
+
+character-level {
+  font: "Tahoma" bold 16;
+  text-align: center;
+  color: #2EFF03;
+  text-effect: "outline";
+  effect-color: #026400;
+  effect-size: 2;
+  background: image "gui/v3/character_equipment/icons/star_green_size.png" scalexy;
+}
+
+item-name-label {
+/*border: 1 solid #FF00FF;*/
+  font: "Tahoma" bold 16;
+  color: #FFFFFF;
+  vertical-align: top;
+  text-effect: "outline";
+  effect-color: #00000055;
+  effect-size: 2;
+}
+
+stat-info-container {
+  /*border: 1 solid #FFFF00;*/
+}
+
+stat-name {
+  /*border: 1 solid #FFFFFF;*/
+  font: "Tahoma" bold 16;
+  color: #BED3FE;
+  text-align: center;
+  padding: 0 8 0 8;
+}
+
+stat-value {
+  /*border: 1 solid #88FFFF;*/
+  font: "Tahoma" bold 16;
+  color: #BED3FE;
+  text-align: right;
+}
+
+stat-diff-positive-arrow {
+  /*border: 1 solid #8888FF;*/
+  background: image "gui/v3/character_equipment/arrow_up.png" scalexy;
+}
+
+stat-diff-negative-arrow {
+  /*border: 1 solid #8888FF;*/
+  background: image "gui/v3/character_equipment/arrow_down.png" scalexy;
+}
+
+stat-diff-positive-value {
+  /*border: 1 solid #888888;*/
+  color: #2aeb02;
+  font: "Tahoma" bold 12;
+  text-align: left;
+  text-effect: "outline";
+  effect-color: #000000;
+  effect-size: 2;  
+}
+
+stat-diff-negative-value {
+  /*border: 1 solid #888888;*/
+  color: #FF4300;
+  font: "Tahoma" bold 12;
+  text-align: left;
+  text-effect: "outline";  
+  effect-color: #000000;
+  effect-size: 2;    
+}
+
+stat-diff-positive-value-centered {
+  parent: stat-diff-positive-value;
+  text-align: center;
+}
+
+stat-diff-negative-value-centered {
+  parent: stat-diff-negative-value;
+  text-align: center;
+}
+
+stat-name-root {
+  font: "Tahoma" bold 19;
+  text-align: left;
+  text-effect: "outline";
+  effect-size: 3;
+  padding: 0 8 0 8;
+}
+
+stat-value-root {
+  font: "Tahoma" bold 19;
+  text-align: center;
+  text-effect: "outline";
+  effect-size: 3;
+}
+
+stat-name-level {
+  parent: "stat-name-root";
+  color: #93F562;
+  effect-color: #003404;
+}
+
+stat-value-level {
+  parent: "stat-value-root";
+  color: #93F562;
+  effect-color: #003404;
+}
+
+stat-name-health {
+  parent: "stat-name-root";
+  color: #FF2C2E;
+  effect-color: #330B13;
+}
+
+stat-value-health {
+  parent: "stat-value-root";
+  color: #FF2C2E;
+  effect-color: #330B13;
+}
+
+stat-name-mana {
+  parent: "stat-name-root";
+  color: #208AE2;
+  effect-color: #0A225E;
+}
+
+stat-value-mana {
+  parent: "stat-value-root";
+  color: #208AE2;
+  effect-color: #0A225E;
+}
+
+stat-name-armour {
+  parent: "stat-name-root";
+  color: #9B7BE8;
+  effect-color: #070046;
+}
+
+stat-value-armour {
+  parent: "stat-value-root";
+  color: #9B7BE8;
+  effect-color: #070046;
+}
+
+stat-name-power {
+  parent: "stat-name-root";
+  color: #FFF80F;
+  effect-color: #372000;
+}
+
+stat-value-power {
+  parent: "stat-value-root";
+  color: #FFF80F;
+  effect-color: #372000;
+}
+
+stat-name-crit {
+  parent: "stat-name-root";
+  color: #FF7100;
+  effect-color: #3C1808;
+}
+
+stat-value-crit {
+  parent: "stat-value-root";
+  color: #FF7100;
+  effect-color: #3C1808;
+}
+
+stat-icon-level {
+
+}
+
+stat-icon-armour {
+  background: image "gui/v3/character_equipment/icons/defence_size.png" centerxy;
+}
+
+stat-icon-max_health {
+  background: image "gui/v3/character_equipment/icons/heart_size.png" centerxy;
+}
+
+stat-icon-power {
+  background: image "gui/v3/character_equipment/icons/attack_size.png" centerxy;
+}
+
+stat-icon-max_mana {
+  background: image "gui/v3/character_equipment/icons/mana_size.png" centerxy;
+}
+
+stat-icon-crit {
+  background: image "gui/v3/character_equipment/icons/critical_size.png" centerxy;
+}
+
+scrollbar_vless {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+scrollbar_vless:hover {
+  background: image "gui/v3/general/arrow_up_large_hover.png" scalexy;
+}
+scrollbar_vless:down {
+  background: image "gui/v3/general/arrow_up_large_pressed.png" scalexy;
+}
+scrollbar_vless:disabled {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+
+scrollbar_vmore {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vmore:hover {
+  background: image "gui/v3/general/arrow_down_large_hover.png" scalexy;
+}
+scrollbar_vmore:down {
+  background: image "gui/v3/general/arrow_down_large_pressed.png" scalexy;
+}
+scrollbar_vmore:disabled {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+
+test-label{
+background: solid #00ff0055;
+}
+
+
+
+progress-bgd{
+background: solid #000000;
+}
+
+
+icon-stat-health {
+	background: image "gui/v3/character_equipment/icons/heart_size.png" scalexy;
+}
+
+progress-stat-health {
+    progress_list: "gui/v2/interface/main_screen/healthbar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/healthbar_diff.png" scalexy;
+
+}
+
+icon-stat-mana {
+	background: image "gui/v3/character_equipment/icons/mana_size.png" scalexy;
+}
+
+progress-stat-mana {
+    progress_list: "gui/v2/interface/main_screen/manabar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/manabar_diff.png" scalexy;
+}
+
+icon-stat-defense {
+	background: image "gui/v3/character_equipment/icons/defence_size.png" scalexy;
+}
+
+progress-stat-defense {
+    progress_list: "gui/v2/interface/main_screen/defensebar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/defensebar_diff.png" scalexy;
+}
+
+icon-stat-attack {
+	background: image "gui/v3/character_equipment/icons/attack_size.png" scalexy;
+}
+
+progress-stat-attack {
+    progress_list: "gui/v2/interface/main_screen/attackbar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/attackbar_diff.png" scalexy;
+}
+
+icon-stat-crit {
+	background: image "gui/v3/character_equipment/icons/critical_size.png" scalexy;
+}
+
+progress-stat-crit {
+    progress_list: "gui/v2/interface/main_screen/megahitbar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/megahitbar_diff.png" scalexy;
+
+}
+
+progress-stat-increase {
+    progress_list: "gui/v2/interface/main_screen/achievebar.png" scalexy;
+
+}
+
+progress-stat-decrease {
+    progress_list: "gui/v2/interface/main_screen/decreasebar.png" scalexy;
+}
+
+progress-stat-bar_bgd {
+	background: image "gui/v2/interface/main_screen/bar_bgd.jpg" framexy 4;
+}
+
+progress-stat-gloss {
+    font: "Tahoma" bold 12;
+    text-align: center;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+	background: image "gui/v2/interface/main_screen/healthbar_gloss.png" scalexy;
+}
+
+
+character-bgd{
+     background: image "gui/v3/character_equipment/chr_window.png" scalexy;
+}
+
+character-border{
+ background: image "gui/v3/character_equipment/chr_window_frame.png" framexy 10;
+}
+
+bgd-label{
+    background: image "gui/v3/friends/inner_window_friends.png" framexy;
+}
+
+equipment-stats-level {
+  font: "Tahoma" bold 16;
+  text-align: center;
+  color: #2EFF03;
+  text-effect: "outline";
+  effect-color: #026400;
+  effect-size: 2;
+}
+
+equipment-stats-item-bgd {
+  font: "Screengem" bold 20;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  text-align: center;
+  background: image "gui/v3/cards/item_cards/card_item_default.png" framexy 2 2 2 2;
+}
+
+equipment-stats-icon{
+    padding: 0;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #0000000;
+}
+members_only.en{
+    background: image "gui/v3/general/memberstamp_en.png" scalexy;
+}
+
+members_only.fr{
+    background: image "gui/v3/general/memberstamp_fr.png" scalexy;
+}
+
+members_only.no{
+    background: image "gui/v3/general/memberstamp_no.png" scalexy;
+}
+
+stat-change-label{
+ font: "Tahoma" bold 12;
+    text-align: right;
+    color: #00FF00;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+    padding: 0 5 0 0;
+}

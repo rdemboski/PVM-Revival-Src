@@ -1,0 +1,93 @@
+/********** INVENTORY WINDOW **********/
+
+inventorywindow.container {
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy ;
+  /* padding: top, right, bottom, left; */
+}
+
+inventorywindow.container.extraslots {
+  parent: inventorywindow.container;
+  background: image "gui/v3/general/button_red_wide_default.png" framexy 5 5 5 5;
+}
+
+trashcan {
+  background: image "gui/v3/general/inventory_trashcan.jpg" scalexy;
+}
+
+itembutton {
+  background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+  padding: 7;
+  size: 62 62;
+  text-align: center;
+}
+
+itembutton.label.shine {
+  background: solid #FFFFFF22;
+}
+
+itembutton.quantity {
+  font: "Tahoma" bold 12;
+  color: #FFFF00;
+  text-align: right;
+  vertical-align: bottom;
+  text-effect: shadow;
+  effect-color: #666666;
+}
+
+close-button {
+  background: image "gui/v3/general/close_mini_default.png" framexy 5 5 5 5;
+}
+close-button:hover {
+  background: image "gui/v3/general/close_mini_hover.png" framexy 5 5 5 5;
+}
+close-button:down {
+  background: image "gui/v3/general/close_mini_pressed.png" framexy 5 5 5 5;
+}
+
+close-button:disabled {
+  background: image "gui/v3/general/close_mini_gray.png" framexy 5 5 5 5;
+}
+
+
+scrollbar_vless {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+scrollbar_vless:hover {
+  background: image "gui/v3/general/arrow_up_large_hover.png" scalexy;
+}
+scrollbar_vless:down {
+  background: image "gui/v3/general/arrow_up_large_pressed.png" scalexy;
+}
+scrollbar_vless:disabled {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+
+scrollbar_vmore {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vmore:hover {
+  background: image "gui/v3/general/arrow_down_large_hover.png" scalexy;
+}
+scrollbar_vmore:down {
+  background: image "gui/v3/general/arrow_down_large_pressed.png" scalexy;
+}
+scrollbar_vmore:disabled {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+
+scrollbar_vwell {
+  background: image "gui/v3/general/scroll_bar.png" framexy;
+}
+
+scrollbar_vthumb {
+    background: image "gui/v3/general/scroll_bar_round_default.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:hover {
+    background: image "gui/v3/general/scroll_bar_round_selected.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:down {
+  background: image "gui/v3/general/scroll_bar_round_hit.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:disabled {
+  background: image "gui/v3/general/scroll_bar_round_default.png" framexy 5 5 5 5;
+}

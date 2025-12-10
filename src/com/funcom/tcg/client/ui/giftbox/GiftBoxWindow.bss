@@ -1,0 +1,279 @@
+reward-cards-container {
+  /*border: 1 solid #000000;*/
+}
+
+level-label-icon {
+  text-align: left;
+  font: "Screengem" bold 16;
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 2;
+  icon: image "gui/v3/cards/card_green_star_small.png";
+}
+
+member-level-label-icon {
+  text-align: left;
+  font: "Screengem" bold 16;
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 2;
+  icon: image "gui/v3/pet_selection/paw_mini.png";
+}
+
+level-label {
+  /*border: 1 solid #FF00FF;*/
+  font: Tahoma bold 16;
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 4;
+  text-align: right;
+}
+
+default-tiered-button {
+    empty_star: "gui/v3/general/tutorial_highlight.png";
+  filled_star: "gui/v3/general/tutorial_highlight.png";
+}
+
+item-reward-label {
+    parent: "default-tiered-button";
+
+  padding: 8;
+}
+
+title-label {
+  text-align: center;
+  color: #FFFFFF;
+  font: Tahoma bold 36;
+  text-effect: "outline";
+  effect-size: 3;
+  effect-color: #000000AA;
+/*border: 1 solid #FFFF88;*/
+}
+
+button {
+  background: image "gui/v2/interface/skin/button_main_blue.png" framexy 20;
+  padding: 17;
+  text-align: center;
+  vertical-align: center;
+  color: #FF980C;
+}
+
+pet-button-epic {
+  background: image "gui/v3/cards/card_pet_gold.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 3;
+  font: Tahoma bold 16;
+}
+
+pet-button-epic:hover {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button-epic:selected {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button-epic:selected_hover {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button {
+  background: image "gui/v3/cards/card_pet_default.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 3;
+  font: Tahoma bold 16;
+}
+
+pet-button:hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button:selected {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button:selected_hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+/*pet-button:disabled {*/
+  /*background: image "gui/v3/cards/card_pet_unknown.png" framexy;*/
+/*}*/
+
+pet-button-member {
+  background: image "gui/v3/cards/card_pet_default.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  text-effect: "outline";
+  effect-size: 3;
+  font: Tahoma bold 16;
+}
+
+pet-button-member:hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button-member:selected {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button-member:selected_hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+equipment-button {
+  background: image "gui/v3/cards/item_cards/card_item_default.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 4;
+/*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  font: Tahoma bold 16;
+  text-effect: "outline";
+  effect-size: 4;
+  filled_star: "gui/icons/interface/stats/level_star.png";
+}
+
+equipment-button:hover {
+  background: image "gui/v3/cards/item_cards/card_item_mouseover.png" scalexy;
+}
+
+equipment-button:selected {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button-member {
+  background: image "gui/v3/cards/item_cards/card_item_default_member.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 4;
+/*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  font: Tahoma bold 16;
+  text-effect: "outline";
+  effect-size: 3;
+  filled_star: "gui/icons/interface/stats/level_star.png";
+}
+
+equipment-button-member:hover {
+  background: image "gui/v3/cards/item_cards/card_item_mouseover_member.png" scalexy;
+}
+
+equipment-button-member:selected {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+equipment-button-member:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_selected.png" scalexy;
+}
+
+
+equipment-button-level {
+  background: image "gui/v3/cards/item_cards/card_item_level_default.png" scalexy;
+  /* Used as selection overlay */
+  image: "gui/v2/interface/skin/frame_pet_selection.png" ;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 8 8 10 10;
+/*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400aa;
+  font: "Tahoma" bold 16;
+  text-effect: "outline";
+  effect-size: 3;
+  filled_star: "gui/icons/interface/stats/level_star.png";
+}
+
+equipment-button-level:hover {
+  background: image "gui/v3/cards/item_cards/card_item_level_mouseover.png" scalexy;
+}
+
+equipment-button-level:selected {
+  background: image "gui/v3/cards/item_cards/card_item_level_selected.png" scalexy;
+}
+
+equipment-button-level:selected_hover {
+  background: image "gui/v3/cards/item_cards/card_item_level_selected.png" scalexy;
+}
+
+/* The beveled frame on top of icons */
+icon-overlay {
+  image: "gui/v3/cards/card_pet_yellow_frame.png";
+}
+
+item_card_container {
+	background: image "gui/v3/cards/item_cards/card_item_default.png" framexy 2 2 2 2;
+}
+
+text_amount_tokens {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+}
+
+text_amount_coins {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+}
+
+text_amount_potions {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+}
+
+graphic_card_icon {
+	font: Tahoma plain 12;
+}
+
+ok_button {
+	background: image "gui/v3/general/check_large_default.png" framexy 5 5 5 5;
+}
+
+ok_button:down {
+	background: image "gui/v3/general/check_large_pressed.png" framexy 5 5 5 5;
+}
+
+ok_button:hover {
+	background: image "gui/v3/general/check_large_hover.png" framexy 5 5 5 5;
+}
+
+ok_button:disabled {
+	background: image "gui/v3/general/check_large_gray.png" framexy 5 5 5 5;
+}

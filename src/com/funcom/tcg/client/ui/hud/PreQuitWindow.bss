@@ -1,0 +1,57 @@
+root {
+  /* window font color */
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}
+
+quitwindow{
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" scalexy;
+}
+
+prequitwindow.pet.label{
+  background: image "gui/v3/general/loading_pet_06.png" scalexy;
+}
+
+quitwindow.button {
+  font: "Tahoma" bold 20;
+  text-align: center;
+  effect-size: 2;
+  color: #ffffff; 
+  effect-color: #000000;
+  background: image "gui/v3/general/button_green_wide_default.png" framexy 5 5 5 5;
+}
+
+quitwindow.button:hover {
+  background: image "gui/v3/general/button_green_wide_hover.png" framexy 5 5 5 5;
+}
+
+quitwindow.button:down {
+  background: image "gui/v3/general/button_green_wide_pressed.png" framexy 5 5 5 5;
+}
+
+quitwindow.button.cancel {
+  parent: "quitwindow.button";
+  color: #ffffff;
+  effect-color: #000000;
+  background: image "gui/v3/general/button_red_wide_default.png" framexy 5 5 5 5;
+}
+
+quitwindow.button.cancel:hover {
+  background: image "gui/v3/general/button_red_wide_hover.png" framexy 5 5 5 5;
+}
+
+quitwindow.button.cancel:down {
+  background: image "gui/v3/general/button_red_wide_pressed.png" framexy 5 5 5 5;
+}
+
+quitwindow.label{
+  background: solid #00000000;
+  font: "Screengem" bold 16;
+  text-align: center;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}

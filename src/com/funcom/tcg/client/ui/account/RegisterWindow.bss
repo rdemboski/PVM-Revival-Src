@@ -1,0 +1,47 @@
+title-label {
+  font: "Tahoma" bold 28;
+  color: #25FF00;
+  text-align: center;
+  text-effect: "outline";
+  effect-color: #004806;
+  effect-size: 4;
+}
+
+info-label {
+  font: "Tahoma" bold 22;
+  color: #F1F2A2;
+  text-align: center;
+  text-effect: "outline";
+  effect-color: #000000;
+  effect-size: 2;
+
+  /*border: 1 solid #FF00FF;*/
+}
+
+field-label {
+  color: #80DFFD;
+  text-align: right;
+  text-effect: "outline";
+  effect-color: #112240;
+  effect-size: 2;
+
+  /*border: 1 solid #FF00FF;*/
+}
+
+field-value {
+  font: "Screengem" plain 35;
+
+  background: solid #fff000;
+  text-effect: "outline";
+  effect-size: 3;
+  color: #27F500;
+  effect-color: #000000;
+  text-align: left;
+  vertical-align: center;
+  /*padding: top, right, bottom, left*/
+  padding: 0 45 37 40;
+}
+
+faux-window {
+  background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy 0 5 5 0;
+}

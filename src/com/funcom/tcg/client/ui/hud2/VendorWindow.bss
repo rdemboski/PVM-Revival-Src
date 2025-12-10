@@ -1,0 +1,80 @@
+ vendorwindow{
+}
+
+vendorwindow.itemlist {
+  //background: image "gui/v3/pet_trial_membership/prequit_background.png" framexy;
+}
+
+vendorwindow.itembutton {
+  background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;  
+}
+
+ vendorwindow.itembutton:hover {
+  background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+vendorwindow.itembutton:down {
+  background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+
+vendorwindow.itembutton:disabled {
+ background: image "gui/v3/general/gray_wide.png" framexy 5 5 5 5;
+ /*border: 1 solid #FFFFFF;*/
+}
+
+vendorwindow.itembutton.icon {
+  text-align: left;
+  vertical-align: center;
+  padding: 0 0 0 16;
+}
+
+vendorwindow.itembutton.name {
+  font: "screengem" bold 14;
+  text-align: left;
+  vertical-align: top;
+  padding: 15 15 0 5;
+}
+
+ vendorwindow.itembutton.level {
+  font: "screengem" bold 14;
+  text-align: left;
+  vertical-align: top;
+  padding: 15 15 0 5;
+}
+
+vendorwindow.itembutton.price {
+    text-align: right;
+    vertical-align: bottom;
+    color:  #ffff66ff;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+    effect-color:  #333333ff;
+    padding:0 20 10 0;
+}
+
+ vendorwindow.itembutton.red.price {
+    text-align: right;
+    vertical-align: bottom;
+    color:  #ff0000ff;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+    effect-color:  #333333ff;
+    padding:0 20 10 0;
+}
+
+vendorwindow.prices.container {
+  padding:0 0 0 25;  
+}
+
+vendorwindow.prices.label {
+    vertical-align:  bottom;
+	color:  #ffff66ff;
+	text-align:  left;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #333333ff;
+    padding:0 0 10 0;
+}

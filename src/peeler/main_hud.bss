@@ -1,0 +1,546 @@
+graphic_glow_bar_health {
+	background: image "gui/v2/interface/main_screen/healthbar_glow.png" framexy 5 150 5 10;
+}
+
+checkbox:selected {
+	text-effect:  outline;
+	effect-size:  10;
+	effect-color:  #ff0000ff;
+}
+
+root {
+	vertical-align:  center;
+	color:  #ffffff00;
+	text-align:  center;
+	font: "Tahoma" plain 12;
+	background: solid #00000000;
+	tooltip: tooltip;
+}
+
+graphic_bkg_health {
+	background: image "gui/v2/interface/main_screen/healthbar.png" framexy 5 5 5 5 ;
+}
+
+graphic_icon_health {
+	background: image "gui/v2/interface/main_screen/health_icon.png" scalexy ;
+}
+
+graphic_icon_mana {
+	background: image "gui/v2/interface/main_screen/mana_icon.png" scalexy ;
+}
+
+graphic_bar_health {
+	background: image "gui/v2/interface/main_screen/healthbar.png" framexy 5 5 5 5 ;
+}
+
+button_pause {
+	background: image "gui/v2/icons/interface/floating_icons/pause_default.png" scalexy ;
+}
+
+button_pause:down {
+	background: image "gui/v2/icons/interface/floating_icons/pause_hover.png" scalexy ;
+}
+
+button_pause:hover {
+	background: image "gui/v2/icons/interface/floating_icons/pause_hover.png" scalexy ;
+}
+button_pause:selected {
+	background: image "gui/v2/icons/interface/floating_icons/pause_hover.png" scalexy ;
+}
+
+button_pause:selected_hover {
+	background: image "gui/v2/icons/interface/floating_icons/pause_hover.png" scalexy ;
+}
+
+button_portal {
+	background: image "gui/v2/icons/interface/floating_icons/travel_default.png" scalexy ;
+}
+
+button_portal:down {
+	background: image "gui/v2/icons/interface/floating_icons/travel_default.png" scalexy ;
+}
+
+button_portal:hover {
+	background: image "gui/v2/icons/interface/floating_icons/travel_hover.png" scalexy ;
+}
+
+button_portal:disabled {
+	background: image "gui/v2/icons/interface/floating_icons/travel_disabled.png" scalexy ;
+}
+button_map {
+	background: image "gui/v2/icons/interface/floating_icons/map_default.png" scalexy ;
+}
+
+button_map:down {
+	background: image "gui/v2/icons/interface/floating_icons/map_default.png" scalexy ;
+}
+
+button_map:hover {
+	background: image "gui/v2/icons/interface/floating_icons/map_hover.png" scalexy ;
+}
+
+button_map:disabled {
+	background: image "gui/v2/icons/interface/floating_icons/map_disabled.png" scalexy ;
+}
+
+button_quest:hover {
+	background: image "gui/v2/icons/interface/floating_icons/quest_hover.png" scalexy ;
+}
+
+button_petslot1 {
+	background: image "gui/v3/cards/card_pet_default_short.png" scalexy ;
+}
+
+button_achieve{
+    vertical-align:  center;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "Tahoma" bold 16;
+	effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #000000ff;
+	padding:  0 0 4 2;
+    background: image "gui/v2/icons/interface/floating_icons/achievements.png" scalexy;
+}
+
+button_achieve:hover{
+    background: image "gui/v2/icons/interface/floating_icons/achievements_hover.png" scalexy;
+}
+
+button_achieve:down{
+    background: image "gui/v2/icons/interface/floating_icons/achievements.png" scalexy;
+}
+
+button_achieve:disabled{
+    background: image "gui/v2/icons/interface/floating_icons/achievements_disabled.png" scalexy;
+}
+
+
+main_container {
+	font: "Tahoma" plain 12;
+	background: blank;
+}
+
+button_chat:down {
+	background: image "gui/v2/icons/interface/floating_icons/chat_default.png" scalexy ;
+}
+
+button_chat:hover {
+	background: image "gui/v2/icons/interface/floating_icons/chat_hover.png" scalexy ;
+}
+
+button_petslot2 {
+	background: image "gui/v3/cards/card_pet_default_short.png" scalexy ;
+}
+
+button_petslot3 {
+	background: image "gui/v3/cards/card_pet_default_short.png" scalexy ;
+}
+
+button_friends:down {
+	background: image "gui/v2/icons/interface/floating_icons/friends_default.png" scalexy ;
+}
+
+graphic_bkg_barholder {
+	background: image "gui/v2/interface/main_screen/bar_holder.png" scalexy ;
+}
+
+button_petgui {
+	background: image "gui/v2/icons/interface/floating_icons/pets.png" scalexy ;
+}
+
+button_petgui:down {
+	background: image "gui/v2/icons/interface/floating_icons/pets.png" scalexy ;
+}
+
+
+button_petgui:hover {
+	background: image "gui/v2/icons/interface/floating_icons/pets_hover.png" scalexy ;
+}
+
+button_manabar:down {
+	background: image "gui/v2/interface/main_screen/manabar_gloss_pressed.png" scalexy ;
+}
+
+button_friends:hover {
+	background: image "gui/v2/icons/interface/floating_icons/friends_hover.png" scalexy ;
+}
+
+button_manabar:hover {
+	background: image "gui/v2/interface/main_screen/manabar_gloss_hover.png" scalexy ;
+}
+
+button_petslot1:hover {
+	background: image "gui/v3/cards/card_pet_mouseover.png" scalexy ;
+}
+
+graphic_overlay_healthgloss {
+	background: image "gui/v2/interface/main_screen/healthbar_gloss.png" scalexy ;
+}
+
+button_manabar {
+	font: "Tahoma" plain 12;
+	effect-size:  1;
+	background: image "gui/v2/interface/main_screen/manabar_gloss.png" scalexy ;
+}
+
+button_healthbar {
+	font: "Tahoma" plain 12;
+	effect-size:  1;
+	background: image "gui/v2/interface/main_screen/healthbar_gloss.png" scalexy ;
+}
+
+button_healthbar:hover {
+	background: image "gui/v2/interface/main_screen/healthbar_gloss_hover.png" scalexy ;
+}
+
+button_healthbar:down {
+	background: image "gui/v2/interface/main_screen/healthbar_gloss_pressed.png" scalexy ;
+}
+
+graphic_bkg_centerhud {
+	background: image "gui/v2/interface/main_screen/middle_hud.png" framexy 5 5 5 5 ;
+}
+
+window {
+	
+}
+
+container {
+}
+
+button_quest:down {
+	background: image "gui/v2/icons/interface/floating_icons/quest_default.png" scalexy ;
+}
+
+button_chat {
+    vertical-align:  center;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "Tahoma" bold 16;
+	effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #000000ff;
+	background: image "gui/v2/icons/interface/floating_icons/chat_default.png" scalexy ;
+	padding:  0 0 4 2;
+}
+
+
+button_potion_health {
+	vertical-align:  center;
+	color:  #ffcbcbff;
+	text-align:  center;
+	font: "Tahoma" bold 16;
+	background: image "gui/v2/icons/interface/floating_icons/potion_health_default.png" scalexy ;
+	effect-size:  2;
+	text-effect:  outline;
+	padding:  22 15 0 0;	
+	effect-color:  #000000ff;
+}
+
+button_potion_health:hover {
+	background: image "gui/v2/icons/interface/floating_icons/potion_health_hover.png" scalexy ;
+}
+
+button_potion_health:down {
+	background: image "gui/v2/icons/interface/floating_icons/potion_health_default.png" scalexy ;
+}
+
+button_potion_mana {
+	vertical-align:  center;
+	color:  #cde3ffff;
+	text-align:  center;
+	font: "Tahoma" bold 16;
+	background: image "gui/v2/icons/interface/floating_icons/potion_mana_default.png" scalexy ;
+	effect-size:  2;
+	text-effect:  outline;
+	padding:  22 0 0 15;		
+	effect-color:  #000000ff;
+}
+
+button_potion_mana:hover {
+	background: image "gui/v2/icons/interface/floating_icons/potion_mana_hover.png" scalexy ;
+}
+
+button_potion_mana:down {
+	background: image "gui/v2/icons/interface/floating_icons/potion_mana_default.png" scalexy ;
+}
+	
+graphic_bkg_mana {
+}
+
+button_character:hover {
+	background: image "gui/v2/icons/interface/floating_icons/armor_hover.png" scalexy ;
+}
+
+graphic_bar_mana {
+	background: image "gui/v2/interface/main_screen/manabar.png" scalexy ;
+}
+
+button_duel {
+	background: image "gui/v2/icons/interface/floating_icons/duel_default.png" scalexy ;
+}
+
+button_duel:hover {
+	background: image "gui/v2/icons/interface/floating_icons/duel_hover.png" scalexy ;
+}
+
+button_duel:selected {
+	background: image "gui/v2/icons/interface/floating_icons/duel_hover.png" scalexy ;
+}
+
+button_duel:selected_hover {
+	background: image "gui/v2/icons/interface/floating_icons/duel_hover.png" scalexy ;
+}
+
+button_duel:down {
+	background: image "gui/v2/icons/interface/floating_icons/duel_default.png" scalexy ;
+}
+
+button_options {
+	background: image "gui/v2/icons/interface/floating_icons/options_default.png" scalexy ;
+}
+
+button_options:hover {
+	background: image "gui/v2/icons/interface/floating_icons/options_hover.png" scalexy ;
+}
+
+button_options:down {
+	background: image "gui/v2/icons/interface/floating_icons/options_default.png" scalexy ;
+}
+
+button_pvp {
+	background: image "gui/v2/icons/interface/floating_icons/pvp_default.png" scalexy ;
+}
+
+button_pvp:hover {
+	background: image "gui/v2/icons/interface/floating_icons/pvp_hover.png" scalexy ;
+}
+
+button_pvp:down {
+	background: image "gui/v2/icons/interface/floating_icons/pvp_default.png" scalexy ;
+}
+
+button_pvp:disabled {
+	background: image "gui/v2/icons/interface/floating_icons/pvp_disabled.png" scalexy ;
+}
+
+
+button_petslot3:hover {
+	background: image "gui/v3/cards/card_pet_mouseover.png" scalexy ;
+}
+
+button_character {
+	background: image "gui/v2/icons/interface/floating_icons/armor_default.png" scalexy ;
+}
+
+
+
+button_petslot2:hover {
+	background: image "gui/v3/cards/card_pet_mouseover.png" scalexy ;
+}
+
+graphic_bkg_left {
+	background: image "gui/v2/interface/main_screen/icon_holder_left.png" framexy 5 5 5 5 ;
+}
+
+graphic_overlay_managloss {
+	font: "Tahoma" plain 12;
+	background: image "gui/v2/interface/main_screen/manabar_gloss.png" framexy 5 5 5 5 ;
+}
+
+graphic_bkg_right {
+	background: image "gui/v2/interface/main_screen/icon_holder_right.png" framexy 5 5 5 5 ;
+}
+
+button_friends {
+    vertical-align:  center;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "Tahoma" bold 16;
+	effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #000000ff;
+	padding:  0 0 4 2;		
+	background: image "gui/v2/icons/interface/floating_icons/friends_default.png" scalexy ;
+}
+
+text_hotkey {
+	color:  #ffffff99;
+	font: "tahoma" bold 16;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000ff;
+}
+
+text_potion {
+	color:  #2bef02ff;
+	font: "tahoma" bold 16;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000ff;
+}
+
+button_quest {
+	background: image "gui/v2/icons/interface/floating_icons/quest_default.png" scalexy ;
+}
+
+
+graphic_glow_bar_mana {
+	background: image "gui/v2/interface/main_screen/manabar_glow.png" framexy 5 10 5 150 ;
+}
+
+timer-label {
+  text-align: center; // XX = left|center|right
+  vertical-align: top; // XX = top|center|bottom
+  font: "Screengem" bold 16;
+  effect-color: #000000aa;
+  text-effect: "outline";
+  effect-size: 3;
+  color: #FFFFFF;
+}
+
+petbutton.label.overlay {
+  //background: image "gui/v2/icons/interface/slots/slot_brass_overlay.png" centerxy;
+}
+
+pet-1-button {
+  //background: image "gui/v2/icons/interface/slots/slot_empty.png" centerxy;
+}
+
+pet-2-button {
+  //background: image "gui/v2/icons/interface/slots/slot_empty.png" centerxy;
+}
+
+pet-3-button {
+  //background: image "gui/v2/icons/interface/slots/slot_empty.png" centerxy;
+}
+
+pet-label-subscriber {
+  background: image "gui/icons/pets/empty_slot.png" centerxy;
+  padding: 1 1 1 1;
+}
+
+pet-label-notsubscriber {
+  background: image "gui/icons/pets/subscriber.png" centerxy;
+  padding: 1 1 1 1;
+}
+
+pet-button-epic {
+  background: image "gui/v3/cards/card_pet_gold_smaller.png" framexy;
+  //image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+ padding: 1 1 1 1;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  font: "Screengem" bold 20;
+}
+
+pet-button-epic:hover {
+  background: image "gui/v3/cards/card_pet_gold_highlight_smaller.png" framexy;
+}
+
+pet-button-epic:selected {
+  background: image "gui/v3/cards/card_pet_gold_small_selected.png" framexy;
+}
+
+pet-button-epic:selected_hover {
+  background: image "gui/v3/cards/card_pet_gold_small_selected.png" framexy;
+}
+
+pet-button {
+  background: image "gui/v3/cards/card_pet_default_short.png" framexy;
+ // image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+   padding: 1 1 1 1;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  font: "Screengem" bold 20;
+}
+
+pet-button:hover {
+  background: image "gui/v3/cards/card_pet_mouseover_short.png" framexy;
+}
+
+pet-button:selected {
+  background: image "gui/v3/cards/card_pet_default_selected.png" framexy;
+}
+
+pet-button:selected_hover {
+  background: image "gui/v3/cards/card_pet_default_selected.png" framexy;
+}
+
+pet-button-member {
+  background: image "gui/v3/cards/card_pet_default_short.png" framexy;
+ // image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 -1 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  font: "Screengem" bold 20;
+}
+
+pet-button-member:hover {
+  background: image "gui/v3/cards/card_pet_mouseover_short.png" framexy;
+}
+
+pet-button-member:selected {
+  background: image "gui/v3/cards/card_pet_default_selected.png" framexy;
+}
+
+pet-button-member:selected_hover {
+  background: image "gui/v3/cards/card_pet_default_selected.png" framexy;
+}
+
+progress.health {
+  progress_list: "gui/v2/interface/main_screen/healthbar.png" framexy 5 5 5 5 ;
+  active_progress_list: "gui/v2/interface/main_screen/healthbar_diff.png" framexy 5 5 5 5 ;
+}
+
+progress.mana {
+  progress_list: "gui/v2/interface/main_screen/manabar.png" framexy 5 5 5 5 ;
+  active_progress_list: "gui/v2/interface/main_screen/manabar_diff.png" framexy 5 5 5 5 ;
+}
+
+pet-trial-label {
+  font: "Screengem" bold 10;
+  effect-color: #9F8747;
+  text-effect: "outline";
+  effect-size: 4;
+  color: #FDFCAC;
+  text-align: center; // XX = left|center|right
+  vertical-align: center; // XX = top|center|bottom
+}
+
+close-button {
+  background: image "gui/v3/general/button_x_default.png" scalexy;
+}
+close-button:hover {
+  background: image "gui/v3/general/button_x_hover.png" scalexy;
+}
+close-button:down {
+  background: image "gui/v3/general/button_x_pressed.png" scalexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}

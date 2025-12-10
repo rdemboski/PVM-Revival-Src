@@ -1,0 +1,149 @@
+/********** CUSTOM WINDOWS **********/
+
+root {
+  color: #FFFFFF;
+  font: "Screengem" bold 21;
+  text-align: center; // XX = left|center|right
+  vertical-align: center; // XX = top|center|bottom
+  tooltip: tooltip;
+}
+
+window {
+  background: solid #80808000;
+}
+
+highlight-label{
+background: image "gui/v3/general/tutorial_highlight.png" scalexy;
+}
+
+title-label {
+	background: solid #00000000;
+	font: "Screengem" bold 20;
+	color: #FFFFFF;
+	text-effect: "outline";
+	effect-size: 2;
+	effect-color: #00000055;
+	text-align: center;
+
+}
+
+faux-window {
+  background: image "gui/v2/interface/skin/frame_main_blue_noshadow.png" framexy;
+}
+
+close-button {
+  background: image "gui/v3/general/close_mini_default.png" framexy 5 5 5 5;
+}
+close-button:hover {
+  background: image "gui/v3/general/close_mini_hover.png" framexy 5 5 5 5;
+}
+close-button:down {
+  background: image "gui/v3/general/close_mini_pressed.png" framexy 5 5 5 5;
+}
+
+close-button:disabled {
+  background: image "gui/v3/general/close_mini_gray.png" framexy 5 5 5 5;
+}
+
+label {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:#00000000;
+}
+
+scrollbar_vwell {
+  background: image "gui/v3/general/scroll_bar.png" framexy;
+}
+scrollbar_vless {
+  background: image "gui/v3/general/arrow_up_large_default.png" framexy 5 5 5 5;
+}
+scrollbar_vless:hover {
+  background: image "gui/v3/general/arrow_up_large_hover.png" framexy 5 5 5 5;
+}
+scrollbar_vless:down {
+  background: image "gui/v3/general/arrow_up_large_pressed.png" framexy 5 5 5 5;
+}
+scrollbar_vless:disabled {
+  background: image "gui/v3/general/arrow_up_large_default.png" framexy 5 5 5 5;
+}
+
+scrollbar_vmore {
+  background: image "gui/v3/general/arrow_down_large_default.png" framexy 5 5 5 5;
+}
+scrollbar_vmore:hover {
+  background: image "gui/v3/general/arrow_down_large_hover.png" framexy 5 5 5 5;
+}
+scrollbar_vmore:down {
+  background: image "gui/v3/general/arrow_down_large_pressed.png" framexy 5 5 5 5;
+}
+scrollbar_vmore:disabled {
+  background: image "gui/v3/general/arrow_down_large_default.png" framexy 5 5 5 5;
+}
+
+scrollbar_vthumb {
+    background: image "gui/v3/general/scroll_bar_round_default.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:hover {
+    background: image "gui/v3/general/scroll_bar_round_selected.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:down {
+  background: image "gui/v3/general/scroll_bar_round_hit.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:disabled {
+  background: image "gui/v3/general/scroll_bar_round_default.png" framexy 5 5 5 5;
+}
+
+/* --- Common Styles, But Not Used Directly by Base Window --- */
+/* Used only as a parent */
+parent--framed-container {
+  image: "gui/v2/interface/skin/borderframe_main_blue.png";
+  padding: 21;
+}
+
+/* Only read in code to get overlay image (not used as style) */
+fixed--framed-container-select {
+  image: "gui/v2/interface/skin/borderframe_main_selection.png";
+}
+
+/* The beveled frame on top of icons */
+icon-overlay {
+  image: "gui/v3/cards/card_pet_yellow_frame.png";
+}
+
+
+
+info_button{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_default.png" scalexy;
+}
+
+info_button:down {
+    background: image "gui/v3/pet_selection/button_bio_unpressed_hit.png" scalexy;
+}
+
+info_button:hover{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_hover.png" scalexy;
+}
+
+info_button:selected{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_hit.png" scalexy;
+}
+
+info_button:disabled{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_gray.png" scalexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}

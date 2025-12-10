@@ -1,0 +1,27 @@
+RotationalIssuesExplained
+
+(As explained by Guilherme)
+
+
+
+the rotation issue is related to the direction and orientation of particles when they are generated in a rotating PS.
+
+In relation to the direction, the middle PS in the test case you created, is affected by the nodes movement and rotation. As such, not only are the particles detached from the generator's position - so they don't follow the generator movement, they have their own, absolute position - but the direction that the particles are moving to when they are generated also changes due to rotation.
+
+In the coloredFountain example you can cleary see this. The bottom PS performs a PI rotation and back around the movement axis. The middle PS should also show the same rotation. You should see the middle fountain making the same rotation as the bottom one.
+
+But what you see is that is makes that rotation twice. As i tested, the rotation matrix from jMe is diferenet from the one in Xith3D, as are the quaternions.
+
+In relation to the particle orientation, for example, when using the whirl PS in the test case you created, you see that the bottom PS totally rotates around the axis as it should, and the top PS is static so doesn't change.
+
+But the middle PS, as it is in an absolute or dynamic node, is affected by the node's movement and rotation.
+
+What you see is that the PS seems streched, as the creation point for the particles is moving around. But it is not only moving around, but also rotating.
+
+So what should happen is that the particles orientation must change too. You should see particles being created tilted gradually as the PS moves.
+
+Thats is the current problem right now.
+
+I have correctly implemented this in Xith3D, both in regards to orientation and direction, but  Xith3D uses the same math library I use, which is openmali. jMe has its own math library which doesn't seem to perform the same calculations or work under the same exact principles. Or maybe one uses degrees, and the other radians, but I've tested for that too and didn't made any sense.
+
+I don't think I'll have much sucess with that thread tough. The only way to get this working is reading the source code from both openmali and jMe's math library and try to figure out what's different. Unfortunantly I currently don't have time for that right now.

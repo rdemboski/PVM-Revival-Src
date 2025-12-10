@@ -1,0 +1,106 @@
+root {
+  font: "Screengem" plain 16;
+  color: #FFFFFF;
+  background: solid #00000000;
+  /*border:  1 solid #FFFFFFFF;*/
+  text-align: center; // XX = left|center|right
+  vertical-align: center; // XX = top|center|bottom
+}
+window {
+	background: image "gui/v3/char_creation/blue-background.jpg" scalexy;
+}
+
+label.eulacontent {
+    text-align: left;
+    padding: 16 0 16 16;
+}
+
+button_back {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 50;
+	effect-color:  #000000ff;
+	background: image "gui/v3/general/button_back_default.png" framexy 10 20 10 40;
+}
+
+button_back:down {
+  background: image "gui/v3/general/button_back_pressed.png" framexy 10 20 10 40;
+}
+
+button_back:hover {
+  background: image "gui/v3/general/button_back_hover.png" framexy 10 20 10 40;
+}
+
+button_accept {
+	color:  #ffffff;
+	font: "Tahoma" bold 24;
+	background: image "gui/v3/char_creation/play_default.png" framexy 10 40 10 20;
+	effect-size:  3;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 20;
+	effect-color:  #000000ff;
+}
+
+button_accept:hover {
+	background: image "gui/v3/char_creation/play_hover.png" framexy 10 40 10 20;
+}
+
+button_accept:down {
+	background: image "gui/v3/char_creation/play_pressed.png" framexy 10 40 10 20;
+}
+
+button.terms{
+  font: "Screengem" bold 18;
+  text-effect: "outline";
+  effect-size: 3;
+  effect-color: #000000;
+  color: #FFFFFF;
+}
+
+button.terms:hover{
+   color: #7AAFFF;
+}
+
+button.terms:down{
+   color: #FFFFFF;
+}
+
+label_wolf{
+    background: image "gui/v3/general/eula_noah.png" scalexy;
+}
+
+label_textbubble{
+    font: "Tahoma" bold 18;
+    color: #FFFFFF;
+    vertical-align: center;
+    text-align: center;
+}
+
+label_textbubble_fr{
+    font: "Tahoma" bold 16;
+    color: #FFFFFF;
+    vertical-align: center;
+    text-align: center;
+}
+
+label_parents{
+    font: "Tahoma" bold 30;
+    color: #FFFFFF;
+    vertical-align: center;
+    text-align: left;
+    effect-size:  4;
+    text-effect:  outline;
+	effect-color:  #FFFFFF55;
+}
+
+separator{
+background: image "gui/v3/general/separator_orange.png" scalexy;
+}
+
+label_logo{
+   background: image "gui/v2/interface/login/logo_pvm_beta.png" scalexy;
+}

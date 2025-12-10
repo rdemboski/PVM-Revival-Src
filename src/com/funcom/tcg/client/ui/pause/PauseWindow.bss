@@ -1,0 +1,35 @@
+pause-window{
+
+}
+
+progressbar-label {
+  font: "Screengem" bold 16;
+  color: #ffffff;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  text-align: center; 
+  progress_list: "gui/v2/interface/main_screen/pausebar.png" scalexy;
+  background: solid #1547a4c0;
+}
+
+overlay-shadow {
+  background: image "gui/v2/interface/skin/overlay_shadow_pause.png" scalexy;
+}
+
+eventProgress-label{
+  font: "Screengem" bold 16;
+  color: #ffffff;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  text-align: center;
+}
+
+pause-frame {
+  background: image "gui/v2/interface/main_screen/pause_frame.png" framexy;
+}
+
+pause-background{
+ background: solid #FF00157F;
+}

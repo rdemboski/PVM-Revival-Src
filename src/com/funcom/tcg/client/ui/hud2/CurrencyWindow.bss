@@ -1,0 +1,52 @@
+root{
+    color:  #e2fd21ff;
+    font: "Tahoma" bolditalic 16;
+	effect-size:  3;
+	text-effect:  outline;
+	effect-color:  #000000AA;
+	text-align: center;
+	vertical-align: bottom;
+	tooltip: tooltip;
+}
+
+label.icon.coin{
+    background: image "gui/icons/items/currency/coin_item.png" scalexy;
+}
+
+label.icon.token{
+    background: image "gui/v3/pet_selection/pet_token.png" scalexy;
+}
+
+label.total.coin{
+    vertical-align:  center;
+	color:  #ffff66ff;
+	text-align:  left;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+	padding:  0 0 0 0;
+	effect-color:  #333333AA;
+}
+
+label.total.token{
+	vertical-align:  center;
+	color:  #641990ff;
+	text-align:  left;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+	padding:  0 0 0 0;
+	effect-color:  #f0c30dAA;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}

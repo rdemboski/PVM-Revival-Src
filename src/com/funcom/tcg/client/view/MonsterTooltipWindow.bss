@@ -1,0 +1,35 @@
+name-label {
+  font: "Screengem" bold 14;
+  color: #0C2A4B;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #e6eeff;
+  text-align: center;
+}
+level-label {
+  font: "Screengem" bold 18;
+  color: #0C2A4B;
+  text-effect: "outline";
+  effect-size: 3;
+  effect-color: #e6eeff;
+  text-align: center;
+}
+
+background-label {
+  background: image "gui/v2/interface/main_screen/tooltip/tooltip_frame.png" framexy;
+}
+
+monster-window {
+  health-progress-player: "gui/v2/interface/main_screen/tooltip/tooltip_monster_healthbar_player.png" centerxy;
+  health-progress-monster: "gui/v2/interface/main_screen/tooltip/tooltip_monster_healthbar_monster.png" centerxy;
+  boss-lvl-below: solid #00000000;
+  boss-lvl-above: solid #00000000;
+  boss-lvl-same: solid #00000000;
+  miniboss-lvl-below: solid #00000000;
+  miniboss-lvl-above: solid #00000000;
+  miniboss-lvl-same: solid #00000000;
+  mob-lvl-below: solid #00000000;
+  mob-lvl-above: solid #00000000;
+  mob-lvl-same: solid #00000000;
+  player-image: solid #00000000;
+}

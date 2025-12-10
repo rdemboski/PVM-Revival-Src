@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.err"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <!--The default pattern: Date Priority [Category] Message\n-->
+            <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
+        </layout>
+
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="DEBUG"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+
+    <!--
+    ********************************************************************************************************************
+    * [LOGGING SECTION] - GENERAL
+    ********************************************************************************************************************
+    -->
+    <logger name="sun">
+        <level value="FATAL"/>
+    </logger>
+
+    <logger name="java">
+        <level value="FATAL"/>
+    </logger>
+
+    <logger name="com.funcom">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="com.funcom.model">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="com.funcom.tcg.server.persistence">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="com.funcom.rpgengine2">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="com.jme">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="org.softmed">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="skunkworks">
+        <level value="DEBUG"/>
+    </logger>
+
+    <logger name="com.funcom.gameengine.pathfinding2">
+        <level value="DEBUG"/>
+    </logger>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</log4j:configuration>
+        

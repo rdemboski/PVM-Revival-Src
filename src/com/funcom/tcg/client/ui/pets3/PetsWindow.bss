@@ -1,0 +1,750 @@
+root{
+    tooltip: tooltip;
+}
+/********** CUSTOM WINDOWS **********/
+
+pet-view-container {
+  padding: 19;
+  image: "gui/v3/pet_selection/pet_window_frame_default.png";
+}
+
+pet-view-container-selected {
+  padding: 19;
+  image: "gui/v3/pet_selection/pet_window_frame_selected.png";
+}
+
+pet-button-container {
+  image: "gui/v3/pet_selection/petwindow_middle_shadow.png";
+  background: image "gui/v3/pet_selection/petwindow_middle_base.png" framexy;
+  /* (additional padding to add space between buttons and border) */
+  padding: 16 22;
+/*border: 1 solid #FF00FF;*/
+}
+
+pet-button-container-left {
+  background: image "gui/v3/pet_selection/petwindow_left_base.png" framexy;
+/*border: 1 solid #FF00FF;*/
+}
+
+pet-button-shadow-left {
+  background: image "gui/v3/pet_selection/petwindow_left_shadow.png" framexy;
+/*border: 1 solid #FF00FF;*/
+}
+
+pet-button-container-right {
+  background: image "gui/v3/pet_selection/petwindow_right_base.png" framexy;
+/*border: 1 solid #FF00FF;*/
+}
+
+pet-button-shadow-right {
+  background: image "gui/v3/pet_selection/petwindow_right_shadow.png" framexy;
+/*border: 1 solid #FF00FF;*/
+}
+
+train-button-container {
+  image: "gui/v2/interface/skin/borderframe_main_blue_small.png";
+  background: image "gui/v2/interface/skin/frame_background_darkblue.png" framexy;
+}
+
+train-button {
+  background: image "gui/v3/pet_selection/button_pet_training_default.png" scalexy;
+}
+
+train-button:down {
+  background: image "gui/v3/pet_selection/button_pet_training_hit.png" scalexy;
+}
+
+train-button:selected {
+  background: image "gui/v3/pet_selection/button_pet_training_hit.png" scalexy;
+}
+
+train-button:selected_hover {
+  background: image "gui/v3/pet_selection/button_pet_training_hit.png" scalexy;
+}
+
+train-button:hover {
+  background: image "gui/v3/pet_selection/button_pet_training_hover.png" scalexy;
+}
+
+train-button:disabled {
+  background: image "gui/v3/pet_selection/button_pet_training_default_grey.png" scalexy;
+}
+
+train-token{
+background: image "gui/v3/pet_selection/pet_token.png" scalexy;
+}
+
+train-token-label {
+  icon: image "gui/v3/pet_selection/pet_token_small.png";
+  font: "Tahoma" bold 18;
+  text-align: left;
+  vertical-align: center;
+  color: #71219A;
+  text-effect: "outline";
+  effect-size: 3;
+  effect-color: #FFBC03;
+}
+
+token-number-label {
+    /*border: 1 solid #FF00FF;*/
+  font: "Tahoma" bold 18;
+  text-align: center;
+  vertical-align: center;
+  color: #71219A;
+  text-effect: "outline";
+  effect-size: 3;
+  effect-color: #FFBC03;
+}
+
+pet-view {
+/*border: 1 solid #FF00FF;*/
+  background: solid #00000000;
+}
+
+pet-view:hover {
+/*border: 1 solid #FF00FF;*/
+  background: solid #00000000;
+}
+
+pet-view-background-upgraded {
+  background: solid #00000000;
+}
+
+pet-view-background-upgraded:hover {
+/*border: 1 solid #FF00FF;*/
+   background: solid #00000000;
+}
+
+pet-view-background-member {
+  background: image "gui/v3/pet_selection/pet_window_backg_member.png" scalexy;
+}
+
+skill-label {
+  background: image "gui/v2/interface/skin/frame_underlying_blue_round.png" framexy;
+  padding: 8;
+  /*border: 1 solid #FF00FF;*/
+  font: "Screengem" plain 18;
+  text-effect: "none";
+}
+
+lvl40_pet_card {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/cards/card_full_gold_default.png" scalexy ;
+}
+
+pet-button-epic {
+  background: image "gui/v3/cards/card_pet_gold.png" framexy;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  font: "Screengem" bold 20;
+}
+
+pet-button-epic:hover {
+  background: image "gui/v3/cards/card_pet_gold_highlight.png" framexy;
+}
+
+pet-button-epic:selected {
+  background: image "gui/v3/cards/card_pet_gold_selected.png" framexy;
+}
+
+pet-button-epic:selected_hover {
+  background: image "gui/v3/cards/card_pet_gold_selected.png" framexy;
+}
+
+pet-button {
+  background: image "gui/v3/cards/card_pet_default.png" framexy;
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  font: "Screengem" bold 20;
+}
+
+pet-button:hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button:selected {
+  background: image "gui/v3/cards/card_pet_selected.png" framexy;
+}
+
+pet-button:selected_hover {
+  background: image "gui/v3/cards/card_pet_selected.png" framexy;
+}
+
+/*pet-button:disabled {*/
+  /*background: image "gui/v3/cards/card_pet_unknown.png" framexy;*/
+/*}*/
+
+pet-button-member {
+  background: image "gui/v3/cards/card_pet_default.png" framexy;
+  image: "gui/v3/cards/card_pet_hourglass.png";
+  /* (different padding for each side due to embedded shadow in background) */
+  padding: 13 13 13 13;
+  /*border: 1 solid #FF00FF;*/
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  font: "Screengem" bold 20;
+}
+
+pet-button-member:hover {
+  background: image "gui/v3/cards/card_pet_mouseover.png" framexy;
+}
+
+pet-button-member:selected {
+  background: image "gui/v3/cards/card_pet_selected.png" framexy;
+}
+
+pet-button-member:selected_hover {
+  background: image "gui/v3/cards/card_pet_selected.png" framexy;
+}
+
+bio-button {
+  background: image "gui/v3/pet_selection/button_bio_unpressed_default.png" scalexy;
+}
+
+bio-button:hover {
+  background: image "gui/v3/pet_selection/button_bio_unpressed_hover.png" scalexy;
+}
+
+bio-button:selected {
+  background: image "gui/v3/pet_selection/button_bio_pressed_default.png" scalexy;
+}
+
+bio-button:selected_hover {
+  background: image "gui/v3/pet_selection/button_bio_pressed_default.png" scalexy;
+}
+
+bio-button:down {
+  background: image "gui/v3/pet_selection/button_bio_pressed_default.png" scalexy;
+}
+
+/*bio-button:disabled {
+  background: image "gui/v3/pet_selection/button_bio_unpressed_disabled.png" scalexy;
+} */
+
+skill-button {
+  background: image "gui/v3/pet_selection/button_attack_unpressed_default.png" scalexy;
+}
+
+skill-button:hover {
+  background: image "gui/v3/pet_selection/button_attack_unpressed_hover.png" scalexy;
+}
+
+skill-button:selected {
+  background: image "gui/v3/pet_selection/button_attack_pressed_default.png" scalexy;
+}
+
+skill-button:selected_hover {
+  background: image "gui/v3/pet_selection/button_attack_pressed_default.png" scalexy;
+}
+
+skill-button:down {
+  background: image "gui/v3/pet_selection/button_attack_pressed_default.png" scalexy;
+}
+
+/*skill-button:disabled {
+  background: image "gui/v3/pet_selection/button_attack_unpressed_disabled.png" scalexy;
+} */
+
+view-button {
+  background: image "gui/v3/pet_selection/button_3dview_unpressed_default.png" scalexy;
+}
+
+view-button:hover {
+ background: image "gui/v3/pet_selection/button_3dview_unpressed_hover.png" scalexy;
+}
+
+view-button:selected {
+  background: image "gui/v3/pet_selection/button_3dview_pressed_default.png" scalexy;
+}
+
+view-button:selected_hover {
+  background: image "gui/v3/pet_selection/button_3dview_pressed_default.png" scalexy;
+}
+
+view-button:down {
+  background: image "gui/v3/pet_selection/button_3dview_pressed_default.png" scalexy;
+}
+
+/*view-button:disabled {
+  background: image "gui/v3/pet_selection/button_3dview_unpressed_disabled.png" scalexy;
+} */
+
+pet-title-name-label {
+  font: "Screengem" bold 20;
+  color: #FFFFFFAA;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #57ADE6AA;
+  text-align: center;
+}
+
+pet-title-name-label-selected {
+  font: "Screengem" bold 20;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #57ADE6AA;
+  text-align: center;
+}
+
+pet-title-name-label-upgraded {
+  font: "Screengem" bold 20;
+  color: #FDFCACaa;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #9F8747AA;
+  text-align: center;
+}
+
+pet-title-name-label-selected-upgraded {
+  font: "Screengem" bold 20;
+  color: #9F8747;
+  text-effect: "outline";
+  effect-size: 4;
+  effect-color: #FDFCACAA;
+  text-align: center;
+}
+
+subview-info-label {
+  font: "Screengem" bold 16;
+  text-align: left;
+  vertical-align: top;
+  effect-color: #00000055;
+  text-effect: "outline";
+  effect-size: 2;
+  color: #FFFFFF;
+}
+
+pet-trial-label {
+  font: "Screengem" bold 30;
+  effect-color: #000000AA;
+  text-effect: "outline";
+  effect-size: 4;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+pet-title-level-label {
+/*border: 1 solid #FF00FF;*/
+  background: image "gui/v3/pet_selection/pet_window_star_default.png" scalexy;
+  font: "Screengem" bold 16;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 3;
+  padding: 0 0 0 4;
+  text-align: center;
+}
+
+level-label {
+  /*border: 1 solid #FF00FF;*/
+  font: "Screengem" bold 16;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  text-align: left;
+  padding: 0 0 0 25;
+}
+
+star-level-label {
+  /*border: 1 solid #FF00FF;*/
+  font: "Screengem" bold 14;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 4;
+  text-align: left;
+}
+
+trial-label {
+  /*border: 1 solid #FF00FF;*/
+  font: "Screengem" bold 12;
+  effect-color: #000000aa;
+  text-effect: "outline";
+  effect-size: 2;
+  color: #ffffff;
+  text-align: center;
+}
+
+level-label-icon {
+  icon: image "gui/v3/cards/card_green_star_small.png";
+  font: "Screengem" bold 16;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 2;
+  text-align: left;
+}
+
+member-level-label-icon {
+  icon: image "gui/v3/pet_selection/paw_mini.png";
+  font: "Screengem" bold 16;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 2;
+  text-align: left;
+}
+
+xp-progress {
+  background_list: image "gui/v3/cards/card_progressbar_black.png" framexy;
+  progress_list: "gui/v3/cards/card_progressbar_green.png" framexy;
+}
+
+/* Only read in code to get overlay image (not used as style) */
+fixed--framed-container-select {
+  image: "gui/v3/pet_selection/pet_window_frame_selected.png";
+}
+
+icon-overlay-label {
+  background: image "gui/v3/general/icon_highlight.png" scalexy;
+}
+
+pet-title-hover-label {
+  /*background: image "gui/icons/interface/stats/level_star.png" scalexy;*/
+}
+
+cat-pet-label {
+  background: image "gui/icons/pets/peticon_cat.png" scalexy;
+}
+
+bear-pet-label {
+  background: image "gui/icons/pets/peticon_bear.png" scalexy;
+}
+
+dog-pet-label {
+  background: image "gui/icons/pets/peticon_wolf.png" scalexy;
+}
+
+ape-pet-label {
+  background: image "gui/icons/pets/peticon_ape.png" scalexy;
+}
+
+bird-pet-label {
+  background: image "gui/icons/pets/peticon_bird.png" scalexy;
+}
+
+info-text-label {
+  font: "Tahoma" bold 14;
+  text-align: left;
+  vertical-align: top;
+  color: #ffffff;
+  effect-color: #000000aa;
+  text-effect: "outline";
+  effect-size: 2;
+}
+scrollbar_vless {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+scrollbar_vless:hover {
+  background: image "gui/v3/general/arrow_up_large_hover.png" scalexy;
+}
+scrollbar_vless:down {
+  background: image "gui/v3/general/arrow_up_large_pressed.png" scalexy;
+}
+scrollbar_vless:disabled {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+
+scrollbar_vmore {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vmore:hover {
+  background: image "gui/v3/general/arrow_down_large_hover.png" scalexy;
+}
+scrollbar_vmore:down {
+  background: image "gui/v3/general/arrow_down_large_pressed.png" scalexy;
+}
+scrollbar_vmore:disabled {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+
+scrollbar_vwell {
+  background: image "gui/v3/general/scroll_bar.png" framexy;
+}
+
+scrollbar_vthumb {
+    background: image "gui/v3/general/scroll_bar_round_default.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:hover {
+    background: image "gui/v3/general/scroll_bar_round_selected.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:down {
+  background: image "gui/v3/general/scroll_bar_round_hit.png" framexy 5 5 5 5;
+}
+scrollbar_vthumb:disabled {
+  background: image "gui/v3/general/scroll_bar_round_default.png" framexy 5 5 5 5;
+}
+
+overlay-shadow {
+  background: image "gui/v3/cards/card_full_grayalpha.png" scalexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}
+button_cancel {
+	background: image "gui/v3/general/close_large_default.png" framexy 5 5 5 5;
+}
+
+button_cancel:down {
+	background: image "gui/v3/general/close_large_pressed.png" framexy 5 5 5 5;
+}
+
+button_cancel:hover {
+	background: image "gui/v3/general/close_large_hover.png" framexy 5 5 5 5;
+}
+
+button_cancel:disabled {
+	background: image "gui/v3/general/close_large_gray.png" framexy 5 5 5 5;
+}
+
+button_accept {
+	background: image "gui/v3/general/check_large_default.png" framexy 5 5 5 5;
+}
+
+button_accept:down {
+	background: image "gui/v3/general/check_large_pressed.png" framexy 5 5 5 5;
+}
+
+button_accept:hover {
+	background: image "gui/v3/general/check_large_hover.png" framexy 5 5 5 5;
+}
+
+button_accept:disabled {
+	background: image "gui/v3/general/check_large_gray.png" framexy 5 5 5 5;
+}
+
+button_add_token{
+ background: image "gui/v3/pet_selection/button_pet_training_default.png" scalexy;
+}
+
+pet_xpbar {
+  background_list: image "gui/v3/cards/card_progressbar_black.png" framexy;
+  progress_list: "gui/v3/cards/card_progressbar_green.png" framexy;
+}
+
+pet_card_star {
+	background: image "gui/v3/cards/card_green_star_small.png" scalexy ;
+}
+
+
+
+pet_card_icon {
+	color:  #e5e098ff;
+	font: "Tahoma" plain 16;
+	text-effect:  none;
+	effect-size:  1;
+	effect-color:  #a89552ff;
+}
+
+staticgraphic {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/cards/card_full_default.png" scalexy ;
+}
+
+graphic_token {
+	color:  #e5e098ff;
+	font: "Tahoma" bold 16;
+	background: image "gui/v3/pet_selection/pet_token.png" scalexy ;
+	text-effect:  outline;
+	effect-size:  3;
+	effect-color:  #a89552ff;
+}
+
+text_petlevel {
+	vertical-align:  center;
+	color:  #2EFF03;
+	text-align:  left;
+	font: "Tahoma" bold 22;
+	background: blank;
+	effect-size:  3;
+	text-effect:  outline;
+	effect-color:  #026400aa;
+}
+
+warning-label {
+	vertical-align: top;
+	color:  #ffffffff;
+	text-align:  center;
+	font: "Tahoma" bold 16;
+	background: blank;
+	effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #000000ff;
+}
+
+heading {
+	color:  #E2FD21ff;
+	font: "Tahoma" bold 18;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000ff;
+}
+
+text_tokens {
+	vertical-align:  center;
+	text-align:  left;
+	color:  #641990ff;
+	font: "Tahoma" bold 22;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  4;
+	effect-color:  #f0c30dff;
+}
+
+canvas {
+	font: "Tahoma" plain 12;
+	background: solid #ff0000;
+	//background: image "gui/v3/pet_selection/window_background_pettraining.png" scalexy ;
+}
+
+text_descriptive {
+	color:  #ffffff;
+	font: "Tahoma" bold 14;
+	background: solid #000000;
+	effect-size:  2;
+	text-effect:  none;
+	effect-color:  #000000aa;
+}
+
+add_token_button{
+    background: image "gui/v3/pet_selection/add_token_default.png" scalexy ;
+}
+
+add_token_button:down{
+    background: image "gui/v3/pet_selection/add_token_pressed.png" scalexy ;
+}
+
+add_token_button:hover{
+    background: image "gui/v3/pet_selection/add_token_hover.png" scalexy ;
+}
+
+add_token_button:disabled{
+    background: image "gui/v3/pet_selection/add_token_grey.png" scalexy ;
+}
+
+progress-bgd{
+background: solid #000000;
+}
+
+
+icon-stat-health {
+	background: image "gui/v3/character_equipment/icons/heart_size.png" scalexy;
+}
+
+progress-stat-health {
+    progress_list: "gui/v2/interface/main_screen/healthbar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/healthbar_diff.png" scalexy;
+
+}
+
+progress-stat-increase-health {
+    progress_list: "gui/v2/interface/main_screen/achievebar.png" scalexy;
+
+}
+
+icon-stat-mana {
+	background: image "gui/v3/character_equipment/icons/mana_size.png" scalexy;
+}
+
+progress-stat-mana {
+    progress_list: "gui/v2/interface/main_screen/manabar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/manabar_diff.png" scalexy;
+}
+
+progress-stat-increase-mana {
+    progress_list: "gui/v2/interface/main_screen/achievebar.png" scalexy;
+
+}
+
+icon-stat-defense {
+	background: image "gui/v3/character_equipment/icons/defence_size.png" scalexy;
+}
+
+progress-stat-defense {
+    progress_list: "gui/v2/interface/main_screen/defensebar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/defensebar_diff.png" scalexy;
+}
+
+progress-stat-increase-defense {
+    progress_list: "gui/v2/interface/main_screen/achievebar.png" scalexy;
+
+}
+
+icon-stat-attack {
+	background: image "gui/v3/character_equipment/icons/attack_size.png" scalexy;
+}
+
+progress-stat-attack {
+    progress_list: "gui/v2/interface/main_screen/attackbar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/attackbar_diff.png" scalexy;
+}
+
+progress-stat-increase-attack {
+    progress_list: "gui/v2/interface/main_screen/achievebar.png" scalexy;
+
+}
+
+icon-stat-crit {
+	background: image "gui/v3/character_equipment/icons/critical_size.png" scalexy;
+}
+
+progress-stat-crit {
+    progress_list: "gui/v2/interface/main_screen/megahitbar.png" scalexy;
+    active_progress_list: "gui/v2/interface/main_screen/megahitbar_diff.png" scalexy;
+
+}
+
+progress-stat-increase-crit {
+    progress_list: "gui/v2/interface/main_screen/achievebar.png" scalexy;
+
+}
+
+progress-stat-bar_bgd {
+	background: image "gui/v2/interface/main_screen/bar_bgd.jpg" framexy 4;
+}
+
+progress-stat-gloss {
+    font: "Tahoma" bold 12;
+    text-align: center;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+	background: image "gui/v2/interface/main_screen/healthbar_gloss.png" scalexy;
+}
+
+backdrop-label{
+    background: image "gui/v3/pet_selection/pet_backdrop.png" scalexy;
+}
+
+backdrop-label-upgraded{
+    background: image "gui/v3/pet_selection/pet_backdrop_epic.png" scalexy;
+}
+
+members-label{
+background: image "gui/v3/pet_selection/pet_backdrop_member.png" scalexy;
+}

@@ -1,0 +1,510 @@
+root {
+  color: #FFFFFF;
+  font: "Screengem" bold 18;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  tooltip: tooltip;
+}
+
+vendor_title {
+  background: solid #00000000;
+  font: "Screengem" bold 20;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #00000055;
+  text-align: center;
+}
+
+coins {
+	background: solid #00000000;
+    vertical-align:  center;
+	color:  #ffff66ff;
+	text-align:  left;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #333333AA;
+	icon:  image "gui/icons/items/currency/coin_item.png" scalexy;
+}
+
+coins_centered{
+   	background: solid #00000000;
+    vertical-align:  center;
+	color:  #ffff66ff;
+	text-align:  center;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #333333AA;
+	icon:  image "gui/icons/items/currency/coin_item.png" scalexy;
+}
+
+preview_level{
+  font: "Tahoma" bold 16;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 3;
+}
+
+preview_level_center{
+  font: "Tahoma" bold 16;
+  text-align: center;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 3;
+}
+
+tokens{
+    background: image "gui/v3/pet_selection/pet_token.png" scalexy;
+}
+
+tokens_total{
+	background: solid #00000000;
+	vertical-align:  center;
+	color:  #641990ff;
+	text-align:  left;
+	font: "tahoma" bold 16;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #f0c30dAA;
+}
+
+buy_container {
+    background: image "gui/v3/friends/inner_window_friends.png" framexy 20 5 20 5;
+}
+
+buy_container_list {
+	background: solid #00000000;
+}
+
+sell_container {
+    background: image "gui/v3/friends/inner_window_friends.png" framexy 20 5 20 5;
+}
+
+sell_container_items{
+
+}
+
+sell_container_list {
+	background: solid #00000000;
+}
+
+stats_container {
+	background: image "gui/v3/friends/inner_window_friends.png" framexy;
+}
+
+preview_icon {
+}
+
+preview_name {
+  background: solid #00000000;
+  font: "Tahoma" bold 16;
+  color: #FFFFFF;
+  vertical-align: center;
+  text-effect: "outline";
+  effect-color: #00000055;
+  effect-size: 2;
+  text-align: center;
+}
+
+preview_health {
+	background: image "gui/v3/character_equipment/icons/heart_size.png" scalexy;
+}
+
+preview_health_bar {
+    progress_list: "gui/v2/interface/main_screen/healthbar.png" scalexy;
+}
+
+preview_mana {
+	background: image "gui/v3/character_equipment/icons/mana_size.png" scalexy;
+}
+
+preview_mana_bar {
+    progress_list: "gui/v2/interface/main_screen/manabar.png" scalexy;
+}
+
+preview_defense {
+	background: image "gui/v3/character_equipment/icons/defence_size.png" scalexy;
+}
+
+preview_defense_bar {
+    progress_list: "gui/v2/interface/main_screen/defensebar.png" scalexy;
+}
+
+preview_attack {
+	background: image "gui/v3/character_equipment/icons/attack_size.png" scalexy;
+}
+
+preview_attack_bar {
+    progress_list: "gui/v2/interface/main_screen/attackbar.png" scalexy;
+}
+
+preview_crit {
+	background: image "gui/v3/character_equipment/icons/critical_size.png" scalexy;
+}
+
+preview_crit_bar {
+    progress_list: "gui/v2/interface/main_screen/megahitbar.png" scalexy;
+
+}
+
+preview_bar_bgd {
+	background: solid #000000;
+}
+
+preview_bar_gloss {
+    font: "Tahoma" bold 14;
+    text-align: center;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+	background: image "gui/v2/interface/main_screen/healthbar_gloss.png" scalexy;
+}
+
+sell_total_title {
+  font: "Tahoma" bold 16;
+  text-align: left;
+  padding: 0 0 0 3;
+  color: #2EFF03;
+  text-effect: "outline";
+  effect-color: #026400;
+  effect-size: 4;
+}
+
+item.background {
+  font: "Screengem" bold 20;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  text-align: center;
+  background: image "gui/v3/cards/item_cards/card_item_default.png" framexy 2 2 2 2;
+}
+
+item.background:hover {
+	background: image "gui/v3/cards/item_cards/card_item_mouseover.png" framexy 2 2 2 2;
+}
+
+item.background:down {
+	background: image "gui/v3/cards/item_cards/card_item_selected.png" framexy 2 2 2 2;
+}
+
+item.background:disabled {
+	background: image "gui/v3/cards/item_cards/card_item_disabled.png" framexy 2 2 2 2;
+}
+
+item.level{
+  font: "Tahoma" bold 14;
+  text-align: center;  
+  color: #2EFF03;
+  text-effect: "outline";
+  effect-color: #026400;
+  effect-size: 2;
+}
+
+item.star{
+  background: image "gui/v3/character_equipment/icons/star_yellow_size.png" scalexy;
+}
+
+item.salestamp{
+   background: image "gui/v3/vendor/sellstamp_border.png" framexy 5 5 5 5;
+}
+
+item.buystamp{
+   background: image "gui/v3/vendor/buystamp_border.png" framexy 5 5 5 5;
+}
+
+
+main_container {
+	background: image "gui/v2/interface/skin/frame_main_blue_noshadow.png" framexy;
+}
+
+close-button {
+  background: image "gui/v3/general/close_mini_default.png" framexy 5 5 5 5;
+}
+close-button:hover {
+  background: image "gui/v3/general/close_mini_hover.png" framexy 5 5 5 5;
+}
+close-button:down {
+  background: image "gui/v3/general/close_mini_pressed.png" framexy 5 5 5 5;
+}
+
+close-button:disabled {
+  background: image "gui/v3/general/close_mini_gray.png" framexy 5 5 5 5;
+}
+
+info_button{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_default.png" framexy 5 5 5 5;
+}
+
+info_button:down {
+    background: image "gui/v3/pet_selection/button_bio_unpressed_hit.png" framexy 5 5 5 5;
+}
+
+info_button:hover{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_hover.png" framexy 5 5 5 5;
+}
+
+info_button:selected{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_hit.png" framexy 5 5 5 5;
+}
+
+info_button:disabled{
+    background: image "gui/v3/pet_selection/button_bio_unpressed_gray.png" framexy 5 5 5 5;
+}
+
+label {
+    color:  #ffffff;
+    text-align:  center;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+
+}
+
+amount.label {
+    color:  #ffffff;
+    text-align:  right;
+    font: "Screengem" bold 18;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #000000aa;
+
+}
+
+description{
+  color: #FFFFFF;
+  font: "Screengem" bold 14;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000AA;
+}
+
+textfield {
+}
+
+window {
+	background: solid #00000000;
+}
+
+container {
+}
+
+vendorwindow.itembutton.icon {
+  text-align: left;
+  vertical-align: center;
+}
+
+scrollbar_vwell {
+  background: image "gui/v3/general/scroll_bar.png" scalexy;
+}
+scrollbar_vless {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+scrollbar_vless:hover {
+  background: image "gui/v3/general/arrow_up_large_hover.png" scalexy;
+}
+scrollbar_vless:down {
+  background: image "gui/v3/general/arrow_up_large_pressed.png" scalexy;
+}
+scrollbar_vless:disabled {
+  background: image "gui/v3/general/arrow_up_large_default.png" scalexy;
+}
+
+scrollbar_vmore {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vmore:hover {
+  background: image "gui/v3/general/arrow_down_large_hover.png" scalexy;
+}
+scrollbar_vmore:down {
+  background: image "gui/v3/general/arrow_down_large_pressed.png" scalexy;
+}
+scrollbar_vmore:disabled {
+  background: image "gui/v3/general/arrow_down_large_default.png" scalexy;
+}
+scrollbar_vthumb {
+    background: image "gui/v3/general/scroll_bar_round_default.png" framexy;
+}
+scrollbar_vthumb:hover {
+    background: image "gui/v3/general/scroll_bar_round_selected.png" framexy;
+}
+scrollbar_vthumb:down {
+  background: image "gui/v3/general/scroll_bar_round_hit.png" framexy;
+}
+scrollbar_vthumb:disabled {
+  background: image "gui/v3/general/scroll_bar_round_default.png" framexy;
+}
+
+container_confirm {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/friends/inner_window_friends.png" framexy ;
+}
+
+
+text_msg_confirm {
+	vertical-align:  top;
+	text-align:  center;
+	color:  #e2e935ff;
+	font: "Tahoma" bold 18;
+	background: blank;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000ff;
+}
+text_msg_name {
+	color:  #d177ffff;
+	font: "Tahoma" bold 22;
+	background: solid #00000000;
+	text-effect:  outline;
+	effect-size:  2;
+	effect-color:  #000000ff;
+	text-align:  center;
+	vertical-align:  center;
+}
+text_msg_query {
+	vertical-align:  bottom;
+	text-align:  center;
+	color:  #e2e935ff;
+	font: "Tahoma" bold 18;
+	background: blank;
+	effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #000000ff;
+}
+button_msg_confirm {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/general/check_large_default.png" scalexy ;
+}
+button_msg_confirm:disable {
+	background: image "gui/v3/general/check_large_gray.png" scalexy ;
+}
+button_msg_confirm:hover {
+	background: image "gui/v3/general/check_large_hover.png" scalexy ;
+}
+button_msg_confirm:down {
+	background: image "gui/v3/general/check_large_pressed.png" scalexy ;
+}
+button_msg_cancel {
+	font: "Tahoma" plain 12;
+	background: image "gui/v3/general/close_large_default.png" scalexy ;
+}
+button_msg_cancel:hover {
+	background: image "gui/v3/general/close_large_hover.png" scalexy ;
+}
+button_msg_cancel:down {
+	background: image "gui/v3/general/close_large_pressed.png" scalexy ;
+}
+
+button.sell {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 65;
+	effect-color:  #000000AA;
+	background: image "gui/v3/general/button_back_default.png" framexy 10 20 10 40;
+}
+
+button.sell:down {
+  background: image "gui/v3/general/button_back_pressed.png" framexy 10 20 10 40;
+}
+
+button.sell:hover {
+  background: image "gui/v3/general/button_back_hover.png" framexy 10 20 10 40;
+}
+
+button.buy {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: right;
+	padding: 0 65 5 0;
+	effect-color:  #000000AA;
+	background: image "gui/v3/general/button_fwd_default.png" framexy 10 40 10 20;
+}
+
+button.buy:down {
+  background: image "gui/v3/general/button_fwd_pressed.png" framexy 10 40 10 20;
+}
+
+button.buy:hover {
+  background: image "gui/v3/general/button_fwd_hover.png" framexy 10 40 10 20;
+}
+
+
+button.undo {
+  background: image "gui/v3/vendor/button_refresh_default.png" scalexy;
+}
+button.undo:hover {
+  background: image "gui/v3/vendor/button_refresh_hover.png" scalexy;
+}
+button.undo:down {
+  background: image "gui/v3/vendor/button_refresh_pressed.png" scalexy;
+}
+
+buy_coins{
+    color: #FF7602;
+    font: "Tahoma" bold 12;
+}
+
+sell_coins{
+    color: #C3FF00;
+    font: "Tahoma" bold 12;
+}
+
+members_only.en{
+    background: image "gui/v3/general/memberstamp_en.png" scalexy;
+}
+
+members_only.fr{
+    background: image "gui/v3/general/memberstamp_fr.png" scalexy;
+}
+
+members_only.no{
+    background: image "gui/v3/general/memberstamp_no.png" scalexy;
+}
+buy_border{
+background: image "gui/v3/vendor/buy_border.png" scalexy;
+}
+
+sell_border{
+background: image "gui/v3/vendor/sell_border.png" scalexy;
+}
+
+button.sell.arrow{
+	background: image "gui/v3/vendor/arrow_medium_left.png" framexy 0 -50 0 -50;
+}
+
+button.buy.arrow{
+	background: image "gui/v3/vendor/arrow_medium_right.png" scalexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}
+
+item.level.label {
+  font: "Tahoma" bold 16;
+  text-align: right;
+  color: #2EFF03;
+  effect-color: #026400;
+  text-effect: "outline";
+  effect-size: 2;
+}

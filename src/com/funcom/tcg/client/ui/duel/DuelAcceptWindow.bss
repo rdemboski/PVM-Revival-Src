@@ -1,0 +1,35 @@
+root {
+background: image "gui/v3/pet_trial_membership/prequit_background.png" scalexy;
+}
+
+button {
+  font: "Screengem" bold 16;
+  text-align: center;
+  color: #FFFFFF;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #2D29A1;
+  background: image "gui/v3/general/button_blue_wide_default.png" framexy 5 5 5 5;
+}
+
+button:hover {
+  background: image "gui/v3/general/button_blue_wide_hover.png" framexy 5 5 5 5;
+}
+
+button:down{
+   background: image "gui/v3/general/button_blue_wide_pressed.png" framexy 5 5 5 5;
+}
+
+message.label{
+  background: solid #00000000;
+  font: "Screengem" bold 16;
+  text-align: center;
+  color: #FFFFFF;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}
+
+duel.label{
+background: image "gui/v3/duel/duel_background.png" scalexy;
+}

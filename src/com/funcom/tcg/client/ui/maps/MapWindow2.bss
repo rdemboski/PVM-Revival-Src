@@ -1,0 +1,358 @@
+/********** CUSTOM WINDOWS **********/
+
+root {
+  color: #FFFFFF;
+  font: "Tahoma" bold 21;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}
+
+
+hover.label {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}
+
+hover.label.map {
+    background: solid #00000000;
+	font: "Tahoma" bold 24;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+    effect-color:  #00000000;
+    text-effect:  outline;
+	effect-size: 0;
+}
+
+tcgcontainer {
+
+ background: image "gui/v2/interface/skin/borderframe_main_blue.png" framexy;
+  padding: 5;
+}
+
+info_label {
+	background: solid #00000000;
+	font: "Screengem" bold 16;
+	color: #FFFFFF;
+	text-effect: "outline";
+	effect-size: 2;
+	effect-color: #00000055;
+}
+
+text_header {
+	background: solid #00000000;
+	font: "Screengem" bold 20;
+	color: #FFFFFF;
+	text-effect: "outline";
+	effect-size: 2;
+	effect-color: #00000055;
+	text-align: center;
+}
+
+button {
+  background: solid #00000000;
+  padding: 3 5;
+  text-align: center;
+  font: "Tahoma" bold 24;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;  
+  color: #ffffff;
+}
+
+map-button {
+  background: image "gui/icons/interface/maps/world_map.png";
+}
+
+map-button:hover {
+  background: image "gui/icons/interface/maps/world_map_hover.png";
+}
+
+map-button:down {
+  background: image "gui/icons/interface/maps/world_map_hover.png";
+}
+
+you-icon-label {
+  icon: image "gui/icons/interface/maps/maparrow.png";
+}
+
+friend-icon-label {
+  icon: image "gui/icons/interface/maps/friends.png";
+}
+
+portal-icon-label {
+  icon: image "gui/icons/interface/maps/mapportal.png";
+}
+
+shop-icon-label {
+  icon: image "gui/icons/interface/maps/vendoricon.png";
+}
+
+area-icon-label {
+  icon: image "gui/icons/interface/maps/mission_area.png";
+}
+
+objective-icon-label {
+  icon: image "gui/icons/interface/maps/target.png";
+}
+
+quest-handin-icon-label {
+  icon: image "gui/icons/interface/maps/quest_ending.png";
+}
+
+available-quest-icon-label {
+  icon: image "gui/icons/interface/maps/available_quest.png";
+}
+
+worldmapcomp {
+  background: image "gui/interface/maps/world_map/world_map.jpg";
+}
+
+button_mountain {
+	background: image "gui/interface/maps/world_map_v2/mountain.png" scalexy;
+}
+
+button_humidjungle_b:hover {
+	background: image "gui/interface/maps/world_map_v2/humidjungle_b_hover.png" scalexy;
+}
+
+button_spiderlair {
+	background: image "gui/interface/maps/world_map_v2/spiderlair.png" scalexy;
+}
+
+button_hubcity {
+	background: image "gui/interface/maps/world_map_v2/hubcity.png" scalexy;
+}
+
+canvas {
+}
+
+button_treetop_a {
+	background: image "gui/interface/maps/world_map_v2/treetop_a.png" scalexy;
+}
+
+button_seacave {
+	background: image "gui/interface/maps/world_map_v2/seacave.png" scalexy;
+}
+
+button_lavaboss:hover {
+	background: image "gui/interface/maps/world_map_v2/lavaboss_hover.png" scalexy;
+}
+
+button_mysteriousseabed_b:hover {
+	background: image "gui/interface/maps/world_map_v2/mysteriousseabed_b_hover.png" scalexy;
+}
+
+button_clouds_a:hover {
+	background: image "gui/interface/maps/world_map_v2/clouds_a_hover.png" scalexy;
+}
+
+button_hauntedruins_a:hover {
+	background: image "gui/interface/maps/world_map_v2/hauntedruins_a_hover.png" scalexy;
+}
+
+button_mysteriousseabed_a {
+	background: image "gui/interface/maps/world_map_v2/mysteriousseabed_a.png" scalexy;
+}
+
+button_clouds_b {
+	background: image "gui/interface/maps/world_map_v2/clouds_b.png" scalexy;
+}
+
+button_hauntedruins_b {
+	background: image "gui/interface/maps/world_map_v2/hauntedruins_b.png" scalexy;
+}
+
+button_riverside:hover {
+	background: image "gui/interface/maps/world_map_v2/riverside_hover.png" scalexy;
+}
+
+button_lava_b {
+	font: "Tahoma" plain 12;
+	background: image "gui/interface/maps/world_map_v2/lava_b.png" scalexy;
+}
+
+button_dryplains_a:hover {
+	background: image "gui/interface/maps/world_map_v2/dryplains_a_hover.png" scalexy;
+}
+
+button_dryplains_b:hover {
+	background: image "gui/interface/maps/world_map_v2/dryplains_b_hover.png" scalexy;
+}
+
+button_toxicswamp_a {
+	background: image "gui/interface/maps/world_map_v2/toxicswamp_a.png" scalexy;
+}
+
+button_hauntedruins_a {
+	background: image "gui/interface/maps/world_map_v2/hauntedruins_a.png" scalexy;
+}
+
+button_riverside {
+	background: image "gui/interface/maps/world_map_v2/riverside.png" scalexy;
+}
+
+button_thawed {
+	background: image "gui/interface/maps/world_map_v2/thawed.png" scalexy;
+}
+
+button_thawed:hover {
+	background: image "gui/interface/maps/world_map_v2/thawed_hover.png" scalexy;
+}
+
+button_clouds_b:hover {
+	background: image "gui/interface/maps/world_map_v2/clouds_b_hover.png" scalexy;
+}
+
+button_lava_a {
+	background: image "gui/interface/maps/world_map_v2/lava_a.png" scalexy;
+}
+
+button_humidjungle_b {
+	background: image "gui/interface/maps/world_map_v2/humidjungle_b.png" scalexy;
+}
+
+button_mountain:hover {
+	background: image "gui/interface/maps/world_map_v2/mountain_hover.png" scalexy;
+}
+
+button_railroadplateau_a {
+	background: image "gui/interface/maps/world_map_v2/railroadplateau_a.png" scalexy;
+}
+
+button_seacave:hover {
+	background: image "gui/interface/maps/world_map_v2/seacave_hover.png" scalexy;
+}
+
+button_mushroom:hover {
+	background: image "gui/interface/maps/world_map_v2/mushroom_hover.png" scalexy;
+}
+
+button_railroadplateau_b:hover {
+	background: image "gui/interface/maps/world_map_v2/railroadplateau_b_hover.png" scalexy;
+}
+
+button_lavaboss {
+	background: image "gui/interface/maps/world_map_v2/lavaboss.png" scalexy;
+}
+
+button_dryplains_a {
+	background: image "gui/interface/maps/world_map_v2/dryplains_a.png" scalexy;
+}
+
+button_dryplains_b {
+	background: image "gui/interface/maps/world_map_v2/dryplains_b.png" scalexy;
+}
+
+button_lava_b:hover {
+	background: image "gui/interface/maps/world_map_v2/lava_b_hover.png" scalexy;
+}
+
+button_charred:hover {
+	background: image "gui/interface/maps/world_map_v2/charred_hover.png" scalexy;
+}
+
+button_herozones:hover {
+	background: image "gui/interface/maps/world_map_v2/herozones_hover.png" scalexy;
+}
+
+button_toxicswamp_b:hover {
+	background: image "gui/interface/maps/world_map_v2/toxicswamp_b_hover.png" scalexy;
+}
+
+main_container {
+	background: image "gui/interface/maps/world_map_v2/world_map.jpg" scalexy;
+}
+
+button_herozones {
+	background: image "gui/interface/maps/world_map_v2/herozones.png" scalexy;
+}
+
+button_hauntedruins_b:hover {
+	background: image "gui/interface/maps/world_map_v2/hauntedruins_b_hover.png" scalexy;
+}
+
+button_hubcity:hover {
+	background: image "gui/interface/maps/world_map_v2/hubcity_hover.png" scalexy;
+}
+
+button_mushroom {
+	background: image "gui/interface/maps/world_map_v2/mushroom.png" scalexy;
+}
+
+button_humidjungle_a {
+	background: image "gui/interface/maps/world_map_v2/humidjungle_a.png" scalexy;
+}
+
+button_charred {
+	background: image "gui/interface/maps/world_map_v2/charred.png" scalexy;
+}
+
+button_toxicswamp_a:hover {
+	background: image "gui/interface/maps/world_map_v2/toxicswamp_a_hover.png" scalexy;
+}
+
+button_treetop_b {
+	background: image "gui/interface/maps/world_map_v2/treetop_b.png" scalexy;
+}
+
+button_toxicswamp_c {
+	background: image "gui/interface/maps/world_map_v2/toxicswamp_c.png" scalexy;
+}
+
+button_railroadplateau_b {
+	background: image "gui/interface/maps/world_map_v2/railroadplateau_b.png" scalexy;
+}
+
+button_clouds_a {
+	background: image "gui/interface/maps/world_map_v2/clouds_a.png" scalexy;
+}
+
+button_toxicswamp_c:hover {
+	background: image "gui/interface/maps/world_map_v2/toxicswamp_c_hover.png" scalexy;
+}
+
+button_railroadplateau_a:hover {
+	background: image "gui/interface/maps/world_map_v2/railroadplateau_a_hover.png" scalexy;
+}
+
+button_treetop_b:hover {
+	background: image "gui/interface/maps/world_map_v2/treetop_b_hover.png" scalexy;
+}
+
+button_lava_a:hover {
+	background: image "gui/interface/maps/world_map_v2/lava_a_hover.png" scalexy;
+}
+
+button_treetop_a:hover {
+	background: image "gui/interface/maps/world_map_v2/treetop_a_hover.png" scalexy;
+}
+
+button_toxicswamp_b {
+	background: image "gui/interface/maps/world_map_v2/toxicswamp_b.png" scalexy;
+}
+
+button_spiderlair:hover {
+	background: image "gui/interface/maps/world_map_v2/spiderlair_hover.png" scalexy;
+}
+
+button_humidjungle_a:hover {
+	background: image "gui/interface/maps/world_map_v2/humidjungle_a_hover.png" scalexy;
+}
+
+button_mysteriousseabed_a:hover {
+	background: image "gui/interface/maps/world_map_v2/mysteriousseabed_a_hover.png" scalexy;
+}
+
+button_mysteriousseabed_b {
+	background: image "gui/interface/maps/world_map_v2/mysteriousseabed_b.png" scalexy;
+}

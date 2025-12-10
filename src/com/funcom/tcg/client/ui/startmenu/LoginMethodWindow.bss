@@ -1,0 +1,125 @@
+root {
+background: solid #00000000;
+  color: #FFC406;
+  text-align: center;
+  vertical-align: center;
+}
+
+window {
+	background: image "gui/v3/char_creation/blue-background.jpg" scalexy;
+}
+
+label.logo {
+  background: image "gui/v2/interface/login/monsterlogo.png" scalexy;
+}
+
+button {
+    font: "Screengem" bold 24;
+    background: image "gui/v3/char_creation/container_bgd.png" scalexy;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-size: 3;
+    effect-color: #000000;
+}
+
+button:hover {
+    background: image "gui/v3/char_creation/container_bgd_hover.png" scalexy;
+}
+
+button:down {
+    background: image "gui/v3/char_creation/container_bgd_pressed.png" scalexy;
+}
+
+button.options {
+	color:  #ffffff;
+	font: "Tahoma" bold 20;
+	background: image "gui/v3/char_creation/play_default.png" framexy 10 40 10 20;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 0 20;
+	effect-color:  #000000ff;
+}
+
+button.options:hover {
+	background: image "gui/v3/char_creation/play_hover.png" framexy 10 40 10 20;
+}
+
+button.options:down {
+	background: image "gui/v3/char_creation/play_pressed.png" framexy 10 40 10 20;
+}
+
+label.returning.en{
+    font: "Screengem" bold 36;
+    background: solid #00000000;
+    color: #FD9706;
+    text-effect: "outline";
+    effect-size: 4;
+    effect-color: #000000;
+    background: image "gui/v3/start_menu/loginmethod_returning_en.png" scalexy;
+}
+
+label.new.en{
+    font: "Screengem" bold 36;
+    //background: solid #00000000;
+    color: #AEF80F;
+    text-effect: "outline";
+    effect-size: 4;
+    effect-color: #000000;
+	background: image "gui/v3/start_menu/loginmethod_newplayer_en.png" scalexy;
+}
+
+label.returning.fr{
+    font: "Screengem" bold 36;
+    background: solid #00000000;
+    color: #FD9706;
+    text-effect: "outline";
+    effect-size: 4;
+    effect-color: #000000;
+    background: image "gui/v3/start_menu/loginmethod_returning_fr.png" scalexy;
+}
+
+label.new.fr{
+    font: "Screengem" bold 36;
+    //background: solid #00000000;
+    color: #AEF80F;
+    text-effect: "outline";
+    effect-size: 4;
+    effect-color: #000000;
+	background: image "gui/v3/start_menu/loginmethod_newplayer_fr.png" scalexy;
+}
+
+label.returning.no{
+    font: "Screengem" bold 36;
+    background: solid #00000000;
+    color: #FD9706;
+    text-effect: "outline";
+    effect-size: 4;
+    effect-color: #000000;
+    background: image "gui/v3/start_menu/loginmethod_returning_no.png" scalexy;
+}
+
+label.new.no{
+    font: "Screengem" bold 36;
+    //background: solid #00000000;
+    color: #AEF80F;
+    text-effect: "outline";
+    effect-size: 4;
+    effect-color: #000000;
+	background: image "gui/v3/start_menu/loginmethod_newplayer_no.png" scalexy;
+}
+
+
+close-button {
+  background: image "gui/v3/general/close_large_default.png" framexy 5 5 5 5;
+}
+close-button:hover {
+  background: image "gui/v3/general/close_large_hover.png" framexy 5 5 5 5;
+}
+close-button:down {
+  background: image "gui/v3/general/close_large_pressed.png" framexy 5 5 5 5;
+}
+
+close-button:disabled {
+  background: image "gui/v3/general/close_large_gray.png" framexy 5 5 5 5;
+}

@@ -1,0 +1,160 @@
+root{
+    color: #FFFFFF;
+  font: "Screengem" bold 18;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+  tooltip:tooltip;
+}
+
+window{
+    background: solid #00000000;
+}
+
+top_window{
+    background: solid #000000;
+}
+
+bottom_window{
+    background: solid #000000;
+}
+
+progress.health.player1 {
+  progress_list: "gui/v3/duel/health_player1.png" scalexy;
+  active_progress_list: "gui/v3/duel/health_diff_player1.png" scalexy;
+}
+
+progress.health.player2 {
+  progress_list: "gui/v3/duel/health_player2.png" scalexy;
+  active_progress_list: "gui/v3/duel/health_diff_player2.png" scalexy;
+}
+
+progress.health.bgd {
+  background: solid #000000;
+}
+
+progress.mana.player1 {
+  progress_list: "gui/v3/duel/mana_player1.png" scalexy;
+  active_progress_list: "gui/v3/duel/mana_diff_player1.png" scalexy;
+}
+
+progress.mana.bgd.player1 {
+  background: image "gui/v3/duel/mana_bgd_player1.png" scalexy;
+}
+
+progress.mana.player2 {
+  progress_list: "gui/v3/duel/mana_player2.png" scalexy;
+  active_progress_list: "gui/v3/duel/mana_diff_player2.png" scalexy;
+}
+
+progress.mana.bgd.player2 {
+  background: image "gui/v3/duel/mana_bgd_player2.png" scalexy;
+}
+
+progress.holder{
+    background: image "gui/v3/duel/progress_holder.png" scalexy;
+}
+
+player1.name {
+	font: "Tahoma" bold 14;
+    text-align: left;
+    vertical-align: center;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+	background: solid #00000000;
+}
+
+player2.name{
+    font: "Tahoma" bold 14;
+    text-align: right;
+    vertical-align: center;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+	background: solid #00000000;
+
+}
+
+label_countdown{
+    font: "Tahoma" bolditalic 100;
+    text-align: center;
+    color: #FF6A00;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 6;
+    background: solid #00000000;
+}
+
+label{
+    font: "Tahoma" bold 12;
+    color: #FFFFFF;
+    text-effect: "outline";
+    effect-color: #000000AA;
+    effect-size: 2;
+    vertical-align: center;
+    text-align: left;
+}
+
+giveup_button {
+	color:  #ffffff;
+	font: "Tahoma" bold 14;
+	effect-size:  2;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 40;
+	effect-color:  #000000ff;
+	background: image "gui/v3/general/button_back_default.png" scalexy;
+}
+
+giveup_button:down {
+  background: image "gui/v3/general/button_back_pressed.png" scalexy;
+}
+
+giveup_button:hover {
+  background: image "gui/v3/general/button_back_hover.png" scalexy;
+}
+
+pet_holder{
+    background: image "gui/v3/duel/pet_holder.png" scalexy;
+}
+
+
+pet_bgd_player1{
+    background: image "gui/v3/duel/pet_bgd_player1.png" scalexy;
+}
+
+pet_bgd_player2{
+    background: image "gui/v3/duel/pet_bgd_player2.png" scalexy;
+}
+
+button_pet_select{
+    background: solid #00000000;
+}
+
+button_pet_select:hover{
+    background: image "gui/v3/duel/pet_hover.png" scalexy;
+}
+
+button_pet_select:pressed{
+    background: image "gui/v3/duel/pet_selected.png" scalexy;
+}
+
+button_pet_select:selected{
+    background: image "gui/v3/duel/pet_selected.png" scalexy;
+}
+
+button_pet_select:select_hover{
+    background: image "gui/v3/duel/pet_selected.png" scalexy;
+}
+
+tooltip {
+    background: image "gui/v3/general/tooltip.png" framexy 6 9 5 10;
+	font: "Tahoma" bold 14;
+    text-align: center;
+    vertical-align: center;
+    color: #ffffff;
+    padding: 10;
+}

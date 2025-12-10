@@ -1,0 +1,70 @@
+tutorial-info-label{
+    background: image "gui/v3/quest_gui/tutorial_bubble_t.png" scalexy;
+    font: "Comic Sans MS" bold 16;
+    color: #000000;
+    text-align: left;
+    padding: 15 140 0 140;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #FFFFFF;
+}
+
+next-button{
+    background: image "gui/v3/quest_gui/icon_tutorial_next.png" scalexy;
+}
+next-button:hover{
+    background: image "gui/v3/quest_gui/icon_tutorial_next_hover.png" scalexy;
+}
+
+next-button:down{
+    background: image "gui/v3/quest_gui/icon_tutorial_next.png" scalexy;
+}
+
+next-button:disabled{
+    background: image "gui/v3/quest_gui/icon_tutorial_next_disabled.png" scalexy;
+}
+
+confirm-button{
+    background: image "gui/v3/general/check_large_default.png" scalexy;
+}
+
+confirm-button:hover{
+    background: image "gui/v3/general/check_large_hover.png" scalexy;
+}
+
+confirm-button:down{
+    background: image "gui/v3/general/check_large_pressed.png" scalexy;
+}
+
+confirm-button:disabled{
+    background: image "gui/v3/general/check_large_gray.png" scalexy;
+}
+
+
+prev-button{
+    background: image "gui/v3/quest_gui/icon_tutorial_prev.png" scalexy;
+}
+prev-button:hover{
+    background: image "gui/v3/quest_gui/icon_tutorial_prev_hover.png" scalexy;
+}
+prev-button:down{
+    background: image "gui/v3/quest_gui/icon_tutorial_prev.png" scalexy;
+}
+
+prev-button:disabled{
+    background: image "gui/v3/quest_gui/icon_tutorial_prev_disabled.png" scalexy;
+}
+
+button-icon {
+  /*background: image "gui/v2/interface/skin/overlay_shadow_pause.png" scalexy;*/
+
+}
+
+page-number-label{
+    font: "Comic Sans MS" bold 12;
+    color: #000000;
+    text-align: left;
+    text-effect: "outline";
+    effect-size: 2;
+    effect-color: #FFFFFF;
+}

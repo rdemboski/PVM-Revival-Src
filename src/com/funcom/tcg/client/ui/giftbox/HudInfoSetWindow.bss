@@ -1,0 +1,13 @@
+root {
+  /* window font color */
+  color: #FFFFFF;
+  font: "Tahoma" bold 21;
+  text-effect: "outline";
+  effect-size: 2;
+  effect-color: #000000;
+}
+
+hudwindow {
+  /*background: "solid" #ffffff;*/
+  padding: 0 0 0 4;
+}

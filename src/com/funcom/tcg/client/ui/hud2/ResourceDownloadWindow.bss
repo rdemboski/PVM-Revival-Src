@@ -1,0 +1,17 @@
+label.percent {
+  text-align: left; // XX = left|center|right
+  vertical-align: center; // XX = top|center|bottom
+  /* window font color */
+  color: #FFFFFF;
+  font: "Screengem" plain 12;
+}
+
+bar1 {
+  background_list: image "gui/v2/icons/interface/loading/left_bg.png" scalexy;
+  progress_list: "gui/v2/icons/interface/loading/left_highlight.png" scalexy;
+}
+
+bar2 {
+  background_list: image "gui/v2/icons/interface/loading/right_bg.png" scalexy;
+  progress_list: "gui/v2/icons/interface/loading/right_highlight.png" scalexy;
+}

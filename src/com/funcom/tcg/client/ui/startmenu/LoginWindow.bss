@@ -1,0 +1,117 @@
+root {
+/*background: solid #FF0000FF;*/
+/*border:  1 solid #FFFFFFFF;*/
+/* window font color */
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: center;
+}
+
+window {
+	background: image "gui/v3/char_creation/blue-background.jpg" scalexy;
+}
+
+label {
+    font: "Tahoma" bold 20;
+    vertical-align:  center;
+	text-align:  left;
+	color:  #ffffff;
+	effect-size:  3;
+	text-effect:  outline;
+	effect-color:  #00000055;
+}
+
+text.charactername {
+  background: image "gui/v2/interface/login/input_right_blue.png" framexy 5 5 5 5;
+  font: "Screengem" plain 18;
+  color: #FFFFFF;
+  text-align: left;
+  vertical-align: center;
+  padding: 0 5 10 15;
+}
+
+
+text.charactername:hover {
+  background: image "gui/v2/interface/login/input_right_white.png" framexy 5 5 5 5;  
+
+}
+
+text.password {
+  background: image "gui/v2/interface/login/input_left_blue.png" framexy 5 5 5 5;
+  font: "Screengem" plain 18;
+  color: #FFFFFF;
+  text-align: left;
+  vertical-align: center;
+  padding: 0 5 5 15;
+}
+
+button.play {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	background: image "gui/v3/char_creation/play_default.png" framexy 10 40 10 20;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 20;
+	effect-color:  #000000ff;
+}
+
+button.play:hover {
+	background: image "gui/v3/char_creation/play_hover.png" framexy 10 40 10 20;
+}
+
+button.play:down {
+	background: image "gui/v3/char_creation/play_pressed.png" framexy 10 40 10 20;
+}
+
+
+button.back {
+	color:  #ffffff;
+	font: "Tahoma" bold 30;
+	effect-size:  4;
+	text-effect:  outline;
+	text-align: left;
+	padding: 0 0 5 50;
+	effect-color:  #000000ff;
+	background: image "gui/v3/general/button_back_default.png" framexy 10 20 10 40;
+}
+
+button.back:down {
+  background: image "gui/v3/general/button_back_pressed.png" framexy 10 20 10 40;
+}
+
+button.back:hover {
+  background: image "gui/v3/general/button_back_hover.png" framexy 10 20 10 40;
+}
+
+label.bgd {
+  background: image "gui/v2/interface/login/login_bgd.png" scalexy;
+}
+
+label.title{
+    font: "Tahoma" bold 20;
+    effect-size:  3;
+	text-effect:  outline;
+	effect-color:  #00000055;
+    text-align: center;
+    vertical-align: center;
+}
+
+
+button.forgotpass{
+    font: "Tahoma" bold 12;
+    background: solid #00000000;
+    color: #000000;
+    effect-size:  2;
+	text-effect:  outline;
+	effect-color:  #ffffff55;
+
+    icon: image "gui/v2/interface/login/forgotpassword-normal.png";
+    text-align: right;
+    vertical-align: center;
+}
+
+button.forgotpass:hover{
+    color: #444444;
+    icon: image "gui/v2/interface/login/forgotpassword-hover.png";
+}

@@ -1,0 +1,15 @@
+hslider {
+  background: image "gui/v2/interface/skin/borderframe_main_blue.png" framexy 5;
+  icon: image "gui/v2/interface/skin/button_main_blue_pressed.png";
+}
+root {
+  color: #BED4FF;
+  font: "Screengem" plain 14;
+}
+
+checkbox{
+    icon: image "gui/v2/interface/skin/button_main_blue.png";
+}
+checkbox:selected{
+    icon: image "gui/v2/interface/skin/button_main_red.png";
+}

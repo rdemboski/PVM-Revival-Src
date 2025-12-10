@@ -1,0 +1,5 @@
+TEXT=txt
+IMAGE=png,gif,jpg,jpeg,tif,bmp
+XML=xml
+SOUND=ogg,mp3,wav,au
+JME=jme
