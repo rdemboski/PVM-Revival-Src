@@ -14,11 +14,11 @@
 /*    */ public class DefaultImageExtractableBStyleSheetParser
 /*    */   extends DefaultBStyleSheetParser
 /*    */ {
-/*    */   protected Object parseIcon(ArrayList<String> args) {
+/*    */   protected Object parseIcon(ArrayList args) {
 /* 18 */     IconProperty iprop = new ImageExtractableIconProperty();
-/* 19 */     iprop.type = args.get(0);
+/* 19 */     iprop.type = (String)args.get(0);
 /* 20 */     if (iprop.type.equals("image")) {
-/* 21 */       iprop.ipath = args.get(1);
+/* 21 */       iprop.ipath = (String)args.get(1);
 /* 22 */     } else if (iprop.type.equals("blank")) {
 /* 23 */       iprop.width = BStyleSheetParsingUtil.parseInt(args.get(1));
 /* 24 */       iprop.height = BStyleSheetParsingUtil.parseInt(args.get(2));
@@ -29,15 +29,15 @@
 /*    */   }
 /*    */ 
 /*    */   
-/*    */   protected Object parseBackground(ArrayList<String> args) {
+/*    */   protected Object parseBackground(ArrayList args) {
 /* 33 */     BackgroundProperty bprop = new ImageExtractableBackgroundProperty();
-/* 34 */     bprop.type = args.get(0);
+/* 34 */     bprop.type = (String)args.get(0);
 /* 35 */     if (bprop.type.equals("solid")) {
-/* 36 */       bprop.color = BStyleSheetParsingUtil.parseColor(args.get(1));
+/* 36 */       bprop.color = BStyleSheetParsingUtil.parseColor((String)args.get(1));
 /* 37 */     } else if (bprop.type.equals("image")) {
-/* 38 */       bprop.ipath = args.get(1);
+/* 38 */       bprop.ipath = (String)args.get(1);
 /* 39 */       if (args.size() > 2) {
-/* 40 */         String scaleModeStr = args.get(2);
+/* 40 */         String scaleModeStr = (String)args.get(2);
 /* 41 */         ImageBackgroundMode scaleMode = ImageBackgroundMode.fromStylesheetAttributeString(scaleModeStr);
 /*    */ 
 /*    */ 

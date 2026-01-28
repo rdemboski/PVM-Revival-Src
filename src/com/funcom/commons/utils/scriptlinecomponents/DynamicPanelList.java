@@ -9,7 +9,6 @@
 /*     */ import javax.swing.table.DefaultTableModel;
 /*     */ import javax.swing.table.TableCellEditor;
 /*     */ import javax.swing.table.TableCellRenderer;
-/*     */ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 /*     */ 
 /*     */ 
 /*     */ 
@@ -125,7 +124,7 @@
 /*     */ 
 /*     */         
 /*     */         public void remove() {
-/* 128 */           throw new NotImplementedException();
+/* 128 */           throw new UnsupportedOperationException();
 /*     */         }
 /*     */       };
 /*     */   }

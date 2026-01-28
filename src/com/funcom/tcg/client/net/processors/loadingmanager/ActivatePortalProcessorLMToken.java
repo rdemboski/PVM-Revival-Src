@@ -148,7 +148,7 @@
 /*     */     
 /* 149 */     switch (activatePortalMessage.getPortalType())
 /*     */     { case CUSTOM_PORTAL:
-/* 151 */         document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_xml"));
+/* 151 */         Document document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_xml"));
 /*     */ 
 /*     */ 
 /*     */ 
@@ -161,7 +161,7 @@
 /*     */ 
 /*     */ 
 /*     */         
-/* 164 */         xmlModularDescription = new XmlModularDescription(document);
+/* 164 */         XmlModularDescription xmlModularDescription = new XmlModularDescription(document);
 /* 165 */         return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager());case RETURN_POINT: document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("return_point_xml")); xmlModularDescription = new XmlModularDescription(document); return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager());case TOWN_PORTAL: document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_xml")); xmlModularDescription = new XmlModularDescription(document); return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager()); }  Document document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_other_xml")); XmlModularDescription xmlModularDescription = new XmlModularDescription(document); return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager());
 /*     */   }
 /*     */ }

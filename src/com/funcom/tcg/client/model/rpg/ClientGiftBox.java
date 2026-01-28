@@ -4,6 +4,7 @@
 /*    */ import com.funcom.tcg.client.TcgGame;
 /*    */ import com.funcom.tcg.client.net.NetworkHandler;
 /*    */ import com.funcom.tcg.client.ui.Localizer;
+import com.funcom.tcg.client.ui.giftbox.HudInfoAction;
 /*    */ import com.funcom.tcg.client.ui.giftbox.HudInfoModel;
 /*    */ import com.funcom.tcg.net.message.GiftBoxOpenMessage;
 /*    */ import org.apache.log4j.Level;

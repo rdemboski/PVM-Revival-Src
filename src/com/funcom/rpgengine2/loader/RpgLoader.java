@@ -1,64 +1,103 @@
 /*      */ package com.funcom.rpgengine2.loader;
+import com.funcom.commons.configuration.ExtProperties;
 /*      */ import com.funcom.commons.dfx.DireEffectDescription;
 /*      */ import com.funcom.commons.dfx.DireEffectDescriptionFactory;
+import com.funcom.commons.dfx.EffectHandlerFactory;
 /*      */ import com.funcom.commons.dfx.GameplayEffectDescription;
 /*      */ import com.funcom.commons.dfx.NoSuchDFXException;
+import com.funcom.commons.localization.LocalizationException;
+import com.funcom.rpgengine2.DefaultFactionEnum;
 /*      */ import com.funcom.rpgengine2.RPGFactionFilterType;
+import com.funcom.rpgengine2.Stat;
+import com.funcom.rpgengine2.StatsManager;
 /*      */ import com.funcom.rpgengine2.abilities.Ability;
+import com.funcom.rpgengine2.abilities.AbilityContainer;
+import com.funcom.rpgengine2.abilities.BuffType;
 /*      */ import com.funcom.rpgengine2.abilities.movement.MovementManipulatorFactory;
 /*      */ import com.funcom.rpgengine2.abilities.projectile.ProjectileFactory;
+import com.funcom.rpgengine2.abilities.projectileReflection.ProjectileReflectionFactory;
 /*      */ import com.funcom.rpgengine2.abilities.projectileReflection.ProjectileReflectorFactory;
 /*      */ import com.funcom.rpgengine2.abilities.targetedeffect.TargetedEffectFactory;
 /*      */ import com.funcom.rpgengine2.abilities.valueaccumulator.ValueAccumulatorFactory;
 /*      */ import com.funcom.rpgengine2.abilities.values.GeneralValueParser;
+import com.funcom.rpgengine2.buffs.RemoveInfiniteBuffFactory;
 /*      */ import com.funcom.rpgengine2.checkpoints.CheckpointDescription;
 /*      */ import com.funcom.rpgengine2.checkpoints.CheckpointManager;
 /*      */ import com.funcom.rpgengine2.combat.AbstractRectShape;
 /*      */ import com.funcom.rpgengine2.combat.AbstractShape;
+import com.funcom.rpgengine2.combat.AllRectShape;
+import com.funcom.rpgengine2.combat.AllShape;
 /*      */ import com.funcom.rpgengine2.combat.Element;
+import com.funcom.rpgengine2.combat.ElementDescription;
 /*      */ import com.funcom.rpgengine2.combat.ElementManager;
+import com.funcom.rpgengine2.combat.SelfShape;
+import com.funcom.rpgengine2.combat.Shape;
 /*      */ import com.funcom.rpgengine2.combat.ShapeDataEvaluator;
 /*      */ import com.funcom.rpgengine2.combat.ShapeManager;
+import com.funcom.rpgengine2.combat.SingleRectShape;
+import com.funcom.rpgengine2.combat.SingleShape;
 /*      */ import com.funcom.rpgengine2.dfx.DFXValidity;
 /*      */ import com.funcom.rpgengine2.dfx.ItemDFXHandlerFactory;
 /*      */ import com.funcom.rpgengine2.equipment.ArchType;
+import com.funcom.rpgengine2.equipment.ArchtypeManager;
 /*      */ import com.funcom.rpgengine2.equipment.EquipmentBuilder;
 /*      */ import com.funcom.rpgengine2.equipment.PetArchType;
+import com.funcom.rpgengine2.equipment.PetArchtypeManager;
 /*      */ import com.funcom.rpgengine2.equipment.PetEquipmentBuilder;
+import com.funcom.rpgengine2.items.DefaultItemFactory;
 /*      */ import com.funcom.rpgengine2.items.ItemDescription;
 /*      */ import com.funcom.rpgengine2.items.ItemFactory;
 /*      */ import com.funcom.rpgengine2.items.ItemManager;
+import com.funcom.rpgengine2.items.ItemSetDesc;
 /*      */ import com.funcom.rpgengine2.items.ItemSetManager;
 /*      */ import com.funcom.rpgengine2.items.ItemType;
 /*      */ import com.funcom.rpgengine2.loot.LevelLootDescription;
 /*      */ import com.funcom.rpgengine2.loot.LootDescription;
 /*      */ import com.funcom.rpgengine2.loot.LootManager;
 /*      */ import com.funcom.rpgengine2.loot.LootType;
+import com.funcom.rpgengine2.loot.MonsterGroupLoot;
 /*      */ import com.funcom.rpgengine2.monsters.MonsterDescription;
 /*      */ import com.funcom.rpgengine2.monsters.MonsterManager;
 /*      */ import com.funcom.rpgengine2.pets.PetDescription;
 /*      */ import com.funcom.rpgengine2.pets.PetManager;
 /*      */ import com.funcom.rpgengine2.pickupitems.AbstractPickUpDescription;
+import com.funcom.rpgengine2.pickupitems.DefaultPickUpType;
+import com.funcom.rpgengine2.pickupitems.PickUpManager;
 /*      */ import com.funcom.rpgengine2.pickupitems.PickupType;
 /*      */ import com.funcom.rpgengine2.portals.CustomPortalManager;
 /*      */ import com.funcom.rpgengine2.portkey.PortkeyManager;
+import com.funcom.rpgengine2.quests.DefaultQuestFactory;
 /*      */ import com.funcom.rpgengine2.quests.QuestDescription;
 /*      */ import com.funcom.rpgengine2.quests.QuestFactory;
+import com.funcom.rpgengine2.quests.QuestManager;
 /*      */ import com.funcom.rpgengine2.quests.objectives.CollectObjective;
+import com.funcom.rpgengine2.quests.objectives.CollectPetObjective;
+import com.funcom.rpgengine2.quests.objectives.FinishMissionObjective;
+import com.funcom.rpgengine2.quests.objectives.GoToObjective;
+import com.funcom.rpgengine2.quests.objectives.HandInQuestObjective;
+import com.funcom.rpgengine2.quests.objectives.KillObjective;
 /*      */ import com.funcom.rpgengine2.quests.objectives.ObjectiveSpecialType;
+import com.funcom.rpgengine2.quests.objectives.ObjectiveType;
+import com.funcom.rpgengine2.quests.objectives.PetLevelObjective;
 /*      */ import com.funcom.rpgengine2.quests.objectives.QuestObjective;
 /*      */ import com.funcom.rpgengine2.quests.objectives.RegistrationObjective;
+import com.funcom.rpgengine2.quests.objectives.SpecialAmountObjective;
+import com.funcom.rpgengine2.quests.objectives.SpecialTutorialObjective;
 /*      */ import com.funcom.rpgengine2.quests.objectives.SubscriptionObjective;
 /*      */ import com.funcom.rpgengine2.quests.objectives.UseItemObjective;
 /*      */ import com.funcom.rpgengine2.regions.RegionManager;
 /*      */ import com.funcom.rpgengine2.speach.SpeachContext;
+import com.funcom.rpgengine2.speach.SpeachManager;
 /*      */ import com.funcom.rpgengine2.startupequipment.StartUpEquipmentManager;
 /*      */ import com.funcom.rpgengine2.vendor.VendorManager;
 /*      */ import com.funcom.rpgengine2.waypoints.WaypointManager;
 /*      */ import java.io.IOException;
 /*      */ import java.util.HashMap;
+import java.util.LinkedList;
 /*      */ import java.util.List;
 /*      */ import java.util.Map;
+
+import org.apache.log4j.Logger;
 /*      */ 
 /*      */ public class RpgLoader {
 /*   64 */   protected static final Logger LOG = Logger.getLogger(RpgLoader.class.getName());
@@ -924,14 +963,15 @@
 /*      */     
 /*  925 */     for (ItemDescription itemDescription : itemDescriptions) {
 /*  926 */       switch (itemDescription.getItemType().getCategory()) {
-/*      */ 
-/*      */         
-/*      */         case TOTAL_DAMAGE_TAKEN:
-/*      */         case TOTAL_DAMAGE_DEALT:
+/*      */         case SPECIAL:
+/*      */         case UNKNOWN:
 /*  931 */           if (itemDescription.getAbilities().isEmpty()) {
 /*  932 */             this.configErrors.addError("Empty Item", "No abilities assigned: itemId='" + itemDescription.getId() + "' tier=" + itemDescription.getTier());
 /*      */           }
-/*      */       } 
+/*      */           break;
+                   default:
+                     break;       
+                } 
 /*      */     } 
 /*      */   }
 /*      */ 
@@ -1135,7 +1175,7 @@
 /* 1135 */           ((CollectObjective)questObjective).addCollectId(collectId);
 /*      */         } 
 /*      */       } else {
-/* 1138 */         SubscriptionObjective subscriptionObjective; if (!killId.isEmpty()) {
+/* 1138 */         SubscriptionObjective subscriptionObjective = null; if (!killId.isEmpty()) {
 /* 1139 */           KillObjective killObjective = new KillObjective(objectiveId, questId, killId, Integer.parseInt(killAmount));
 /* 1140 */         } else if (!collectId.isEmpty()) {
 /* 1141 */           CollectObjective collectObjective = new CollectObjective(objectiveId, questId, collectId, Integer.parseInt(collectAmount));

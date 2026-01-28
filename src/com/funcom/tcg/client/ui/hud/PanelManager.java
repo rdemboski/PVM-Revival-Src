@@ -17,6 +17,7 @@
 /*     */ import com.funcom.tcg.client.ui.mainmenu.MainMenuWindow;
 /*     */ import com.funcom.tcg.client.ui.mainmenu.OptionsWindow;
 /*     */ import com.funcom.tcg.client.ui.maps.MapWindow2;
+import com.funcom.tcg.client.ui.pets3.PetsWindow;
 /*     */ import com.funcom.tcg.client.ui.quest2.QuestWindow2;
 /*     */ import com.funcom.tcg.client.ui.vendor.VendorFullWindow;
 /*     */ import com.funcom.tcg.client.ui.waypoint.WaypointWindow;
@@ -28,6 +29,7 @@
 /*     */ import java.util.ArrayList;
 /*     */ import java.util.HashMap;
 /*     */ import java.util.Iterator;
+import java.util.LinkedList;
 /*     */ import java.util.List;
 /*     */ import java.util.Map;
 /*     */ 

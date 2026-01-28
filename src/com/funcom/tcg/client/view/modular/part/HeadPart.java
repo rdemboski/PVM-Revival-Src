@@ -65,7 +65,7 @@
 /*     */             public List<String> getTextureLayers() {
 /*  66 */               ClientDescriptionVisual skinVisual = HeadPart.this.visualRegistry.getDescriptionVisualForClassID(ClientDescriptionType.SKINCOLOR, HeadPart.this.playerDescription.getSkinColorId());
 /*     */               
-/*  68 */               return Arrays.asList(new String[] { skinVisual.getTexturePath(HeadPart.access$100(this.this$0).getGender()) });
+/*  68 */               return Arrays.asList(new String[] { skinVisual.getTexturePath(HeadPart.this.playerDescription.getGender()) });
 /*     */             }
 /*     */ 
 /*     */             
@@ -90,7 +90,7 @@
 /*     */             public List<String> getTextureLayers() {
 /*  91 */               ClientDescriptionVisual eyeVisual = HeadPart.this.visualRegistry.getDescriptionVisualForClassID(ClientDescriptionType.EYECOLOR, HeadPart.this.playerDescription.getEyeColorId());
 /*     */               
-/*  93 */               return Arrays.asList(new String[] { eyeVisual.getTexturePath(HeadPart.access$100(this.this$0).getGender()) });
+/*  93 */               return Arrays.asList(new String[] { eyeVisual.getTexturePath(HeadPart.this.playerDescription.getGender()) });
 /*     */             }
 /*     */ 
 /*     */             
@@ -132,7 +132,7 @@
 /*     */ 
 /*     */     
 /*     */     public List<String> getTextureLayers() {
-/* 135 */       return Arrays.asList(new String[] { this.faceVisual.getTexturePath(HeadPart.access$100(this.this$0).getGender()) });
+/* 135 */       return Arrays.asList(new String[] { this.faceVisual.getTexturePath(HeadPart.this.playerDescription.getGender()) });
 /*     */     }
 /*     */   }
 /*     */ }

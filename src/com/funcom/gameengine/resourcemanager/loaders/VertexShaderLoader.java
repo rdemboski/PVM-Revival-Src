@@ -15,7 +15,7 @@
 /* 15 */     super(resourceType);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 20 */     BufferedInputStream bis = null;
 /*    */     try {
@@ -28,7 +28,7 @@
 /* 28 */       vert.load(new String(data));
 /* 29 */       vert.setEnabled(true);
 /*    */       
-/* 31 */       managedResource.setResource(vert);
+/* 31 */       ((ManagedResource<VertexProgramState>)managedResource).setResource(vert);
 /* 32 */     } catch (MalformedURLException e) {
 /* 33 */       throw new LoadException(getResourceManager(), managedResource, e);
 /* 34 */     } catch (IOException e) {

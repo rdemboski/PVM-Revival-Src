@@ -17,12 +17,12 @@
 /* 17 */     super(resourceType);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 22 */     InputStream inputStream = null;
 /*    */     try {
 /* 24 */       inputStream = getFileInputStream(managedResource.getName());
-/* 25 */       managedResource.setResource(loadParticles(inputStream));
+/* 25 */       ((ManagedResource<Spatial>)managedResource).setResource(loadParticles(inputStream));
 /* 26 */     } catch (IOException e) {
 /* 27 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

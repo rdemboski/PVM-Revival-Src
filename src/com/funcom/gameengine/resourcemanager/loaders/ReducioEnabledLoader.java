@@ -38,7 +38,9 @@
 /*    */ 
 /*    */       
 /* 40 */       closeSafely(alphaStream, managedResource);
-/*    */     } 
+/*    */     }
+
+/*    */     return null;
 /*    */   }
 /*    */ 
 /*    */   

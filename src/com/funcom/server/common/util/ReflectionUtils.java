@@ -140,11 +140,11 @@
 /* 140 */         Class<?> clazz = Class.forName(className);
 /*     */         
 /* 142 */         if (clazz != null && targetSuperClass.isAssignableFrom(clazz)) {
-/*     */ 
-/*     */ 
-/*     */           
-/* 146 */           ret.add(clazz);
-/*     */         } else {
+
+
+          
+          ret.add((Class<? extends V>) clazz);
+        } else {
 /* 148 */           throw new RuntimeException("Class is not a " + targetSuperClass.getSimpleName() + ": " + clazz);
 /*     */         } 
 /*     */       } 

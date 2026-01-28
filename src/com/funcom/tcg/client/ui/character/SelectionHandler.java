@@ -85,7 +85,7 @@
 /*  85 */     updateStatComponents(this.compareItem);
 /*     */   }
 /*     */   private void updateStatComponents(InventoryItem wardrobeItem) {
-/*     */     ClientItem clientItem;
+/*     */     ClientItem clientItem = null;
 /*  89 */     InventoryItem wearingEquipmentSelection = null;
 /*     */     
 /*  91 */     if (this.slotIdSelected != -1) {
@@ -93,7 +93,7 @@
 /*     */     }
 /*     */     
 /*  95 */     if (clientItem != null) {
-/*  96 */       ClientItem clientItem1; if (wardrobeItem == null)
+/*  96 */       ClientItem clientItem1 = null; if (wardrobeItem == null)
 /*     */       {
 /*  98 */         clientItem1 = clientItem;
 /*     */       }

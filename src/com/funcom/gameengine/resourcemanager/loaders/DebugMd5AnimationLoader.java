@@ -3,6 +3,8 @@
 /*    */ import com.funcom.gameengine.resourcemanager.LoadException;
 /*    */ import com.funcom.gameengine.resourcemanager.ManagedResource;
 /*    */ import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 /*    */ import java.io.IOException;
 /*    */ import java.io.InputStream;
 /*    */ import java.io.ObjectInputStream;
@@ -10,6 +12,7 @@
 /*    */ import java.net.MalformedURLException;
 /*    */ 
 /*    */ public class DebugMd5AnimationLoader extends Md5AnimationLoader {
+           @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 14 */     InputStream inputStream = null;
 /*    */     try {
@@ -21,7 +24,7 @@
 /* 21 */         JointAnimation anim = (JointAnimation)in.readObject();
 /* 22 */         in.close();
 /*    */         
-/* 24 */         managedResource.setResource(anim);
+/* 24 */         ((ManagedResource<JointAnimation>)managedResource).setResource(anim);
 /*    */       } else {
 /* 26 */         super.loadData(managedResource);
 /*    */         

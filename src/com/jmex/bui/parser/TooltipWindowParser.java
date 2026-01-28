@@ -14,9 +14,9 @@
 /*    */ public class TooltipWindowParser
 /*    */   implements BStyleSheetParser
 /*    */ {
-/*    */   public Object parse(String name, ArrayList<String> args, BStyleSheet styleSheet) {
+/*    */   public Object parse(String name, ArrayList args, BStyleSheet styleSheet) {
 /* 18 */     if (name.equals("health-progress-player") || name.equals("health-progress-monster"))
-/* 19 */       return new ImageProperty(args.get(0)); 
+/* 19 */       return new ImageProperty((String)args.get(0)); 
 /* 20 */     if (name.equals("boss-lvl-below") || name.equals("boss-lvl-above") || name.equals("boss-lvl-same") || name.equals("miniboss-lvl-below") || name.equals("miniboss-lvl-above") || name.equals("miniboss-lvl-same") || name.equals("mob-lvl-below") || name.equals("mob-lvl-above") || name.equals("mob-lvl-same") || name.equals("player-image"))
 /*    */     {
 /*    */ 

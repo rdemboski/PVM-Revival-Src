@@ -19,13 +19,13 @@
 /* 19 */     super(TextureAtlasDescription.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*    */     try {
 /* 25 */       ByteBuffer buffer = (ByteBuffer)getResourceManager().getManagedResource(ByteBuffer.class, managedResource.getName()).getResource();
 /*    */       
 /* 27 */       TextureAtlasDescription description = new TextureAtlasDescription(buffer);
-/* 28 */       managedResource.setResource(description);
+/* 28 */       ((ManagedResource<TextureAtlasDescription>)managedResource).setResource(description);
 /* 29 */     } catch (Exception e) {
 /* 30 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {}

@@ -34,7 +34,7 @@
 /*  34 */     super(Texture.class);
 /*     */   }
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*  39 */     InputStream inputStream = null;
 /*     */     try {
@@ -83,7 +83,7 @@
 /*  83 */       ts.setTexture(texture);
 /*  84 */       ts.load();
 /*     */       
-/*  86 */       managedResource.setResource(asyncTexture2D);
+/*  86 */       ((ManagedResource<AsyncTexture2D>)managedResource).setResource(asyncTexture2D);
 /*  87 */     } catch (MalformedURLException e) {
 /*  88 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*  89 */     } catch (IOException e) {
@@ -101,9 +101,9 @@
 /*     */     }
 /*     */   }
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public Object getUnloadInfo(ManagedResource<?> managedResource) {
-/* 106 */     Texture texture = (Texture)managedResource.getResource();
+/* 106 */     Texture texture = (Texture)((ManagedResource<Texture>)managedResource).getResource();
 /* 107 */     if (texture != null && texture.getTextureId() != 0) {
 /* 108 */       return new TextureUnloadInfo(texture.getTextureKey(), texture.getTextureId());
 /*     */     }

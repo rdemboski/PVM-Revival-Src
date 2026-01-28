@@ -16,7 +16,7 @@
 /*     */   extends StatSupport
 /*     */   implements LifeCycleAware
 /*     */ {
-/*  19 */   private static final Stat ZERO = new Stat(Short.valueOf(-32768), 0);
+/*  19 */   private static final Stat ZERO = new Stat(Short.valueOf((short)-32768), 0);
 /*     */   
 /*     */   protected Stat levelStat;
 /*     */   

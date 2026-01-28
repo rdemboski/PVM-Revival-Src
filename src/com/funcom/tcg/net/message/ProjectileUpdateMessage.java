@@ -113,7 +113,7 @@
 /* 113 */     if (this.projectileUpdateDataList != null) {
 /* 114 */       int size = this.projectileUpdateDataList.size();
 /* 115 */       for (int i = 0; i < size; i++) {
-/* 116 */         (ProjectileUpdateData)this.projectileUpdateDataList.get(i); count += ProjectileUpdateData.getSize();
+/* 116 */         count += ((ProjectileUpdateData)this.projectileUpdateDataList.get(i)).getSize();
 /*     */       } 
 /*     */     } 
 /* 119 */     return count;

@@ -1,6 +1,8 @@
 /*     */ package com.funcom.tcg.client.net.creaturebuilders;
 /*     */ import com.funcom.commons.PerformanceGraphNode;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*     */ import com.funcom.gameengine.jme.modular.XmlModularDescription;
+import com.funcom.gameengine.model.ResourceGetter;
 /*     */ import com.funcom.gameengine.model.ResourceGetterImpl;
 /*     */ import com.funcom.gameengine.model.action.Action;
 /*     */ import com.funcom.gameengine.model.input.ActionDependentMouseOver;
@@ -12,6 +14,7 @@
 /*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
 /*     */ import com.funcom.gameengine.model.props.InteractibleProp;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.utils.SpatialUtils;
 /*     */ import com.funcom.gameengine.view.AnimationMapper;
 /*     */ import com.funcom.gameengine.view.PropNode;
@@ -20,6 +23,7 @@
 /*     */ import com.funcom.tcg.TcgConstants;
 /*     */ import com.funcom.tcg.client.TcgGame;
 /*     */ import com.funcom.tcg.client.controllers.BarkingController;
+import com.funcom.tcg.client.model.actions.OpenVendorGuiAction;
 /*     */ import com.funcom.tcg.client.state.MainGameState;
 /*     */ import com.funcom.tcg.client.view.modular.ClientDescribedModularNode;
 /*     */ import com.funcom.tcg.net.message.VendorCreationMessage;
@@ -29,6 +33,8 @@
 /*     */ import com.jme.util.Debug;
 /*     */ import com.jme.util.stat.StatCollector;
 /*     */ import org.jdom.Document;
+import com.funcom.gameengine.view.Effects;
+import com.funcom.gameengine.view.OverheadIcons;
 /*     */ 
 /*     */ public class VendorBuilder {
 /*     */   public PropNode build(VendorCreationMessage message) {

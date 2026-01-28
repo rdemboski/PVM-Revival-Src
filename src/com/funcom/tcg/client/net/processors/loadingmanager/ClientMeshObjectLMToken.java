@@ -46,7 +46,7 @@
 /*     */   protected float[] tintColor;
 /*     */   protected TokenTargetNode tokenTargetNode;
 /*     */   private DireEffectDescriptionFactory effectDescriptionFactory;
-/*  49 */   private Future<SLoaded> LoadModelFuture = null;
+/*  49 */   private Future LoadModelFuture = null;
 /*     */   
 /*  51 */   private ResourceGetter resourceGetter = null;
 /*  52 */   private String resourceName = "";
@@ -73,8 +73,8 @@
 /*     */ 
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
-/*  76 */     Callable<Integer> callable = new LoadModelCallable(TcgConstants.MODEL_ROTATION);
-/*  77 */     this.LoadModelFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/*  76 */     Callable<SLoaded> callable = new LoadModelCallable(TcgConstants.MODEL_ROTATION);
+/*  77 */     this.LoadModelFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*  78 */     if (this.LoadModelFuture == null) {
 /*  79 */       throw new Exception("processWaitingAssets: the LoadModelFuture is null.");
 /*     */     }
@@ -136,7 +136,7 @@
 /*     */     RepresentationalNode propNode;
 /* 137 */     if (this.LoadModelFuture != null && !this.LoadModelFuture.isCancelled() && this.LoadModelFuture.get() != null) {
 /*     */       
-/* 139 */       SLoaded l = this.LoadModelFuture.get();
+/* 139 */       SLoaded l = (SLoaded)this.LoadModelFuture.get();
 /* 140 */       MeshDescription meshDescription = l.meshDescription;
 /* 141 */       propNode = new RepresentationalNode(meshDescription.getMeshPath(), this.effectDescriptionFactory, 3);
 /* 142 */       propNode.setRunsDfxs(false);
@@ -203,7 +203,7 @@
 /*     */   }
 /*     */   
 /*     */   public class LoadModelCallable
-/*     */     implements Callable
+/*     */     implements Callable<SLoaded>
 /*     */   {
 /* 208 */     Quaternion modelRotation = null;
 /*     */ 

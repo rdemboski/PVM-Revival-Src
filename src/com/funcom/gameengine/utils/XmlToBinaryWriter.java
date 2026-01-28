@@ -188,7 +188,7 @@
 /*     */ 
 /*     */   
 /*     */   private void writeChildren(DataOutputStream os, List<Element> children) throws IOException {
-/* 191 */     Hashtable<Object, Object> hashMeshes = new Hashtable<Object, Object>();
+/* 191 */     Hashtable<String, ArrayList<Element>> hashMeshes = new Hashtable<String, ArrayList<Element>>();
 /* 192 */     DefaultResourceManager defaultResourceManager = new DefaultResourceManager();
 /* 193 */     defaultResourceManager.addResourceRoot("../../resources");
 /* 194 */     defaultResourceManager.addResourceRoot("../../resources_ab");

@@ -15,9 +15,9 @@
 /* 15 */     super(TileQuadCached.CachedTileData.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
-/* 20 */     managedResource.setResource(new TileQuadCached.CachedTileData());
+/* 20 */     ((ManagedResource<TileQuadCached.CachedTileData>)managedResource).setResource(new TileQuadCached.CachedTileData());
 /*    */   }
 /*    */ 
 /*    */   

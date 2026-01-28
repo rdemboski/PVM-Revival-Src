@@ -3,9 +3,12 @@
 /*    */ import com.funcom.audio.SoundSystemFactory;
 /*    */ import com.funcom.commons.dfx.Effect;
 /*    */ import com.funcom.commons.dfx.EffectDescription;
+import com.funcom.commons.dfx.EffectHandler;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.Reference;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.SoundCreateCallable;
+/*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.SoundDisposeWhenFinishedCallable;
+/*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.SoundRegisterCallable;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.SoundPlayCallable;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.SoundStopCallable;
 /*    */ import java.util.concurrent.Callable;

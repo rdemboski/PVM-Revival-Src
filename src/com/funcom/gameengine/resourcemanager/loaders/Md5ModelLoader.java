@@ -39,7 +39,7 @@
 /*     */   private static void endTiming() {}
 /*     */ 
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*  44 */     startTiming();
 /*  45 */     MD5Importer importer = MD5Importer.getInstance();
@@ -61,7 +61,7 @@
 /*     */       
 /*  62 */       modelNode.setCullHint(Spatial.CullHint.Dynamic);
 /*  63 */       modelNode.setRenderQueueMode(3);
-/*  64 */       managedResource.setResource(modelNode);
+/*  64 */       ((ManagedResource<ModelNode>)managedResource).setResource(modelNode);
 /*  65 */       importer.cleanup();
 /*  66 */     } catch (MalformedURLException e) {
 /*  67 */       throw new LoadException(getResourceManager(), managedResource, e);

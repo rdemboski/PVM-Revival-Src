@@ -18,6 +18,7 @@
 /* 18 */     super(Image.class);
 /*    */   }
 /*    */   
+           @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 22 */     LOG.debug("Loading image: " + managedResource.getName());
 /* 23 */     InputStream inputStream = null;
@@ -27,7 +28,7 @@
 /* 27 */       if (!validateImage(image)) {
 /* 28 */         throw new LoadException(getResourceManager(), managedResource, new RuntimeException("Loaded invalid image!"));
 /*    */       }
-/* 30 */       managedResource.setResource(image);
+/* 30 */       ((ManagedResource<Image>)managedResource).setResource(image);
 /* 31 */     } catch (IOException e) {
 /* 32 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

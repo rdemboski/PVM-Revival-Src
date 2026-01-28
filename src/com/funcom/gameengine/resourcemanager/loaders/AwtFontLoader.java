@@ -57,7 +57,7 @@
 /*     */     } 
 /*     */   }
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*  62 */     InputStream inputStream = null; try {
 /*     */       Font font;
@@ -71,7 +71,7 @@
 /*  71 */         font = new Font(fontName, 0, 1);
 /*     */       } 
 /*     */       
-/*  74 */       managedResource.setResource(font);
+/*  74 */       ((ManagedResource<Font>)managedResource).setResource(font);
 /*  75 */     } catch (IOException e) {
 /*  76 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*  77 */     } catch (FontFormatException e) {

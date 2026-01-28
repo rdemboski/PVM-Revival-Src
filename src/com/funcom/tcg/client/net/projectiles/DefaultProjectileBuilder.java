@@ -33,7 +33,7 @@
 /*    */   }
 /*    */   
 /*    */   public Projectile loadAndFireProjectile(ProjectileUpdateMessage.NewProjectileData projectileData) {
-/*    */     DefaultProjectile defaultProjectile;
+/*    */     DefaultProjectile defaultProjectile = null;
 /* 37 */     Projectile projectile = this.projectileMap.get(Integer.valueOf(projectileData.getId()));
 /* 38 */     if (projectile == null) {
 /*    */       

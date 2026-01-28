@@ -2,21 +2,30 @@
 /*      */ import com.funcom.audio.SoundSystemFactory;
 /*      */ import com.funcom.commons.PerformanceGraphNode;
 /*      */ import com.funcom.commons.configuration.CSVWriter;
+import com.funcom.gameengine.Updated;
 /*      */ import com.funcom.gameengine.WorldCoordinate;
 /*      */ import com.funcom.gameengine.debug.TimeStamper;
+import com.funcom.gameengine.jme.ZBufferNode;
 /*      */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
+import com.funcom.gameengine.resourcemanager.loadingmanager.SoundSetIOEnabledCallable;
+import com.funcom.gameengine.resourcemanager.loadingmanager.SoundSetAuditionEnabledCallable;
+import com.funcom.gameengine.resourcemanager.loadingmanager.SoundSetProfileEnabledCallable;
 /*      */ import com.funcom.gameengine.utils.PerformanceGraphRenderPass;
 /*      */ import com.funcom.server.common.GameIOHandler;
 /*      */ import com.funcom.server.common.Message;
+import com.funcom.tcg.client.TcgGame;
 /*      */ import com.funcom.tcg.client.model.rpg.LocalClientPlayer;
 /*      */ import com.funcom.tcg.client.net.NetworkHandler;
 /*      */ import com.funcom.tcg.client.state.MainGameState;
 /*      */ import com.funcom.tcg.client.ui.event.DebugEvent;
 /*      */ import com.funcom.tcg.client.ui.event.DebugWindowListener;
+import com.funcom.tcg.net.message.JoinPvpQueueMessage;
+import com.funcom.tcg.net.message.VerifyTownPortalActivationMessage;
 /*      */ import com.jme.util.Debug;
 /*      */ import com.jme.util.stat.MultiStatSample;
 /*      */ import com.jme.util.stat.StatAssetLog;
 /*      */ import com.jme.util.stat.StatCollector;
+import com.jme.util.stat.StatListener;
 /*      */ import com.jme.util.stat.StatType;
 /*      */ import com.jme.util.stat.StatValue;
 /*      */ import com.jmex.bui.BButton;
@@ -24,7 +33,10 @@
 /*      */ import com.jmex.bui.BComponent;
 /*      */ import com.jmex.bui.BContainer;
 /*      */ import com.jmex.bui.BLabel;
+import com.jmex.bui.BScrollPane;
 /*      */ import com.jmex.bui.BSlider;
+import com.jmex.bui.BWindow;
+import com.jmex.bui.enumeratedConstants.Orientation;
 /*      */ import com.jmex.bui.event.ActionEvent;
 /*      */ import com.jmex.bui.event.ActionListener;
 /*      */ import com.jmex.bui.event.ChangeEvent;
@@ -32,16 +44,27 @@
 /*      */ import com.jmex.bui.event.ComponentListener;
 /*      */ import com.jmex.bui.layout.BLayoutManager;
 /*      */ import com.jmex.bui.layout.BorderLayout;
+import com.jmex.bui.layout.GridLayout;
+import com.jmex.bui.layout.GroupLayout;
+
 /*      */ import java.io.File;
 /*      */ import java.io.FileWriter;
 /*      */ import java.io.IOException;
+import java.net.SocketAddress;
 /*      */ import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 /*      */ import java.util.Date;
+import java.util.HashSet;
 /*      */ import java.util.Iterator;
+import java.util.LinkedList;
 /*      */ import java.util.List;
 /*      */ import java.util.Map;
+import java.util.Set;
 /*      */ import java.util.Timer;
+import java.util.TimerTask;
 /*      */ import java.util.concurrent.Callable;
+import java.util.logging.Logger;
 /*      */ 
 /*      */ public class DebugWindow extends AbstractTcgWindow implements Updated {
 /*   47 */   private static final Logger LOGGER = Logger.getLogger(DebugWindow.class.getName());
@@ -371,7 +394,7 @@
 /*  371 */     this.soundProfile.addListener((ComponentListener)new ActionListener() {
 /*      */           public void actionPerformed(ActionEvent event) {
 /*  373 */             if (LoadingManager.USE) {
-/*  374 */               LoadingManager.INSTANCE.submitSoundCallable((Callable)new SoundSetProfileEnabledCallable(((BCheckBox)event.getSource()).isSelected()));
+/*  374 */               LoadingManager.INSTANCE.submitSoundCallable(new SoundSetProfileEnabledCallable(((BCheckBox)event.getSource()).isSelected()));
 /*      */             } else {
 /*  376 */               SoundSystemFactory.getSoundSystem().setProfileEnabled(((BCheckBox)event.getSource()).isSelected());
 /*      */             } 
@@ -380,7 +403,7 @@
 /*  380 */     this.soundAudition.addListener((ComponentListener)new ActionListener() {
 /*      */           public void actionPerformed(ActionEvent event) {
 /*  382 */             if (LoadingManager.USE) {
-/*  383 */               LoadingManager.INSTANCE.submitSoundCallable((Callable)new SoundSetAuditionEnabledCallable(((BCheckBox)event.getSource()).isSelected()));
+/*  383 */               LoadingManager.INSTANCE.submitSoundCallable(new SoundSetAuditionEnabledCallable(((BCheckBox)event.getSource()).isSelected()));
 /*      */             } else {
 /*  385 */               SoundSystemFactory.getSoundSystem().setAuditionEnabled(((BCheckBox)event.getSource()).isSelected());
 /*      */             } 
@@ -389,7 +412,7 @@
 /*  389 */     this.soundIo.addListener((ComponentListener)new ActionListener() {
 /*      */           public void actionPerformed(ActionEvent event) {
 /*  391 */             if (LoadingManager.USE) {
-/*  392 */               LoadingManager.INSTANCE.submitSoundCallable((Callable)new SoundSetIOEnabledCallable(((BCheckBox)event.getSource()).isSelected()));
+/*  392 */               LoadingManager.INSTANCE.submitSoundCallable(new SoundSetIOEnabledCallable(((BCheckBox)event.getSource()).isSelected()));
 /*      */             } else {
 /*  394 */               SoundSystemFactory.getSoundSystem().setIOEnabled(((BCheckBox)event.getSource()).isSelected());
 /*      */             } 
@@ -943,7 +966,7 @@
 /*      */ 
 /*      */     
 /*      */     public void dumpData() {
-/*  946 */       Iterator<Double> iter = this.writingBuffer.iterator();
+/*  946 */       Iterator<Double[]> iter = this.writingBuffer.iterator();
 /*      */       
 /*  948 */       while (iter.hasNext()) {
 /*  949 */         writeSample((Double[])iter.next());

@@ -51,7 +51,7 @@
 /*     */ 
 /*     */   
 /*     */   public int update() {
-/*     */     DefaultActionInteractActionHandler defaultActionInteractActionHandler;
+/*     */     DefaultActionInteractActionHandler defaultActionInteractActionHandler = null;
 /*  55 */     int pickUpLootId = this.pickUpLootCreationMessage.getPickUpLootId();
 /*  56 */     AbstractPickUpDescription description = TcgGame.getRpgLoader().getPickUpManager().getDescription(this.pickUpLootCreationMessage.getPickupDescriptionId());
 /*     */     

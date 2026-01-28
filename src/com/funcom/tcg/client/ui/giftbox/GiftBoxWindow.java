@@ -1,10 +1,12 @@
 /*    */ package com.funcom.tcg.client.ui.giftbox;
 /*    */ import com.funcom.gameengine.resourcemanager.ResourceManager;
+import com.funcom.tcg.client.state.MainGameState;
 /*    */ import com.funcom.tcg.client.ui.AbstractTcgWindow;
 /*    */ import com.funcom.tcg.client.ui.hud.PanelManager;
 /*    */ import com.funcom.tcg.client.ui.quest2.RewardCardsContainer;
 /*    */ import com.jmex.bui.BButton;
 /*    */ import com.jmex.bui.BComponent;
+import com.jmex.bui.BContainer;
 /*    */ import com.jmex.bui.BImage;
 /*    */ import com.jmex.bui.BLabel;
 /*    */ import com.jmex.bui.BWindow;
@@ -12,6 +14,7 @@
 /*    */ import com.jmex.bui.event.ActionListener;
 /*    */ import com.jmex.bui.event.ComponentListener;
 /*    */ import com.jmex.bui.icon.BIcon;
+import com.jmex.bui.icon.ImageIcon;
 /*    */ import com.jmex.bui.util.Rectangle;
 /*    */ 
 /*    */ public class GiftBoxWindow extends AbstractTcgWindow {

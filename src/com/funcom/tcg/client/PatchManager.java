@@ -10,15 +10,15 @@
 /*     */ import java.net.MalformedURLException;
 /*     */ import java.net.URL;
 /*     */ import java.net.URLConnection;
+import java.util.Base64;
 /*     */ import java.util.Enumeration;
 /*     */ import java.util.Properties;
 /*     */ import java.util.jar.JarEntry;
 /*     */ import java.util.jar.JarFile;
 /*     */ import org.lwjgl.LWJGLException;
-/*     */ import sun.misc.BASE64Encoder;
 /*     */ 
 /*     */ public class PatchManager extends Thread {
-/*  21 */   private static final String AUTHSTRING = "Basic " + (new BASE64Encoder()).encode("tcg:tcgx".getBytes());
+/*  21 */   private static final String AUTHSTRING = "Basic " + Base64.getEncoder().encodeToString("tcg:tcgx".getBytes());
 /*     */   public static final String DEPLOY_DIR = "deploy";
 /*     */   private static final String PROPERTIES_FILE = "build_number.properties";
 /*     */   private static final String DEFAULT_DISPLAY_PROPERTIES_FILE = "properties.cfg";

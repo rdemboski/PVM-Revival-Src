@@ -298,7 +298,7 @@
 /* 298 */     this.end = end;
 /*     */ 
 /*     */     
-/* 301 */     this.currentPathfindingTask = new PathfindingTask((PathGraph)this.mapConnectivityGraph, start, end, Arrays.asList(new WorldCoordinate[] { end }, ), null);
+/* 301 */     this.currentPathfindingTask = new PathfindingTask((PathGraph)this.mapConnectivityGraph, start, end, Arrays.asList(new WorldCoordinate[] { end } ), null);
 /* 302 */     this.currentPathfindingFuture = this.taskExecutor.submit(this.currentPathfindingTask);
 /* 303 */     LOGGER.debug("New breadcrumb pathfinding task submitted.");
 /*     */   }

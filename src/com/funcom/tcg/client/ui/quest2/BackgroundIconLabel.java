@@ -6,7 +6,7 @@
 /*    */ import com.jmex.bui.background.BBackground;
 /*    */ import com.jmex.bui.background.ImageBackground;
 /*    */ import com.jmex.bui.enumeratedConstants.ImageBackgroundMode;
-/*    */ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+/*    */ // import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 /*    */ 
 /*    */ public class BackgroundIconLabel
 /*    */   extends BLabel
@@ -16,7 +16,7 @@
 /*    */   
 /*    */   private BackgroundIconLabel() {
 /* 18 */     super("");
-/* 19 */     throw new NotImplementedException();
+/* 19 */     throw new UnsupportedOperationException();
 /*    */   }
 /*    */   
 /*    */   public BackgroundIconLabel(ResourceManager resourceManager) {

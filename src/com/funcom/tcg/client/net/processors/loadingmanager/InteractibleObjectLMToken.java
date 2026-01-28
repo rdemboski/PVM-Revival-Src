@@ -44,7 +44,7 @@
 /*     */ public class InteractibleObjectLMToken
 /*     */   extends LoadingManagerToken
 /*     */ {
-/*  47 */   private Future<PropNode> LoadModelFuture = null;
+/*  47 */   private Future LoadModelFuture = null;
 /*     */   
 /*     */   InteractibleProp prop;
 /*     */   
@@ -105,8 +105,8 @@
 /*     */ 
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
-/* 108 */     Callable<Integer> callable = new LoadModelCallable();
-/* 109 */     this.LoadModelFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/* 108 */     Callable<PropNode> callable = new LoadModelCallable();
+/* 109 */     this.LoadModelFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /* 110 */     if (this.LoadModelFuture == null) {
 /* 111 */       throw new Exception("processRequestAssets: the LoadModelFuture is null.");
 /*     */     }
@@ -124,7 +124,7 @@
 /*     */   public boolean processGame() throws Exception {
 /* 125 */     PropNode propNode = null;
 /* 126 */     if (this.LoadModelFuture != null && !this.LoadModelFuture.isCancelled()) {
-/* 127 */       propNode = this.LoadModelFuture.get();
+/* 127 */       propNode = (PropNode)this.LoadModelFuture.get();
 /*     */     
 /*     */     }
 /* 130 */     else if (this.xmlMeshResourcePath != null && this.dfxResourcePath != null) {
@@ -236,7 +236,7 @@
 /*     */ 
 /*     */   
 /*     */   public class LoadModelCallable
-/*     */     implements Callable
+/*     */     implements Callable<PropNode>
 /*     */   {
 /*     */     public PropNode call() {
 /* 242 */       PropNode propNode = null;

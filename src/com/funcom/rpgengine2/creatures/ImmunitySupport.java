@@ -1,6 +1,9 @@
 /*    */ package com.funcom.rpgengine2.creatures;
 /*    */ import com.funcom.rpgengine2.abilities.SourceProvider;
+
+import java.util.ArrayList;
 /*    */ import java.util.Collections;
+import java.util.List;
 /*    */ import java.util.Queue;
 /*    */ import java.util.Set;
 /*    */ import java.util.concurrent.LinkedBlockingQueue;

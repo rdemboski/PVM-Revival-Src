@@ -65,13 +65,13 @@
 /*  65 */     switch (msgType) {
 /*     */       case 0:
 /*  67 */         id = buffer.get();
-/*  68 */         return new AutoUseItemMessage(Type.valueOf(id));
+/*  68 */         return new AutoUseItemMessage(Type.fromId(id));
 /*     */ 
 /*     */       
 /*     */       case 1:
 /*  72 */         id = buffer.get();
 /*  73 */         itemDescId = MessageUtils.readStr(buffer);
-/*  74 */         return new AutoUseItemMessage(Type.valueOf(id), itemDescId, MessageUtils.readInt(buffer));
+/*  74 */         return new AutoUseItemMessage(Type.fromId(id), itemDescId, MessageUtils.readInt(buffer));
 /*     */     } 
 /*     */ 
 /*     */     
@@ -119,8 +119,17 @@
 /* 119 */       this.id = id;
 /*     */     } static {
 /*     */     
-/*     */     } public byte getId() {
+/*     */     } 
+
+/*     */     public byte getId() {
 /* 123 */       return this.id;
+/*     */     }
+
+/*     */     public static Type fromId(byte id) {
+/*     */       for (Type t : ALL) {
+/*     */         if (t.id == id) return t;
+/*     */       }
+/*     */       throw new IllegalArgumentException("Unknown Type id: " + id);
 /*     */     }
 /*     */   }
 /*     */ }

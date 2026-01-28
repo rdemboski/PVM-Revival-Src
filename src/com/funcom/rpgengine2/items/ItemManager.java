@@ -2,11 +2,19 @@
 /*     */ import com.funcom.rpgengine2.SkillId;
 /*     */ import com.funcom.rpgengine2.loader.ConfigErrors;
 /*     */ import com.funcom.rpgengine2.pets.PetDescription;
+import com.funcom.rpgengine2.pets.PetManager;
+
+import java.util.ArrayList;
 /*     */ import java.util.HashMap;
+import java.util.HashSet;
 /*     */ import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 /*     */ import java.util.List;
 /*     */ import java.util.Map;
 /*     */ import java.util.Set;
+
+import org.apache.log4j.Logger;
 /*     */ 
 /*     */ public class ItemManager {
 /*  12 */   private Map<String, Map<Integer, ItemDescription>> itemsById = new HashMap<String, Map<Integer, ItemDescription>>();

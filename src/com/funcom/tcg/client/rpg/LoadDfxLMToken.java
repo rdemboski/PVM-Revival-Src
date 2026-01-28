@@ -20,7 +20,7 @@
 /*    */   private String dFXScript;
 /*    */   private ItemDescription itemDescription;
 /*    */   private boolean impact;
-/* 23 */   private Future<DireEffectDescription> LoadDfxFuture = null;
+/* 23 */   private Future LoadDfxFuture = null;
 /*    */   
 /*    */   public LoadDfxLMToken(String dFXScript, ItemDescription itemDescription, boolean impact, DireEffectDescriptionFactory dfxDescriptionFactory, ConfigErrors configErrors) {
 /* 26 */     this.dFXScript = dFXScript;
@@ -33,7 +33,7 @@
 /*    */   
 /*    */   public boolean processRequestAssets() throws Exception {
 /* 35 */     Callable<DireEffectDescription> callable = new LoadDFXCallable(this.dFXScript, this.itemDescription, this.impact);
-/* 36 */     this.LoadDfxFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/* 36 */     this.LoadDfxFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*    */     
 /* 38 */     return true;
 /*    */   }
@@ -47,7 +47,7 @@
 /*    */   public boolean processGame() throws Exception {
 /*    */     DireEffectDescription dfx;
 /* 49 */     if (this.LoadDfxFuture != null && !this.LoadDfxFuture.isCancelled()) {
-/* 50 */       dfx = this.LoadDfxFuture.get();
+/* 50 */       dfx = (DireEffectDescription)this.LoadDfxFuture.get();
 /*    */     } else {
 /* 52 */       Callable<DireEffectDescription> callable = new LoadDFXCallable(this.dFXScript, this.itemDescription, this.impact);
 /* 53 */       dfx = callable.call();
@@ -64,7 +64,7 @@
 /* 64 */     return true;
 /*    */   }
 /*    */   
-/*    */   private class LoadDFXCallable implements Callable {
+/*    */   private class LoadDFXCallable implements Callable<DireEffectDescription> {
 /*    */     private String dFXScript;
 /*    */     private ItemDescription itemDescription;
 /*    */     private boolean impact;

@@ -4,7 +4,7 @@
 /*     */ import com.funcom.audio.Ear;
 /*     */ import com.funcom.audio.Project;
 /*     */ import com.funcom.audio.ReverbPreset;
-/*     */ import com.funcom.audio.Sound;
+import org.jouvieje.FmodEx.Sound;
 /*     */ import com.funcom.audio.SoundSystem;
 /*     */ import com.funcom.audio.SoundSystemException;
 /*     */ import com.funcom.audio.SoundSystemFactory;
@@ -17,18 +17,15 @@
 /*     */ import org.apache.log4j.Level;
 /*     */ import org.apache.log4j.Logger;
 /*     */ import org.apache.log4j.Priority;
-/*     */ import org.jouvieje.FmodDesigner.Defines.VERSIONS;
 /*     */ import org.jouvieje.FmodDesigner.EventCategory;
 /*     */ import org.jouvieje.FmodDesigner.EventSystem;
 /*     */ import org.jouvieje.FmodDesigner.FmodDesigner;
 /*     */ import org.jouvieje.FmodDesigner.InitFmodDesigner;
-/*     */ import org.jouvieje.FmodEx.Defines.VERSIONS;
 /*     */ import org.jouvieje.FmodEx.Enumerations.FMOD_RESULT;
 /*     */ import org.jouvieje.FmodEx.Exceptions.InitException;
 /*     */ import org.jouvieje.FmodEx.FmodEx;
 /*     */ import org.jouvieje.FmodEx.Init;
 /*     */ import org.jouvieje.FmodEx.Misc.BufferUtils;
-/*     */ import org.jouvieje.FmodEx.Sound;
 /*     */ import org.jouvieje.FmodEx.Structures.FMOD_CREATESOUNDEXINFO;
 /*     */ import org.jouvieje.FmodEx.Structures.FMOD_REVERB_PROPERTIES;
 /*     */ import org.jouvieje.FmodEx.System;
@@ -86,7 +83,7 @@
 /*     */ 
 /*     */   
 /*     */   public void init() throws SoundSystemException {
-/*  89 */     String useDummySoundSystem = System.getProperty("sound.dummy");
+/*  89 */     String useDummySoundSystem = java.lang.System.getProperty("sound.dummy");
 /*  90 */     if (useDummySoundSystem != null && useDummySoundSystem.equals("true")) {
 /*  91 */       SoundSystemFactory.setDummyEnabled(true);
 /*     */       return;
@@ -156,7 +153,7 @@
 /*     */   }
 /*     */ 
 /*     */   
-/*     */   public Sound getSound(String path) {
+/*     */   public com.funcom.audio.Sound getSound(String path) {
 /* 160 */     int index = Math.max(path.indexOf('/'), 0);
 /* 161 */     String projectName = path.substring(0, index);
 /* 162 */     Project project = loadSoundProject(projectName + ".fev");
@@ -450,16 +447,16 @@
 /*     */ 
 /*     */ 
 /*     */       
-/* 453 */       if (VERSIONS.NATIVEFMODEX_LIBRARY_VERSION != VERSIONS.NATIVEFMODEX_JAR_VERSION) {
-/* 454 */         throw new SoundSystemException("Error!  NativeFmodEx library version (" + VERSIONS.NATIVEFMODEX_LIBRARY_VERSION + ")" + " is different to jar version (" + VERSIONS.NATIVEFMODEX_JAR_VERSION + ")");
+/* 453 */       if (org.jouvieje.FmodEx.Defines.VERSIONS.NATIVEFMODEX_LIBRARY_VERSION != org.jouvieje.FmodEx.Defines.VERSIONS.NATIVEFMODEX_JAR_VERSION) {
+/* 454 */         throw new SoundSystemException("Error!  NativeFmodEx library version (" + org.jouvieje.FmodEx.Defines.VERSIONS.NATIVEFMODEX_LIBRARY_VERSION + ")" + " is different to jar version (" + org.jouvieje.FmodEx.Defines.VERSIONS.NATIVEFMODEX_JAR_VERSION + ")");
 /*     */       }
 /*     */ 
 /*     */ 
 /*     */ 
 /*     */ 
 /*     */       
-/* 461 */       if (VERSIONS.NATIVEFMODDESIGNER_LIBRARY_VERSION != VERSIONS.NATIVEFMODDESIGNER_JAR_VERSION) {
-/* 462 */         throw new SoundSystemException("Error!  NativeFmodDesigner library version (" + VERSIONS.NATIVEFMODDESIGNER_LIBRARY_VERSION + ")" + " is different to jar version (" + VERSIONS.NATIVEFMODDESIGNER_JAR_VERSION + ")");
+/* 461 */       if (org.jouvieje.FmodDesigner.Defines.VERSIONS.NATIVEFMODDESIGNER_LIBRARY_VERSION != org.jouvieje.FmodDesigner.Defines.VERSIONS.NATIVEFMODDESIGNER_JAR_VERSION) {
+/* 462 */         throw new SoundSystemException("Error!  NativeFmodDesigner library version (" + org.jouvieje.FmodDesigner.Defines.VERSIONS.NATIVEFMODDESIGNER_LIBRARY_VERSION + ")" + " is different to jar version (" + org.jouvieje.FmodDesigner.Defines.VERSIONS.NATIVEFMODDESIGNER_JAR_VERSION + ")");
 /*     */       }
 /*     */ 
 /*     */ 
@@ -481,8 +478,8 @@
 /* 481 */     result = this.eventSystem.getVersion(buffer.asIntBuffer());
 /* 482 */     int version = buffer.getInt(0);
 /* 483 */     throwOnError(result);
-/* 484 */     if (version < VERSIONS.FMOD_EVENT_VERSION) {
-/* 485 */       throw new RuntimeException("Error!  You are using an old version of FMOD EVENT " + version + "." + "  This program requires " + VERSIONS.FMOD_EVENT_VERSION);
+/* 484 */     if (version < org.jouvieje.FmodDesigner.Defines.VERSIONS.FMOD_EVENT_VERSION) {
+/* 485 */       throw new RuntimeException("Error!  You are using an old version of FMOD EVENT " + version + "." + "  This program requires " + org.jouvieje.FmodDesigner.Defines.VERSIONS.FMOD_EVENT_VERSION);
 /*     */     }
 /*     */ 
 /*     */ 
@@ -632,7 +629,7 @@
 /*     */           } 
 /*     */         }
 /*     */       } else {
-/* 635 */         System.err.println("Cannot find sound file: " + waveformName);
+/* 635 */         java.lang.System.err.println("Cannot find sound file: " + waveformName);
 /* 636 */         LOGGER.log((Priority)Level.INFO, "Cannot find sound file: " + waveformName);
 /*     */       } 
 /*     */     } else {

@@ -1,6 +1,7 @@
 /*     */ package com.funcom.tcg.client.state;
 /*     */ import com.funcom.server.common.GameIOHandler;
 /*     */ import com.funcom.server.common.Message;
+import com.funcom.server.common.NetworkConfiguration;
 /*     */ import com.funcom.tcg.client.net.NetworkHandler;
 /*     */ import com.funcom.tcg.client.net.NetworkHandlerException;
 /*     */ import com.funcom.tcg.net.AccountResult;
@@ -8,6 +9,7 @@
 /*     */ import java.net.InetSocketAddress;
 /*     */ import java.util.Iterator;
 /*     */ import java.util.Queue;
+import java.util.concurrent.Callable;
 /*     */ import java.util.concurrent.ExecutionException;
 /*     */ import java.util.concurrent.ExecutorService;
 /*     */ import java.util.concurrent.Executors;

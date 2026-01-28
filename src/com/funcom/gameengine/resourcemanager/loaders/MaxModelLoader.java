@@ -30,6 +30,7 @@
 /* 30 */     this.reducioLoadDelegate = new ReducioLoadDelegate(getResourceManager());
 /*    */   }
 /*    */   
+           @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 34 */     InputStream inStream = null;
 /*    */     try {
@@ -40,13 +41,13 @@
 /* 40 */       Node child = chunkedTDS.buildScene();
 /*    */       
 /* 42 */       MaxNode maxNode = new MaxNode();
-/* 43 */       for (Spatial spatial : new ArrayList(child.getChildren())) {
+/* 43 */       for (Spatial spatial : new ArrayList<Spatial>(child.getChildren())) {
 /* 44 */         maxNode.attachChild(spatial);
 /*    */       }
 /* 46 */       maxNode.updateGeometricState(1.0F, true);
 /* 47 */       maxNode.updateRenderState();
 /*    */       
-/* 49 */       managedResource.setResource(maxNode);
+/* 49 */       ((ManagedResource<MaxNode>)managedResource).setResource(maxNode);
 /* 50 */     } catch (IOException e) {
 /* 51 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

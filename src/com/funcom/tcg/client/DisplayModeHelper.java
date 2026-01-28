@@ -1,4 +1,5 @@
 /*     */ package com.funcom.tcg.client;
+import com.funcom.commons.MessageBox;
 /*     */ import com.jme.system.DisplaySystem;
 /*     */ import com.jme.system.GameSettings;
 /*     */ import com.jme.system.JmeException;

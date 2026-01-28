@@ -2,7 +2,7 @@ package com.funcom.tcg.client.ui.mainmenu;
 
 import org.lwjgl.opengl.DisplayMode;
 
-interface MainMenuModel {
+public interface MainMenuModel {
   void cancel();
   
   void music();

@@ -6,6 +6,7 @@
 /*     */ import javax.management.openmbean.CompositeData;
 /*     */ import javax.management.openmbean.CompositeDataSupport;
 /*     */ import javax.management.openmbean.CompositeType;
+import javax.management.openmbean.OpenDataException;
 /*     */ import javax.management.openmbean.OpenType;
 /*     */ import javax.management.openmbean.SimpleType;
 /*     */ 

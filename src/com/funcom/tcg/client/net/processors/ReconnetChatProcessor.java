@@ -17,11 +17,14 @@
 /*    */ import java.io.IOException;
 /*    */ import java.util.Map;
 /*    */ import org.apache.log4j.Level;
+/*    */ import org.apache.log4j.Logger;
 /*    */ import org.apache.log4j.Priority;
 /*    */ 
 /*    */ public class ReconnetChatProcessor
 /*    */   implements MessageProcessor
 /*    */ {
+/*    */   private static final Logger LOGGER = Logger.getLogger(ReconnetChatProcessor.class.getName());
+/*    */ 
 /*    */   public void process(Message message, GameIOHandler ioHandler, Map<Integer, CreatureData> creatureDataMap, Map<Integer, CreatureData> playerDataMap, Map<Integer, CreatureData> unknownCreatureDataMap, Map<Integer, CreatureData> unknownPlayerDataMap) {
 /*    */     try {
 /* 27 */       ChatClient client = MainGameState.getPlayerModel().getChatController().getChatClient();
@@ -59,7 +62,7 @@
 /* 59 */     if (existingWindow == null) {
 /* 60 */       NoChatServerWindow window = new NoChatServerWindow(TcgGame.getResourceManager(), true);
 /* 61 */       window.setLayer(103);
-/* 62 */       BuiSystem.getRootNode().addWindow((BWindow)window);
+/* 62 */       BuiSystem.getRootNode().addWindow(window);
 /*    */     } 
 /*    */   }
 /*    */ }

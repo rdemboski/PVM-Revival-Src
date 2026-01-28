@@ -1,7 +1,7 @@
 /*     */ package com.funcom.gameengine.resourcemanager;
 /*     */ 
 /*     */ import com.jme.system.DisplaySystem;
-/*     */ import com.sun.corba.se.impl.orbutil.concurrent.Mutex;
+/*     */ //import com.sun.corba.se.impl.orbutil.concurrent.Mutex;
 /*     */ import org.lwjgl.LWJGLException;
 /*     */ import org.lwjgl.opengl.Display;
 /*     */ import org.lwjgl.opengl.Drawable;
@@ -27,7 +27,7 @@
 /*  27 */   private static Drawable mainContext = null;
 /*  28 */   private static boolean switchingEnabled = THREADED_OPENGL;
 /*     */   
-/*  30 */   static Mutex mutex = new Mutex();
+/*  30 */   //static Mutex mutex = new Mutex();
 /*     */   
 /*     */   public static boolean create() {
 /*  33 */     if (!THREADED_OPENGL) {
@@ -151,15 +151,15 @@
 /* 151 */       return true;
 /*     */     }
 /* 153 */     if (USE_MUTEX) {
-/*     */       try {
+/*     */       //try {
 /* 155 */         if (timeout == -1L) {
-/* 156 */           mutex.acquire();
+/* 156 */           //mutex.acquire();
 /*     */         } else {
-/* 158 */           mutex.attempt(timeout);
-/*     */         } 
-/* 160 */       } catch (InterruptedException e) {
-/* 161 */         return false;
-/*     */       } 
+/* 158 */           //mutex.attempt(timeout);
+/*     */         }
+// /* 160 */       } catch (InterruptedException e) {
+// /* 161 */         return false;
+// /*     */       } 
 /*     */     }
 /* 164 */     return true;
 /*     */   }
@@ -168,8 +168,8 @@
 /* 168 */     if (!THREADED_OPENGL) {
 /*     */       return;
 /*     */     }
-/* 171 */     if (USE_MUTEX)
-/* 172 */       mutex.release(); 
+/* 171 */     //if (USE_MUTEX)
+/* 172 */       //mutex.release(); 
 /*     */   }
 /*     */ }
 

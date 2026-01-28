@@ -17,7 +17,7 @@
 /*    */   }
 /*    */   
 /*    */   public BDragListener(BComponent source, Object dragObject, BIcon iconRequest) {
-/* 20 */     this(source, dragObject, new SimpleIconRequest(iconRequest, null));
+/* 20 */     this(source, dragObject, new SimpleIconRequest(iconRequest));
 /*    */   }
 /*    */   
 /*    */   public BDragListener(BComponent source, Object dragObject, IconRequest iconRequest) {

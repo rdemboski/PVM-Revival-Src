@@ -129,7 +129,7 @@
 /*     */ 
 /*     */   
 /*     */   public void setTileCache(ArrayList<TileInfo> tileCache) {
-/* 132 */     this; ResourceGetterImpl.tileCache = tileCache;
+/* 132 */     ResourceGetterImpl resourceGetterImpl = this; ResourceGetterImpl.tileCache = tileCache;
 /*     */   }
 /*     */ 
 /*     */   

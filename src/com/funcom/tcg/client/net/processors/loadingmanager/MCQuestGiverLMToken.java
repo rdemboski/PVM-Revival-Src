@@ -6,7 +6,6 @@
 /*     */ import com.funcom.gameengine.model.action.Action;
 /*     */ import com.funcom.gameengine.model.input.DefaultActionInteractActionHandler;
 /*     */ import com.funcom.gameengine.model.input.MouseOver;
-/*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
 /*     */ import com.funcom.gameengine.model.props.InteractibleProp;
 /*     */ import com.funcom.gameengine.view.OverheadIcons;

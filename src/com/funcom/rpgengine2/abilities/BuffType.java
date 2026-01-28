@@ -6,7 +6,7 @@ public enum BuffType {
     NEUTRAL(2);
 
     private final byte id;
-    private static final BuffType[] ALL;
+    public static final BuffType[] ALL;
 
     static {
         ALL = values();

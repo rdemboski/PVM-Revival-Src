@@ -10,17 +10,18 @@
 /*    */ public class ImageParser
 /*    */   implements BStyleSheetParser
 /*    */ {
-/*    */   public Object parse(String name, ArrayList<String> args, BStyleSheet styleSheet) {
-/* 14 */     if (name.equals("image")) {
-/* 15 */       return new ImageProperty(args.get(0));
-/*    */     }
-/* 17 */     throw new IllegalArgumentException("Unknown property '" + name + "'");
-/*    */   }
-/*    */ 
-/*    */   
-/*    */   public boolean canParse(String name) {
-/* 22 */     return name.equals("image");
-/*    */   }
+@Override
+  public Object parse(String name, ArrayList args, BStyleSheet styleSheet) {
+    if (name.equals("image")) {
+      return new ImageProperty((String) args.get(0));
+    }
+    throw new IllegalArgumentException("Unknown property '" + name + "'");
+  }
+
+  @Override
+  public boolean canParse(String name) {
+    return name.equals("image");
+  }
 /*    */ }
 
 

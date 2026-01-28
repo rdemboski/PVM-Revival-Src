@@ -3,6 +3,7 @@
 /*     */ import com.funcom.commons.dfx.DireEffectDescription;
 /*     */ import com.funcom.commons.dfx.NoSuchDFXException;
 /*     */ import com.funcom.gameengine.ai.Brain;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*     */ import com.funcom.gameengine.jme.modular.XmlModularDescription;
 /*     */ import com.funcom.gameengine.model.ResourceGetter;
 /*     */ import com.funcom.gameengine.model.ResourceGetterImpl;
@@ -15,6 +16,7 @@
 /*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
 /*     */ import com.funcom.gameengine.model.props.InteractibleProp;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.resourcemanager.CacheType;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManagerToken;
@@ -23,6 +25,7 @@
 /*     */ import com.funcom.gameengine.view.ModularNode;
 /*     */ import com.funcom.gameengine.view.PropNode;
 /*     */ import com.funcom.gameengine.view.RepresentationalNode;
+import com.funcom.rpgengine2.combat.UsageParams;
 /*     */ import com.funcom.rpgengine2.pickupitems.AbstractPickUpDescription;
 /*     */ import com.funcom.server.common.GameIOHandler;
 /*     */ import com.funcom.server.common.Message;
@@ -41,6 +44,7 @@
 /*     */ import java.util.HashMap;
 /*     */ import java.util.Map;
 /*     */ import org.jdom.Document;
+import com.funcom.gameengine.resourcemanager.loadingmanager.PrioritizedLoadingTokenQueue;
 /*     */ 
 /*     */ public class PickUpLootCreationProcessor implements MessageProcessor {
 /*     */   public void process(Message message, GameIOHandler ioHandler, Map<Integer, CreatureData> creatureDataMap, Map<Integer, CreatureData> playerDataMap, Map<Integer, CreatureData> unknownCreatureDataMap, Map<Integer, CreatureData> unknownPlayerDataMap) {
@@ -58,7 +62,7 @@
 /*     */     } 
 /*     */   }
 /*     */   private PropNode createPropNode(PickUpLootCreationMessage pickUpLootCreationMessage) {
-/*     */     DefaultActionInteractActionHandler defaultActionInteractActionHandler;
+/*     */     DefaultActionInteractActionHandler defaultActionInteractActionHandler = null;
 /*  62 */     int pickUpLootId = pickUpLootCreationMessage.getPickUpLootId();
 /*  63 */     AbstractPickUpDescription description = TcgGame.getRpgLoader().getPickUpManager().getDescription(pickUpLootCreationMessage.getPickupDescriptionId());
 /*     */     

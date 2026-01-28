@@ -1,11 +1,14 @@
 /*    */ package com.funcom.tcg.client.net.processors;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*    */ import com.funcom.gameengine.jme.modular.XmlModularDescription;
 /*    */ import com.funcom.gameengine.model.action.Action;
 /*    */ import com.funcom.gameengine.model.input.ActionDependentMouseOver;
 /*    */ import com.funcom.gameengine.model.input.DefaultActionInteractActionHandler;
+import com.funcom.gameengine.model.input.MouseOver;
 /*    */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*    */ import com.funcom.gameengine.model.props.Creature;
 /*    */ import com.funcom.gameengine.model.props.InteractibleProp;
+import com.funcom.gameengine.model.props.Prop;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
 /*    */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManagerToken;
 /*    */ import com.funcom.gameengine.view.AnimationMapper;
@@ -16,11 +19,15 @@
 /*    */ import com.funcom.server.common.Message;
 /*    */ import com.funcom.tcg.TcgConstants;
 /*    */ import com.funcom.tcg.client.TcgGame;
+import com.funcom.tcg.client.actions.LootWindowAction;
 /*    */ import com.funcom.tcg.client.net.CreatureData;
 /*    */ import com.funcom.tcg.client.net.MessageProcessor;
+import com.funcom.tcg.client.net.processors.loadingmanager.LootCreationLMToken;
 /*    */ import com.funcom.tcg.client.state.MainGameState;
 /*    */ import com.funcom.tcg.client.view.modular.ClientDescribedModularNode;
 /*    */ import com.funcom.tcg.net.message.LootCreationMessage;
+import com.jme.scene.Spatial;
+
 /*    */ import java.util.Map;
 /*    */ import org.jdom.Document;
 /*    */ 

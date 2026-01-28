@@ -86,7 +86,7 @@
 /*     */   private List<DisposeListener> disposeListeners;
 /*     */   
 /*     */   public PropNode(Prop prop, int contentType, String resourceName, DireEffectDescriptionFactory effectDescriptionFactory) {
-/*  89 */     this(prop, contentType, resourceName, effectDescriptionFactory, new NoopActionHandler(null));
+/*  89 */     this(prop, contentType, resourceName, effectDescriptionFactory, new NoopActionHandler());
 /*  90 */     this.effectDescriptionFactory = effectDescriptionFactory;
 /*     */   }
 /*     */   

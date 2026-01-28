@@ -23,7 +23,7 @@
 /*    */   public TryToUseItemMessage(ByteBuffer buffer) {
 /* 24 */     this.slot = buffer.getInt();
 /* 25 */     byte typeId = buffer.get();
-/* 26 */     this.type = AutoUseItemMessage.Type.valueOf(typeId);
+/* 26 */     this.type = AutoUseItemMessage.Type.fromId(typeId);
 /*    */   }
 /*    */ 
 /*    */   

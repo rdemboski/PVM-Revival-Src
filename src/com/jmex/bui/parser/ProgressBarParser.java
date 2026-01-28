@@ -37,19 +37,19 @@
 /*  37 */     throw new IllegalArgumentException("Unknown property '" + name + "'");
 /*     */   }
 /*     */   
-/*     */   private Object handleBackground(ArrayList<String> args) {
+/*     */   private Object handleBackground(ArrayList args) {
 /*  41 */     List<BackgroundProperty> backgroundList = new ArrayList<BackgroundProperty>();
 /*  42 */     for (int i = 0; i < args.size(); i++) {
 /*  43 */       BackgroundProperty bprop = new BackgroundProperty();
-/*  44 */       bprop.type = args.get(i);
+/*  44 */       bprop.type = (String)args.get(i);
 /*  45 */       if (bprop.type.equals("solid")) {
-/*  46 */         bprop.color = BStyleSheetParsingUtil.parseColor(args.get(1));
+/*  46 */         bprop.color = BStyleSheetParsingUtil.parseColor((String)args.get(1));
 /*  47 */       } else if (bprop.type.equals("image")) {
 /*  48 */         i++;
-/*  49 */         bprop.ipath = args.get(i);
+/*  49 */         bprop.ipath = (String)args.get(i);
 /*  50 */         if (i + 1 < args.size() && args.get(i + 1) instanceof String) {
 /*     */           try {
-/*  52 */             String scaleModeStr = args.get(i + 1);
+/*  52 */             String scaleModeStr = (String)args.get(i + 1);
 /*  53 */             bprop.scaleMode = ImageBackgroundMode.fromStylesheetAttributeString(scaleModeStr);
 /*  54 */             i++;
 /*  55 */             if (bprop.scaleMode == ImageBackgroundMode.FRAME_XY && i + 1 < args.size() && args.get(i + 1) instanceof Double) {

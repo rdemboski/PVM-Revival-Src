@@ -167,7 +167,7 @@
 /*     */     int i;
 /* 168 */     for (i = 0; i < nPolygon - 1; i++) {
 /*     */       
-/* 170 */       CPoint2D[] points = this.earsList.get(i);
+/* 170 */       CPoint2D[] points = (CPoint2D[]) this.earsList.get(i);
 /*     */       
 /* 172 */       this.polygons[i] = new CPoint2D[3];
 /* 173 */       this.polygons[i][0] = points[0];

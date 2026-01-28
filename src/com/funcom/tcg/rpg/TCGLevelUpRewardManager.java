@@ -1,8 +1,12 @@
 /*    */ package com.funcom.tcg.rpg;
 /*    */ import com.funcom.rpgengine2.quests.reward.QuestRewardDescription;
+
+import java.util.ArrayList;
 /*    */ import java.util.Collection;
+import java.util.Collections;
 /*    */ import java.util.HashMap;
 /*    */ import java.util.List;
+import java.util.Map;
 /*    */ 
 /*    */ public class TCGLevelUpRewardManager {
 /*  8 */   private Map<Integer, List<QuestRewardDescription>> rewardsByLevel = new HashMap<Integer, List<QuestRewardDescription>>();

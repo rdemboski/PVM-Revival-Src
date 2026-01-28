@@ -105,7 +105,7 @@
 /*     */   private void setQuestRewardCards(List<QuestRewardData> questRewards) {
 /* 106 */     for (QuestRewardData questReward : questRewards) {
 /* 107 */       if (questReward.getType() == QuestRewardType.ITEM_REWARD.getId()) {
-/* 108 */         ItemCard itemCard; if (questReward.getRewardId().equals("coin")) {
+/* 108 */         ItemCard itemCard = null; if (questReward.getRewardId().equals("coin")) {
 /* 109 */           setCurrencyVisible(true);
 /* 110 */           this.currencyLabel.setText(String.valueOf(questReward.getAmount())); continue;
 /* 111 */         }  if (questReward.getRewardId().equals("pet-token")) {

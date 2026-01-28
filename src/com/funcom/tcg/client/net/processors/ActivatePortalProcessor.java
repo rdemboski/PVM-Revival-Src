@@ -41,6 +41,7 @@
 /*     */ import com.jme.util.stat.StatCollector;
 /*     */ import java.util.Map;
 /*     */ import org.jdom.Document;
+import com.funcom.gameengine.jme.modular.XmlModularDescription;
 /*     */ 
 /*     */ public class ActivatePortalProcessor implements MessageProcessor {
 /*     */   public void process(Message message, GameIOHandler ioHandler, Map<Integer, CreatureData> creatureDataMap, Map<Integer, CreatureData> playerDataMap, Map<Integer, CreatureData> unknownCreatureDataMap, Map<Integer, CreatureData> unknownPlayerDataMap) {
@@ -164,7 +165,7 @@
 /*     */     
 /* 165 */     switch (activatePortalMessage.getPortalType())
 /*     */     { case CUSTOM_PORTAL:
-/* 167 */         document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_xml"));
+/* 167 */         Document document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_xml"));
 /*     */ 
 /*     */ 
 /*     */ 
@@ -177,7 +178,7 @@
 /*     */ 
 /*     */ 
 /*     */         
-/* 180 */         xmlModularDescription = new XmlModularDescription(document);
+/* 180 */         XmlModularDescription xmlModularDescription = new XmlModularDescription(document);
 /* 181 */         return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager());case RETURN_POINT: document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("return_point_xml")); xmlModularDescription = new XmlModularDescription(document); return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager());case TOWN_PORTAL: document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_xml")); xmlModularDescription = new XmlModularDescription(document); return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager()); }  Document document = (Document)TcgGame.getResourceManager().getResource(Document.class, portalPropertyReader.getProperty("town_portal_other_xml")); XmlModularDescription xmlModularDescription = new XmlModularDescription(document); return (ModularNode)new ClientDescribedModularNode((ModularDescription)xmlModularDescription, (AnimationMapper)propNode, TcgConstants.MODEL_ROTATION, 0.0025F, TcgGame.getVisualRegistry(), TcgGame.getResourceManager());
 /*     */   }
 /*     */ 

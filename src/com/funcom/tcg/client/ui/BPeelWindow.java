@@ -28,7 +28,7 @@
 /*     */   public BPeelWindow(String windowName, BananaPeel bananaPeel) {
 /*  29 */     super(windowName, bananaPeel.getStyleSheet(), (BLayoutManager)new AbsoluteLayout());
 /*  30 */     this.bananaPeel = bananaPeel;
-/*  31 */     BContainer mainContainer = bananaPeel.getTopComponents().iterator().next();
+/*  31 */     BContainer mainContainer = (BContainer) bananaPeel.getTopComponents().iterator().next();
 /*  32 */     setSize(mainContainer.getWidth(), mainContainer.getHeight());
 /*  33 */     add((BComponent)mainContainer, new Rectangle(0, 0, getWidth(), getHeight()));
 /*  34 */     center();

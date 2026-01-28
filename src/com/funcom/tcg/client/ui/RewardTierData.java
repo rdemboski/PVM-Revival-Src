@@ -1,10 +1,12 @@
 /*     */ package com.funcom.tcg.client.ui;
+import com.funcom.rpgengine2.combat.Element;
 /*     */ import com.funcom.rpgengine2.combat.ElementDescription;
 /*     */ import com.funcom.rpgengine2.combat.ElementManager;
 /*     */ import com.funcom.rpgengine2.items.ItemDescription;
 /*     */ import com.funcom.rpgengine2.pickupitems.AbstractPickUpDescription;
 /*     */ import com.funcom.rpgengine2.pickupitems.DefaultPickUpType;
 /*     */ import com.funcom.rpgengine2.pickupitems.ItemPickUpDescription;
+import com.funcom.rpgengine2.pickupitems.PetPickUpDescription;
 /*     */ import com.funcom.rpgengine2.pickupitems.PickUpManager;
 /*     */ import com.funcom.rpgengine2.quests.reward.QuestRewardData;
 /*     */ import com.funcom.rpgengine2.quests.reward.QuestRewardType;
@@ -15,7 +17,10 @@
 /*     */ import com.funcom.tcg.client.model.rpg.VisualRegistry;
 /*     */ import com.funcom.tcg.client.state.MainGameState;
 /*     */ import com.funcom.tcg.rpg.GiftBoxDescription;
+import com.funcom.tcg.rpg.GiftBoxPickUpDescription;
 /*     */ import com.funcom.tcg.rpg.TCGPickUpType;
+
+import java.util.ArrayList;
 /*     */ import java.util.List;
 /*     */ 
 /*     */ public class RewardTierData implements TieredData {

@@ -31,6 +31,7 @@
 /* 31 */     this.bananaResourceProvider = new BananaResourceProvider(resourceManager);
 /*    */   }
 /*    */   
+           @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 35 */     InputStream layoutStream = null;
 /* 36 */     InputStream styleStream = null;
@@ -41,7 +42,7 @@
 /* 41 */       styleStream = getFileInputStream(stylePath);
 /*    */       
 /* 43 */       BananaPeel peel = new BananaPeel(layoutStream, styleStream, (ResourceProvider)this.bananaResourceProvider, this.localizer);
-/* 44 */       managedResource.setResource(peel);
+/* 44 */       ((ManagedResource<BananaPeel>)managedResource).setResource(peel);
 /* 45 */     } catch (IOException e) {
 /* 46 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

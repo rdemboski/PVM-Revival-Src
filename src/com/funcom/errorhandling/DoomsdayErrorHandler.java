@@ -1,10 +1,12 @@
 /*     */ package com.funcom.errorhandling;
 /*     */ import java.io.File;
 /*     */ import java.io.FileInputStream;
+import java.io.IOException;
 /*     */ import java.io.InputStreamReader;
 /*     */ import java.io.PrintWriter;
 /*     */ import java.io.StringWriter;
 /*     */ import java.nio.CharBuffer;
+import java.util.LinkedList;
 /*     */ import java.util.List;
 /*     */ import org.apache.log4j.Category;
 /*     */ import org.apache.log4j.FileAppender;

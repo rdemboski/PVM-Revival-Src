@@ -135,8 +135,8 @@
 /*     */   public void ready() {
 /* 136 */     List<Short> validStatIds = this.statIdTranslator.getRuntimeIds();
 /*     */     
-/* 138 */     for (Integer level = Integer.valueOf(1); level.intValue() < this.maxLevel + 1; integer1 = level, integer2 = level = Integer.valueOf(level.intValue() + 1)) {
-/* 139 */       Integer integer1, integer2; StatCollection stats = this.statsByLevel.get(level);
+for (Integer level = Integer.valueOf(1); level.intValue() < this.maxLevel + 1; level = Integer.valueOf(level.intValue() + 1)) {
+  StatCollection stats = this.statsByLevel.get(level);
 /*     */       
 /* 141 */       Set<Short> statIds = stats.getStatIds();
 /* 142 */       int size = validStatIds.size();

@@ -1,4 +1,5 @@
 /*     */ package com.funcom.tcg.client.net.processors.loadingmanager;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*     */ import com.funcom.gameengine.jme.modular.XmlModularDescription;
 /*     */ import com.funcom.gameengine.model.ResourceGetter;
 /*     */ import com.funcom.gameengine.model.ResourceGetterImpl;
@@ -12,6 +13,7 @@
 /*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
 /*     */ import com.funcom.gameengine.model.props.InteractibleProp;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManagerToken;
 /*     */ import com.funcom.gameengine.utils.SpatialUtils;
@@ -33,10 +35,12 @@
 /*     */ import java.util.concurrent.Callable;
 /*     */ import java.util.concurrent.Future;
 /*     */ import org.jdom.Document;
+import com.funcom.gameengine.view.Effects;
+import com.funcom.gameengine.view.OverheadIcons;
 /*     */ 
 /*     */ public class VendorLMToken extends LoadingManagerToken {
 /*  38 */   private VendorCreationMessage creationMessage = null;
-/*  39 */   private Future<PropNode> LoadVendorFuture = null;
+/*  39 */   private Future LoadVendorFuture = null;
 /*     */   
 /*     */   public VendorLMToken(VendorCreationMessage creationMessage) {
 /*  42 */     this.creationMessage = creationMessage;
@@ -46,7 +50,7 @@
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
 /*  48 */     Callable<PropNode> callable = new LoadVendorCallable();
-/*  49 */     this.LoadVendorFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/*  49 */     this.LoadVendorFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*     */     
 /*  51 */     return true;
 /*     */   }
@@ -61,7 +65,7 @@
 /*     */   public boolean processGame() throws Exception {
 /*  62 */     PropNode propNode = null;
 /*  63 */     if (this.LoadVendorFuture != null && !this.LoadVendorFuture.isCancelled()) {
-/*  64 */       propNode = this.LoadVendorFuture.get();
+/*  64 */       propNode = (PropNode)this.LoadVendorFuture.get();
 /*     */     } else {
 /*     */       
 /*  67 */       Callable<PropNode> callable = new LoadVendorCallable();
@@ -108,7 +112,7 @@
 /*     */ 
 /*     */   
 /*     */   public class LoadVendorCallable
-/*     */     implements Callable
+/*     */     implements Callable<PropNode>
 /*     */   {
 /*     */     public PropNode call() {
 /* 114 */       VendorDescription description = TcgGame.getRpgLoader().getVendorManager().getVendorDescription(VendorLMToken.this.creationMessage.getVendorId());

@@ -7,7 +7,6 @@
 /*    */ import com.jme.image.Image;
 /*    */ import com.jme.image.Texture;
 /*    */ import com.jmex.bui.BImage;
-/*    */ import java.awt.Image;
 /*    */ import java.awt.image.BufferedImage;
 /*    */ import java.io.IOException;
 /*    */ import java.io.InputStream;
@@ -25,7 +24,7 @@
 /*    */ 
 /*    */ 
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*    */     try {
 /* 31 */       ManagedResource<Texture> managedResourceT = this.resourceManager.getManagedResource(Texture.class, managedResource.getName());
@@ -33,30 +32,30 @@
 /* 33 */       if (texture != null) {
 /* 34 */         if (texture.getImage().getFormat() == Image.Format.NativeDXT5 || texture.getImage().getFormat() == Image.Format.NativeDXT1) {
 /*    */           
-/* 36 */           managedResource.setResource(new BImage(texture));
+/* 36 */           ((ManagedResource<BImage>)managedResource).setResource(new BImage(texture));
 /*    */         } else {
 /* 38 */           int width = (texture instanceof AsyncTexture2D) ? ((AsyncTexture2D)texture).getOriginalWidth() : texture.getImage().getWidth();
 /* 39 */           int height = (texture instanceof AsyncTexture2D) ? ((AsyncTexture2D)texture).getOriginalHeight() : texture.getImage().getHeight();
-/* 40 */           managedResource.setResource(new BImage(width, height, texture.getImage()));
+/* 40 */           ((ManagedResource<BImage>)managedResource).setResource(new BImage(width, height, texture.getImage()));
 /*    */         }
 /*    */       
 /*    */       }
 /* 44 */     } catch (Exception e) {
 /*    */       
-/* 46 */       managedResource.setResource(null);
+/* 46 */       ((ManagedResource<BImage>)managedResource).setResource(null);
 /*    */     } 
 /*    */ 
 /*    */ 
 /*    */     
 /* 51 */     if (managedResource.getResource() == null) {
-/*    */       Image image;
+/*    */       BufferedImage image;
 /*    */       try {
 /* 54 */         image = tryReducioImage(managedResource, this);
 /* 55 */       } catch (LoadException e) {
 /* 56 */         image = loadNormal(managedResource);
 /*    */       } 
 /*    */       
-/* 59 */       managedResource.setResource(new BImage(image));
+/* 59 */       ((ManagedResource<BImage>)managedResource).setResource(new BImage(image));
 /*    */     } 
 /*    */   }
 /*    */   
@@ -72,7 +71,7 @@
 /* 72 */     return Reducio.load(colorImage, alphaImage);
 /*    */   }
 /*    */   
-/*    */   private Image loadNormal(ManagedResource<?> managedResource) throws LoadException {
+/*    */   private BufferedImage loadNormal(ManagedResource<?> managedResource) throws LoadException {
 /* 76 */     InputStream inputStream = null;
 /*    */     try {
 /* 78 */       inputStream = getFileInputStream(managedResource.getName());

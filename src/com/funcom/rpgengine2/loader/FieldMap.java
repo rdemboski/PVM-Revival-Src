@@ -18,9 +18,9 @@
 /* 18 */       throw new IllegalArgumentException("keys and values must have same size: keyCount=" + keys.length + " valueCount=" + values.length + " itemId=" + itemId);
 /*    */     } 
 /*    */     
-/* 21 */     for (int i = 0; i < keys.length; i++) {
-/* 22 */       put((K)keys[i], (V)values[i]);
-/*    */     }
+            for (int i = 0; i < keys.length; i++) {
+                put(keys[i], values[i]);
+            }
 /*    */   }
 /*    */ 
 /*    */   

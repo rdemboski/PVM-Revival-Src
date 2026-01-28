@@ -382,14 +382,14 @@
 /*     */       
 /* 383 */       if (!this.oldScreenSize.equals(this.screenSizeType) || oldFullscreen != newFullscreen) {
 /* 384 */         switch (this.screenSizeType) {
-/*     */           case SOUND:
+/*     */           case Small:
 /* 386 */             if (this.menuListener != null)
 /* 387 */             { this.menuListener.setRes((DisplayResolutionHelper.getInstance()).lowWindowResolution, newFullscreen); }
 /* 388 */             else { this.model.setRes((DisplayResolutionHelper.getInstance()).lowWindowResolution, newFullscreen); }
 /* 389 */              TcgGame.getGameSettings().setWidth((DisplayResolutionHelper.getInstance()).lowWindowResolution.getWidth());
 /* 390 */             TcgGame.getGameSettings().setHeight((DisplayResolutionHelper.getInstance()).lowWindowResolution.getHeight());
 /*     */             break;
-/*     */           case MUSIC:
+/*     */           case Medium:
 /* 393 */             if (this.menuListener != null)
 /* 394 */             { this.menuListener.setRes((DisplayResolutionHelper.getInstance()).mediumWindowResolution, newFullscreen); }
 /* 395 */             else { this.model.setRes((DisplayResolutionHelper.getInstance()).mediumWindowResolution, newFullscreen); }
@@ -397,7 +397,7 @@
 /* 397 */             TcgGame.getGameSettings().setHeight((DisplayResolutionHelper.getInstance()).mediumWindowResolution.getHeight());
 /*     */             break;
 /*     */           
-/*     */           case FULLSCREEN:
+/*     */           case Large:
 /* 401 */             if (this.menuListener != null)
 /* 402 */             { this.menuListener.setRes((DisplayResolutionHelper.getInstance()).highWindowResolution, newFullscreen); }
 /* 403 */             else { this.model.setRes((DisplayResolutionHelper.getInstance()).highWindowResolution, newFullscreen); }
@@ -472,7 +472,7 @@
 /* 472 */         this.screenSizeHeaderLabel.setVisible(visible);
 /* 473 */         this.screenSizeToggleButton.setVisible(visible);
 /*     */         break;
-/*     */       case MUSIC:
+/*     */       case GRAPHICS:
 /* 476 */         this.soundSectionLabel.setVisible(visible);
 /* 477 */         this.soundOffButton.setVisible(visible);
 /* 478 */         this.soundOnButton.setVisible(visible);
@@ -535,13 +535,13 @@
 /*     */     }
 /*     */     
 /* 537 */     switch (type) {
-/*     */       case SOUND:
+/*     */       case Small:
 /* 539 */         this.screenSizeLowButton.setSelected(true);
 /*     */         break;
-/*     */       case MUSIC:
+/*     */       case Medium:
 /* 542 */         this.screenSizeMediumButton.setSelected(true);
 /*     */         break;
-/*     */       case FULLSCREEN:
+/*     */       case Large:
 /* 545 */         this.screenSizeHighButton.setSelected(true);
 /*     */         break;
 /*     */     } 

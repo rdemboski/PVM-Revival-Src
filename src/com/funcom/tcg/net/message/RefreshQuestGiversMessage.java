@@ -71,7 +71,7 @@
 /*    */ 
 /*    */   
 /*    */   public String toString() {
-/* 74 */     return "RefreshQuestGiversMessage{questIds=" + ((this.questIds == null) ? null : (String)Arrays.<String>asList(this.questIds)) + ", handInQuestIds=" + ((this.handInQuestIds == null) ? null : (String)Arrays.<String>asList(this.handInQuestIds)) + ", progress=" + ((this.progress == null) ? null : (String)Arrays.<Short>asList(this.progress)) + ", questGiverIds=" + ((this.questGiverIds == null) ? null : (String)Arrays.<Integer>asList(this.questGiverIds)) + '}';
+/* 74 */     return "RefreshQuestGiversMessage{questIds=" + ((this.questIds == null) ? null : Arrays.asList(this.questIds)) + ", handInQuestIds=" + ((this.handInQuestIds == null) ? null : Arrays.asList(this.handInQuestIds)) + ", progress=" + ((this.progress == null) ? null : Arrays.asList(this.progress)) + ", questGiverIds=" + ((this.questGiverIds == null) ? null : Arrays.asList(this.questGiverIds)) + '}';
 /*    */   }
 /*    */ }
 

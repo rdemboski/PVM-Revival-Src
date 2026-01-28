@@ -59,7 +59,7 @@
 /*  59 */     TextureLoader.ts = ts;
 /*     */   }
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*  64 */     if (this._supportsNonPowerOfTwo == null) {
 /*  65 */       this._supportsNonPowerOfTwo = Boolean.valueOf((GLContext.getCapabilities()).GL_ARB_texture_non_power_of_two);
@@ -101,7 +101,7 @@
 /* 101 */             Texture2D texture2D = new Texture2D();
 /* 102 */             texture2D.setImage(DDSLoader.loadImage(fis, false));
 /* 103 */             texture2D.getImage().setData(texture2D.getImage().getData());
-/* 104 */             managedResource.setResource(texture2D);
+/* 104 */             ((ManagedResource<Texture2D>)managedResource).setResource(texture2D);
 /*     */             
 /* 106 */             LWJGLTextureState2 ts2 = new LWJGLTextureState2();
 /* 107 */             ts2.setTexture((Texture)texture2D);
@@ -109,7 +109,7 @@
 /* 109 */             if (!bMainThread) {
 /* 110 */               DrawableContextManager.unset();
 /*     */             }
-/* 112 */             managedResource.setResource(texture2D);
+/* 112 */             ((ManagedResource<Texture2D>)managedResource).setResource(texture2D);
 /*     */           } else {
 /*     */             
 /* 115 */             ImageWrapper wrapper = ImageWrapperFactory.createWrapper(resourceName, fis, managedResource.getParameters());
@@ -127,7 +127,7 @@
 /* 127 */               DrawableContextManager.unset();
 /*     */             }
 /* 129 */             texture.getImage().setData(new ArrayList());
-/* 130 */             managedResource.setResource(texture2D);
+/* 130 */             ((ManagedResource<AsyncTexture2D>)managedResource).setResource(texture2D);
 /*     */           }
 /*     */         
 /*     */         }
@@ -137,7 +137,7 @@
 /* 137 */           texture2D.getImage().setData(texture2D.getImage().getData());
 /* 138 */           texture2D.setMagnificationFilter(Texture.MagnificationFilter.Bilinear);
 /* 139 */           texture2D.setMinificationFilter(Texture.MinificationFilter.BilinearNoMipMaps);
-/* 140 */           managedResource.setResource(texture2D);
+/* 140 */           ((ManagedResource<Texture2D>)managedResource).setResource(texture2D);
 /*     */         } else {
 /*     */           
 /* 143 */           ImageWrapper wrapper = ImageWrapperFactory.createWrapper(resourceName, fis, managedResource.getParameters());
@@ -147,7 +147,7 @@
 /* 147 */           AsyncTexture2D texture2D = new AsyncTexture2D(wrapper.getOriginalWidth(), wrapper.getOriginalHeight());
 /* 148 */           texture2D.copyRealProperties(texture);
 /* 149 */           texture.getImage().setData(texture.getImage().getData());
-/* 150 */           managedResource.setResource(texture2D);
+/* 150 */           ((ManagedResource<AsyncTexture2D>)managedResource).setResource(texture2D);
 /*     */         }
 /*     */       
 /* 153 */       } catch (IOException e) {
@@ -186,7 +186,7 @@
 /* 186 */             ts.load();
 /*     */             
 /* 188 */             texture.getImage().setData(new ArrayList());
-/* 189 */             managedResource.setResource(texture2D);
+/* 189 */             ((ManagedResource<AsyncTexture2D>)managedResource).setResource(texture2D);
 /* 190 */           } catch (IOException e) {
 /* 191 */             throw new LoadException(getResourceManager(), managedResource, e);
 /* 192 */           } catch (InterruptedException e) {
@@ -199,6 +199,7 @@
 /*     */     } 
 /*     */   }
 /*     */   
+            @SuppressWarnings("unchecked")
 /*     */   public void loadData_Async(ManagedResource<?> managedResource) throws LoadException {
 /*     */     try {
 /*     */       ImageWrapper imageWrapper;
@@ -219,7 +220,7 @@
 /*     */       
 /* 220 */       AsyncTexture2D substituteTexture = makeSmallSubstituteTexture(imageWrapper);
 /*     */       
-/* 222 */       managedResource.setResource(substituteTexture);
+/* 222 */       ((ManagedResource<AsyncTexture2D>)managedResource).setResource(substituteTexture);
 /*     */       
 /* 224 */       TextureDataSimple textureDataSimple = new TextureDataSimple(resourceName, imageWrapper, substituteTexture);
 /* 225 */       textureDataSimple.init();

@@ -12,7 +12,7 @@
 /* 12 */     super(String.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 17 */     BufferedInputStream bis = null;
 /*    */     try {
@@ -24,7 +24,7 @@
 /* 24 */         throw new LoadException(getResourceManager(), managedResource, new RuntimeException("Data not read entirely, read bytes: " + read + ", should read: " + data.length));
 /*    */       }
 /* 26 */       String dataString = (new String(data)).trim();
-/* 27 */       managedResource.setResource(dataString);
+/* 27 */       ((ManagedResource<String>)managedResource).setResource(dataString);
 /* 28 */     } catch (IOException e) {
 /* 29 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

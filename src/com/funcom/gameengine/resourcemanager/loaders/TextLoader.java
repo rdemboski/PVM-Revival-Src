@@ -15,7 +15,7 @@
 /* 15 */     super(String.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 20 */     BufferedInputStream bis = null;
 /*    */     try {
@@ -28,7 +28,7 @@
 /*    */       }
 /*    */       
 /* 30 */       String dataString = (new String(data)).trim();
-/* 31 */       managedResource.setResource(dataString);
+/* 31 */       ((ManagedResource<String>)managedResource).setResource(dataString);
 /* 32 */     } catch (IOException e) {
 /* 33 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

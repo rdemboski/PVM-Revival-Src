@@ -544,7 +544,7 @@
 /* 544 */     return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 /*     */   }
 /*     */   public BoundingVolume getModelBounds(BoundingVolume bounds) {
-/*     */     BoundingBox boundingBox;
+/*     */     BoundingBox boundingBox = null;
 /* 548 */     if (bounds == null) {
 /* 549 */       boundingBox = new BoundingBox();
 /*     */     }

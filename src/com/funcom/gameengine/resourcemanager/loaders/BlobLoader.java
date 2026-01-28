@@ -14,7 +14,7 @@
 /* 14 */     super(ByteBuffer.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 19 */     InputStream stream = null;
 /*    */     try {
@@ -24,7 +24,7 @@
 /* 24 */       Boolean isDirect = (Boolean)managedResource.getParameter("direct", null);
 /* 25 */       ByteBuffer blob = toBuffer(bout, isDirect);
 /*    */       
-/* 27 */       managedResource.setResource(blob);
+/* 27 */       ((ManagedResource<ByteBuffer>)managedResource).setResource(blob);
 /* 28 */     } catch (IOException e) {
 /* 29 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

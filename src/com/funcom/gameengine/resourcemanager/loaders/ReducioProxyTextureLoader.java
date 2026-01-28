@@ -66,6 +66,7 @@
 /*     */     } 
 /*     */   }
 /*     */   
+            @SuppressWarnings("unchecked")
 /*     */   private void loadReducio(ManagedResource<?> managedResource, ImageWrapper wrapper) throws LoadException {
 /*  70 */     if (LoadingManager.USE) {
 /*     */       
@@ -112,7 +113,7 @@
 /* 112 */           if (!bMainThread)
 /* 113 */             DrawableContextManager.unset(); 
 /* 114 */           texture.getImage().setData(new ArrayList());
-/* 115 */           managedResource.setResource(texture2D);
+/* 115 */           ((ManagedResource<AsyncTexture2D>)managedResource).setResource(texture2D);
 /*     */ 
 /*     */ 
 /*     */         
@@ -127,7 +128,7 @@
 /* 127 */           AsyncTexture2D texture2D = new AsyncTexture2D(wrapper.getOriginalWidth(), wrapper.getOriginalHeight());
 /* 128 */           texture2D.copyRealProperties(texture);
 /* 129 */           texture.getImage().setData(texture.getImage().getData());
-/* 130 */           managedResource.setResource(texture2D);
+/* 130 */           ((ManagedResource<AsyncTexture2D>)managedResource).setResource(texture2D);
 /*     */         } 
 /* 132 */       } catch (InterruptedException e) {
 /* 133 */         throw new LoadException(getResourceManager(), managedResource, e);
@@ -145,7 +146,7 @@
 /* 145 */           ts.setTexture((Texture)texture2D);
 /* 146 */           ts.load();
 /* 147 */           texture.getImage().setData(new ArrayList());
-/* 148 */           managedResource.setResource(texture2D);
+/* 148 */           ((ManagedResource<AsyncTexture2D>)managedResource).setResource(texture2D);
 /* 149 */         } catch (InterruptedException e) {
 /* 150 */           throw new LoadException(getResourceManager(), managedResource, e);
 /*     */         } 
@@ -155,6 +156,7 @@
 /*     */     } 
 /*     */   }
 /*     */   
+            @SuppressWarnings("unchecked")
 /*     */   public void loadData_Async(ManagedResource<?> managedResource, ImageWrapper wrapper) throws LoadException {
 /* 159 */     String resourceName = managedResource.getName();
 /*     */ 
@@ -162,7 +164,7 @@
 /*     */     
 /* 163 */     AsyncTexture2D substituteTexture = makeSmallSubstituteTexture(wrapper);
 /*     */     
-/* 165 */     managedResource.setResource(substituteTexture);
+/* 165 */     ((ManagedResource<AsyncTexture2D>)managedResource).setResource(substituteTexture);
 /*     */     
 /* 167 */     TextureDataSimple textureDataSimple = new TextureDataSimple(resourceName, wrapper, substituteTexture);
 /* 168 */     textureDataSimple.init();

@@ -19,7 +19,7 @@
 /* 19 */     super(PublicKey.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*    */     try {
 /* 25 */       InputStream inputStream = getFileInputStream(managedResource);
@@ -28,7 +28,7 @@
 /* 28 */       KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 /* 29 */       X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(encodedPublicKey);
 /* 30 */       PublicKey publicKey = keyFactory.generatePublic(publicKeySpec);
-/* 31 */       managedResource.setResource(publicKey);
+/* 31 */       ((ManagedResource<PublicKey>) managedResource).setResource(publicKey);
 /* 32 */     } catch (IOException e) {
 /* 33 */       e.printStackTrace();
 /* 34 */     } catch (InvalidKeySpecException e) {

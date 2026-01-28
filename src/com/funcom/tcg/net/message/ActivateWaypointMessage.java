@@ -98,7 +98,7 @@
 /*     */ 
 /*     */   
 /*     */   public String toString() {
-/* 101 */     return "ActivateWaypointMessage{propId=" + this.propId + ", waypointID='" + this.waypointID + '\'' + ", destinationPortalsId=" + ((this.destinationPortalsId == null) ? null : (String)Arrays.<String>asList(this.destinationPortalsId)) + ", destianPortalsLockingStatus=" + ((this.destianPortalsLockingStatus == null) ? null : (String)Arrays.<boolean[]>asList(new boolean[][] { this.destianPortalsLockingStatus })) + '}';
+/* 101 */     return "ActivateWaypointMessage{propId=" + this.propId + ", waypointID='" + this.waypointID + '\'' + ", destinationPortalsId=" + (this.destinationPortalsId == null ? null : Arrays.toString(this.destinationPortalsId)) + ", destianPortalsLockingStatus=" + (this.destianPortalsLockingStatus == null ? null : Arrays.toString(this.destianPortalsLockingStatus)) + '}';
 /*     */   }
 /*     */ }
 

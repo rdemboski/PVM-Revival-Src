@@ -1,6 +1,9 @@
 /*     */ package com.funcom.tcg.client.ui.hud2;
 /*     */ 
+/*     */ import com.funcom.rpgengine2.combat.ElementManager;
+/*     */ import com.funcom.rpgengine2.pickupitems.PickUpManager;
 /*     */ import com.funcom.tcg.client.model.rpg.ClientQuestData;
+/*     */ import com.funcom.tcg.client.model.rpg.PetRegistry;
 /*     */ import com.funcom.tcg.client.ui.giftbox.HudInfoModel;
 /*     */ import com.funcom.tcg.client.ui.giftbox.HudInfoSetModel;
 /*     */ import com.funcom.tcg.client.ui.quest.QuestModel;
@@ -111,6 +114,22 @@
 /*     */   public void dismiss() {
 /* 112 */     super.dismiss();
 /* 113 */     this.questModel.removeChangeListener(this);
+/*     */   }
+/*     */ 
+/*     */ 
+/*     */   @Override
+/*     */   public ElementManager getElementManager() {
+/*     */     return super.getElementManager();
+/*     */   }
+/*     */ 
+/*     */   @Override
+/*     */   public PickUpManager getPickUpManager() {
+/*     */     return super.getPickUpManager();
+/*     */   }
+/*     */ 
+/*     */   @Override
+/*     */   public PetRegistry getPetRegistry() {
+/*     */     return super.getPetRegistry();
 /*     */   }
 /*     */ }
 

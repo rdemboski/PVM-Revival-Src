@@ -63,7 +63,7 @@
 /*     */ public class ClientStaticObjectLMToken
 /*     */   extends LoadingManagerToken
 /*     */ {
-/*  66 */   private Future<Texture> LoadTextureFuture = null;
+/*  66 */   private Future LoadTextureFuture = null;
 /*  67 */   Prop prop = null;
 /*  68 */   WorldCoordinate coord = null;
 /*  69 */   float scale = 1.0F;
@@ -91,8 +91,8 @@
 /*     */ 
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
-/*  94 */     Callable<Integer> callable = new LoadTextureCallable(this.resourceName);
-/*  95 */     this.LoadTextureFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/*  94 */     Callable<Texture> callable = new LoadTextureCallable(this.resourceName);
+/*  95 */     this.LoadTextureFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*     */ 
 /*     */     
 /*  98 */     return true;
@@ -144,7 +144,7 @@
 /*     */     
 /* 145 */     Texture t = null;
 /* 146 */     if (this.LoadTextureFuture != null && !this.LoadTextureFuture.isCancelled()) {
-/* 147 */       t = this.LoadTextureFuture.get();
+/* 147 */       t = (Texture)this.LoadTextureFuture.get();
 /*     */     } else {
 /*     */       
 /* 150 */       t = resourceGetter.getTexture(resourceName, CacheType.CACHE_TEMPORARILY);
@@ -209,7 +209,7 @@
 /* 209 */     return propNode;
 /*     */   }
 /*     */   
-/*     */   class LoadTextureCallable implements Callable {
+/*     */   class LoadTextureCallable implements Callable<Texture> {
 /*     */     private String resourceName;
 /*     */     
 /*     */     public LoadTextureCallable(String resourceName) {

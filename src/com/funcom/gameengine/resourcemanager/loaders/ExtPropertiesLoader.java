@@ -19,6 +19,7 @@
 /* 19 */     super(ExtProperties.class);
 /*    */   }
 /*    */   
+           @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 23 */     String docName = managedResource.getName();
 /*    */ 
@@ -29,7 +30,7 @@
 /* 29 */       ExtProperties properties = new ExtProperties();
 /* 30 */       properties.load(inputStream);
 /*    */       
-/* 32 */       managedResource.setResource(properties);
+/* 32 */       ((ManagedResource<ExtProperties>)managedResource).setResource(properties);
 /* 33 */     } catch (FileNotFoundException e) {
 /* 34 */       throw new LoadException(getResourceManager(), managedResource, e);
 /* 35 */     } catch (IOException e) {

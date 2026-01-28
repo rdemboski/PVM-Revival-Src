@@ -12,7 +12,7 @@
 /* 12 */   private HashSet<String> errors = new HashSet<String>();
 /*    */   
 /*    */   public ServerAchaDoomsdayErrorHandler(String serverAddress) {
-/* 15 */     super(new AchaDoomsdayErrorHandler.AchaBugreportDataFeeder(serverAddress)
+/* 15 */     super(new AchaDoomsdayErrorHandler.AchaBugreportDataFeeder()
 /*    */         {
 /*    */           public String getUsername() {
 /* 18 */             return "not used";

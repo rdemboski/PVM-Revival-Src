@@ -241,7 +241,7 @@
 /* 241 */       align = align.toLowerCase();
 /* 242 */       if (align.equals("top") || align.equals("texttop"))
 /* 243 */         return 0.0F; 
-/* 244 */       this; if (align.equals("center") || align.equals("middle") || align.equals("absmiddle"))
+/* 244 */       ImageViewCustom imageViewCustom = this; if (align.equals("center") || align.equals("middle") || align.equals("absmiddle"))
 /*     */       {
 /* 246 */         return 0.5F; } 
 /*     */     } 

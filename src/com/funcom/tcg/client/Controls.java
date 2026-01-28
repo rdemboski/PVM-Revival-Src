@@ -16,9 +16,9 @@
 /*  16 */   CID_EXIT("exit-game", 62),
 /*     */ 
 /*     */   
-/*  19 */   CID_ZOOM_POSITIVE("zoom-camera-forward"),
-/*  20 */   CID_ZOOM_NEGATIVE("zoom-camera-backward"),
-/*  21 */   CID_CONTEXTUAL_CONTROL("contextual-control"),
+/*  19 */   CID_ZOOM_POSITIVE("zoom-camera-forward", 100),
+/*  20 */   CID_ZOOM_NEGATIVE("zoom-camera-backward", 101),
+/*  21 */   CID_CONTEXTUAL_CONTROL("contextual-control", 102),
 /*     */ 
 /*     */   
 /*  24 */   CID_FORCE_ATTACK("force-attack", 42),

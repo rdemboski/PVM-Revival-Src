@@ -234,7 +234,7 @@
 /*     */ 
 /*     */   
 /*     */   public void setAnisotropic(int aniso) {
-/* 237 */     if (aniso >= 0) { this; anisotropic = aniso; }
+/* 237 */     if (aniso >= 0) { anisotropic = aniso; }
 /* 238 */     else { logger.info("Invalid Anisotropic filter level. Default 16 used."); }
 /*     */   
 /*     */   }
@@ -244,7 +244,7 @@
 /*     */ 
 /*     */   
 /*     */   public void setOrientedBounding(boolean orientedBounding) {
-/* 247 */     this; MD5Importer.orientedBounding = orientedBounding;
+/* 247 */     MD5Importer.orientedBounding = orientedBounding;
 /*     */   }
 /*     */ 
 /*     */ 
@@ -253,7 +253,7 @@
 /*     */ 
 /*     */   
 /*     */   public String[] getExtensions() {
-/* 256 */     this; return extensions;
+/* 256 */     return extensions;
 /*     */   }
 /*     */ 
 /*     */ 
@@ -262,7 +262,7 @@
 /*     */ 
 /*     */   
 /*     */   public Texture.MinificationFilter getMMFilter() {
-/* 265 */     this; return MM_Filter;
+/* 265 */     return MM_Filter;
 /*     */   }
 /*     */ 
 /*     */ 
@@ -271,7 +271,7 @@
 /*     */ 
 /*     */   
 /*     */   public Texture.MagnificationFilter getFMFilter() {
-/* 274 */     this; return FM_Filter;
+/* 274 */     return FM_Filter;
 /*     */   }
 /*     */ 
 /*     */ 
@@ -280,7 +280,7 @@
 /*     */ 
 /*     */   
 /*     */   public int getAnisotropic() {
-/* 283 */     this; return anisotropic;
+/* 283 */     return anisotropic;
 /*     */   }
 /*     */ 
 /*     */ 
@@ -307,7 +307,7 @@
 /*     */ 
 /*     */   
 /*     */   public boolean isOriented() {
-/* 310 */     this; return orientedBounding;
+/* 310 */     return orientedBounding;
 /*     */   }
 /*     */ 
 /*     */   

@@ -21,7 +21,7 @@
 /* 21 */     super(GraphicsConfig.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 26 */     String docName = managedResource.getName();
 /*    */ 
@@ -39,9 +39,9 @@
 /*    */       
 /* 40 */       GraphicsConfig config = new GraphicsConfig(blendMode);
 /*    */       
-/* 42 */       managedResource.setResource(config);
+/* 42 */       ((ManagedResource<GraphicsConfig>)managedResource).setResource(config);
 /* 43 */     } catch (FileNotFoundException e) {
-/* 44 */       managedResource.setResource(DEFAULT_GRAPHICS_CONFIG);
+/* 44 */       ((ManagedResource<GraphicsConfig>)managedResource).setResource(DEFAULT_GRAPHICS_CONFIG);
 /* 45 */     } catch (IOException e) {
 /* 46 */       throw new LoadException(getResourceManager(), managedResource, e);
 /* 47 */     } catch (JDOMException e) {

@@ -73,13 +73,12 @@
 /*     */ 
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
-/*  76 */     Callable<Integer> callable = new LoadModelCallable(TcgConstants.MODEL_ROTATION);
-/*  77 */     this.LoadModelFuture = LoadingManager.INSTANCE.submitCallable(callable);
+              Callable<SLoaded> callable = new LoadModelCallable(TcgConstants.MODEL_ROTATION);
+              this.LoadModelFuture = (Future<SLoaded>) LoadingManager.INSTANCE.submitCallable(callable);
+
 /*  78 */     if (this.LoadModelFuture == null) {
 /*  79 */       throw new Exception("processWaitingAssets: the LoadModelFuture is null.");
 /*     */     }
-/*     */ 
-/*     */ 
 /*     */     
 /*  84 */     return true;
 /*     */   }
@@ -205,16 +204,16 @@
 /*     */   }
 /*     */   
 /*     */   public class LoadModelCallable
-/*     */     implements Callable
+/*     */     implements Callable<SLoaded>
 /*     */   {
-/* 210 */     Quaternion modelRotation = null;
-/*     */     
-/*     */     public LoadModelCallable(Quaternion modelRotation) {
-/* 213 */       this.modelRotation = modelRotation;
-/*     */     }
+              Quaternion modelRotation = null;
+                    
+              public LoadModelCallable(Quaternion modelRotation) {
+                this.modelRotation = modelRotation;
+              }
 /*     */ 
 /*     */     
-/*     */     public CreateMeshObjectLMToken.SLoaded call() {
+/*     */     public SLoaded call() {
 /* 218 */       Document document = CreateMeshObjectLMToken.this.resourceGetter.getDocument(CreateMeshObjectLMToken.this.resourceName, CacheType.CACHE_TEMPORARILY);
 /* 219 */       Element rootElement = document.getRootElement();
 /* 220 */       MeshDescription meshDescription = new MeshDescription(rootElement);

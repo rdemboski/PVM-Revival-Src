@@ -1,6 +1,8 @@
 /*    */ package com.funcom.commons.configuration;
 /*    */ 
 /*    */ import com.funcom.commons.ThreadInvoker;
+import com.funcom.commons.configuration.URLFieldProperties.PropertyException;
+
 /*    */ import java.awt.Dimension;
 /*    */ import java.awt.event.ActionEvent;
 /*    */ import java.awt.event.ActionListener;

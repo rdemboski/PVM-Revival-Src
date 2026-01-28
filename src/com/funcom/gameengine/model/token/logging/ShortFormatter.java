@@ -1,12 +1,11 @@
 /*    */ package com.funcom.gameengine.model.token.logging;
 /*    */ import java.io.PrintWriter;
 /*    */ import java.io.StringWriter;
-/*    */ import java.security.AccessController;
+import java.text.FieldPosition;
 /*    */ import java.text.MessageFormat;
 /*    */ import java.util.Date;
 /*    */ import java.util.logging.Formatter;
 /*    */ import java.util.logging.LogRecord;
-/*    */ import sun.security.action.GetPropertyAction;
 /*    */ 
 /*    */ @Deprecated
 /*    */ public class ShortFormatter extends Formatter {
@@ -18,7 +17,7 @@
 /*    */ 
 /*    */ 
 /*    */   
-/* 21 */   private String lineSeparator = AccessController.<String>doPrivileged(new GetPropertyAction("line.separator"));
+/* 21 */   private String lineSeparator = System.getProperty("line.separator");
 /*    */ 
 /*    */ 
 /*    */ 

@@ -24,7 +24,7 @@
 /*    */   extends LoadingManagerToken
 /*    */ {
 /* 26 */   ClientQuestData clientQuestData = null;
-/* 27 */   Future<BananaPeel> BananaPeelFuture = null;
+/* 27 */   Future BananaPeelFuture = null;
 /*    */   
 /*    */   public ConfirmDialogLMToken(ClientQuestData clientQuestData) {
 /* 30 */     this.clientQuestData = clientQuestData;
@@ -32,8 +32,8 @@
 /*    */ 
 /*    */   
 /*    */   public boolean processRequestAssets() throws Exception {
-/* 35 */     Callable<Integer> callable = new BananaPeelCallable();
-/* 36 */     this.BananaPeelFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/* 35 */     Callable<BananaPeel> callable = new BananaPeelCallable();
+/* 36 */     this.BananaPeelFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*    */     
 /* 38 */     return true;
 /*    */   }
@@ -46,7 +46,7 @@
 /*    */   public boolean processGame() throws Exception {
 /* 47 */     BananaPeel bananaPeel = null;
 /* 48 */     if (this.BananaPeelFuture != null && !this.BananaPeelFuture.isCancelled()) {
-/* 49 */       bananaPeel = this.BananaPeelFuture.get();
+/* 49 */       bananaPeel = (BananaPeel)this.BananaPeelFuture.get();
 /*    */     } else {
 /*    */       
 /* 52 */       bananaPeel = (BananaPeel)TcgGame.getResourceManager().getResource(BananaPeel.class, "gui/peeler/window_quest_accept.xml", CacheType.NOT_CACHED);
@@ -70,7 +70,7 @@
 /*    */ 
 /*    */   
 /*    */   public class BananaPeelCallable
-/*    */     implements Callable
+/*    */     implements Callable<BananaPeel>
 /*    */   {
 /*    */     public BananaPeel call() {
 /* 76 */       return (BananaPeel)TcgGame.getResourceManager().getResource(BananaPeel.class, "gui/peeler/window_quest_accept.xml", CacheType.NOT_CACHED);

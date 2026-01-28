@@ -10,6 +10,7 @@
 /*     */ import org.apache.log4j.Logger;
 /*     */ import org.jdom.Document;
 /*     */ import org.jdom.JDOMException;
+import org.jdom.input.BuilderErrorHandler;
 /*     */ import org.jdom.input.SAXBuilder;
 /*     */ import org.jdom.input.SAXHandler;
 /*     */ import org.xml.sax.ContentHandler;
@@ -29,20 +30,21 @@
 /*     */ 
 /*     */ 
 /*     */   
-/*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
-/*  33 */     InputStream inputStream = null;
-/*     */     try {
-/*  35 */       inputStream = getFileInputStream(managedResource.getName());
-/*  36 */       Document document = createDocument(inputStream);
-/*  37 */       managedResource.setResource(document);
-/*  38 */     } catch (IOException e) {
-/*  39 */       throw new LoadException(getResourceManager(), managedResource, e);
-/*  40 */     } catch (JDOMException e) {
-/*  41 */       throw new LoadException(getResourceManager(), managedResource, e);
-/*     */     } finally {
-/*  43 */       closeSafely(inputStream, managedResource);
-/*     */     } 
-/*     */   }
+            @SuppressWarnings("unchecked")
+            public void loadData(ManagedResource<?> managedResource) throws LoadException {
+                InputStream inputStream = null;
+                try {
+                    inputStream = getFileInputStream(managedResource.getName());
+                    Document document = createDocument(inputStream);
+                    ((ManagedResource<Document>) managedResource).setResource(document);
+                } catch (IOException e) {
+                    throw new LoadException(getResourceManager(), managedResource, e);
+                } catch (JDOMException e) {
+                    throw new LoadException(getResourceManager(), managedResource, e);
+                } finally {
+                    closeSafely(inputStream, managedResource);
+                } 
+            }
 /*     */ 
 /*     */ 
 /*     */ 

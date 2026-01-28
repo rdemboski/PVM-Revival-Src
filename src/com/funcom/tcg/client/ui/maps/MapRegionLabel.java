@@ -7,6 +7,8 @@
 /*     */ import com.jmex.bui.BLabel;
 /*     */ import com.jmex.bui.background.BBackground;
 /*     */ import com.jmex.bui.background.ImageBackground;
+import com.jmex.bui.enumeratedConstants.ImageBackgroundMode;
+
 /*     */ import java.awt.Color;
 /*     */ import java.awt.GradientPaint;
 /*     */ import java.awt.Graphics2D;

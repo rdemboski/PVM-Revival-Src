@@ -13,6 +13,7 @@
 /*    */ import com.jme.scene.Spatial;
 /*    */ import com.jme.scene.state.LightState;
 /*    */ import com.jme.scene.state.RenderState;
+import com.jme.system.DisplaySystem;
 /*    */ 
 /*    */ public class LightSourceHandler extends PositionalEffectHandler {
 /* 18 */   private Light light = null;

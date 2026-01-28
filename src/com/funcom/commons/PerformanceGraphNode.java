@@ -151,38 +151,38 @@
 /*     */   
 /*     */   public enum TrackingStat
 /*     */   {
-/* 154 */     RENDER_TIME("Render time", StatType.STAT_RENDER_TIMER, 1, (StatType)new ColorRGBA(0.0F, 1.0F, 0.87F, 1.0F), true),
-/* 155 */     TRIS_COUNT("Triangles", StatType.STAT_TRIANGLE_COUNT, 1, (StatType)new ColorRGBA(0.7F, 0.0F, 1.0F, 1.0F), false),
-/* 156 */     QUAD_COUNT("Quads", StatType.STAT_QUAD_COUNT, 1, (StatType)ColorRGBA.orange, false),
-/* 157 */     LINE_COUNT("Lines", StatType.STAT_LINE_COUNT, 1, (StatType)ColorRGBA.yellow, false),
-/* 158 */     TEXTURE_BINDS("Textures", StatType.STAT_TEXTURE_BINDS, 1, (StatType)new ColorRGBA(0.98F, 0.0F, 1.0F, 1.0F), false),
-/* 159 */     GEOMETRY_COUNT("Geometry", StatType.STAT_GEOM_COUNT, 1, (StatType)new ColorRGBA(0.0F, 1.0F, 0.16F, 1.0F), false),
-/* 160 */     CHUNK_MANAGEMENT("Chunk management", "chunkManagement", 1, (String)new ColorRGBA(0.0F, 0.68F, 1.0F, 1.0F), true),
-/* 161 */     LOGIC_UPDATE("Logic update", "logicUpdate", 1, (String)new ColorRGBA(0.0F, 0.32F, 1.0F, 1.0F), true),
-/* 162 */     NETWORK_HANDLING("Network handling", "networkHandler", 1, (String)new ColorRGBA(1.0F, 0.51F, 0.0F, 1.0F), true),
-/* 163 */     BREADCRUMBS("Breadcrumbs", "breadcrumbs", 1, (String)ColorRGBA.pink, true),
-/* 164 */     CLIENTS_UPDATE("Clients update", "updateClients", 1, (String)new ColorRGBA(1.0F, 0.17F, 0.36F, 1.0F), true),
-/* 165 */     GLOBAL_RENDER_CALL("Global render call", "renderCall", 1, (String)new ColorRGBA(1.0F, 1.0F, 1.0F, 1.0F), true),
-/* 166 */     PARTICLES("Particles", "particles", 1, (String)new ColorRGBA(0.0F, 1.0F, 0.0F, 1.0F), true),
-/* 167 */     SOUND("Sound", "sound", 1, (String)new ColorRGBA(1.0F, 0.0F, 0.0F, 1.0F), true),
-/* 168 */     UPDATE_QUEUE("Update Queue", "updateQueue", 1, (String)new ColorRGBA(0.0F, 0.5F, 0.5F, 1.0F), true),
-/* 169 */     GAME_TOKEN("Game Token", "gameToken", 1, (String)new ColorRGBA(0.5F, 0.0F, 0.5F, 1.0F), true),
-/* 170 */     LOADING_SCREEN("Loading Screen", "loadingScreen", 1, (String)new ColorRGBA(0.5F, 0.5F, 0.0F, 1.0F), true),
-/* 171 */     SLEEP("Sleep", "sleep", 1, (String)new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
-/* 172 */     BUI_UPDATE("BUI Update", "buiUpdate", 1, (String)new ColorRGBA(0.75F, 0.25F, 0.0F, 1.0F), true),
-/* 173 */     GEOMETRIC_UPDATE("Geometric Update", "geoUpdate", 1, (String)new ColorRGBA(0.75F, 0.0F, 0.25F, 1.0F), true),
-/* 174 */     CREATURE_BUILDING("Creature Building", "creatureBuilding", 1, (String)new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
-/* 175 */     RELOAD_MODULAR("Reload Modular", "reloadModular", 1, (String)new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
-/* 176 */     TEXTURE_LOAD_TIME("Texture load time", "textureLoadTime", 1, (String)new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
-/* 177 */     MODULAR_LOADING_TIME("Modular load time", "modularLoadTime", 1, (String)new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
-/* 178 */     ANIMATION_LOADING_TIME("Animation load time", "animationLoadTime", 1, (String)new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
-/* 179 */     MOVETO("move to", "move_to", 1, (String)new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
-/* 180 */     TURNTO("turn to", "turn_to", 1, (String)new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
-/* 181 */     JOINTS("Joints", "joints", 1, (String)new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
-/* 182 */     BATCH("Batch", "batch", 1, (String)new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
-/* 183 */     MANAGED("Managed", "managed", 1, (String)new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
-/* 184 */     OTHER("Other", "other", 1, (String)new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
-/* 185 */     FPS("FPS", "fps", 2, (String)new ColorRGBA(1.0F, 0.89F, 0.0F, 1.0F), true);
+/* 154 */     RENDER_TIME("Render time", StatType.STAT_RENDER_TIMER, 1, new ColorRGBA(0.0F, 1.0F, 0.87F, 1.0F), true),
+/* 155 */     TRIS_COUNT("Triangles", StatType.STAT_TRIANGLE_COUNT, 1, new ColorRGBA(0.7F, 0.0F, 1.0F, 1.0F), false),
+/* 156 */     QUAD_COUNT("Quads", StatType.STAT_QUAD_COUNT, 1, ColorRGBA.orange, false),
+/* 157 */     LINE_COUNT("Lines", StatType.STAT_LINE_COUNT, 1, ColorRGBA.yellow, false),
+/* 158 */     TEXTURE_BINDS("Textures", StatType.STAT_TEXTURE_BINDS, 1, new ColorRGBA(0.98F, 0.0F, 1.0F, 1.0F), false),
+/* 159 */     GEOMETRY_COUNT("Geometry", StatType.STAT_GEOM_COUNT, 1, new ColorRGBA(0.0F, 1.0F, 0.16F, 1.0F), false),
+/* 160 */     CHUNK_MANAGEMENT("Chunk management", "chunkManagement", 1, new ColorRGBA(0.0F, 0.68F, 1.0F, 1.0F), true),
+/* 161 */     LOGIC_UPDATE("Logic update", "logicUpdate", 1, new ColorRGBA(0.0F, 0.32F, 1.0F, 1.0F), true),
+/* 162 */     NETWORK_HANDLING("Network handling", "networkHandler", 1, new ColorRGBA(1.0F, 0.51F, 0.0F, 1.0F), true),
+/* 163 */     BREADCRUMBS("Breadcrumbs", "breadcrumbs", 1, ColorRGBA.pink, true),
+/* 164 */     CLIENTS_UPDATE("Clients update", "updateClients", 1, new ColorRGBA(1.0F, 0.17F, 0.36F, 1.0F), true),
+/* 165 */     GLOBAL_RENDER_CALL("Global render call", "renderCall", 1, new ColorRGBA(1.0F, 1.0F, 1.0F, 1.0F), true),
+/* 166 */     PARTICLES("Particles", "particles", 1, new ColorRGBA(0.0F, 1.0F, 0.0F, 1.0F), true),
+/* 167 */     SOUND("Sound", "sound", 1, new ColorRGBA(1.0F, 0.0F, 0.0F, 1.0F), true),
+/* 168 */     UPDATE_QUEUE("Update Queue", "updateQueue", 1, new ColorRGBA(0.0F, 0.5F, 0.5F, 1.0F), true),
+/* 169 */     GAME_TOKEN("Game Token", "gameToken", 1, new ColorRGBA(0.5F, 0.0F, 0.5F, 1.0F), true),
+/* 170 */     LOADING_SCREEN("Loading Screen", "loadingScreen", 1, new ColorRGBA(0.5F, 0.5F, 0.0F, 1.0F), true),
+/* 171 */     SLEEP("Sleep", "sleep", 1, new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
+/* 172 */     BUI_UPDATE("BUI Update", "buiUpdate", 1, new ColorRGBA(0.75F, 0.25F, 0.0F, 1.0F), true),
+/* 173 */     GEOMETRIC_UPDATE("Geometric Update", "geoUpdate", 1, new ColorRGBA(0.75F, 0.0F, 0.25F, 1.0F), true),
+/* 174 */     CREATURE_BUILDING("Creature Building", "creatureBuilding", 1, new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
+/* 175 */     RELOAD_MODULAR("Reload Modular", "reloadModular", 1, new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
+/* 176 */     TEXTURE_LOAD_TIME("Texture load time", "textureLoadTime", 1, new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
+/* 177 */     MODULAR_LOADING_TIME("Modular load time", "modularLoadTime", 1, new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
+/* 178 */     ANIMATION_LOADING_TIME("Animation load time", "animationLoadTime", 1, new ColorRGBA(0.0F, 0.25F, 0.75F, 1.0F), true),
+/* 179 */     MOVETO("move to", "move_to", 1, new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
+/* 180 */     TURNTO("turn to", "turn_to", 1, new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
+/* 181 */     JOINTS("Joints", "joints", 1, new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
+/* 182 */     BATCH("Batch", "batch", 1, new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
+/* 183 */     MANAGED("Managed", "managed", 1, new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
+/* 184 */     OTHER("Other", "other", 1, new ColorRGBA(0.0F, 0.0F, 1.0F, 1.0F), true),
+/* 185 */     FPS("FPS", "fps", 2, new ColorRGBA(1.0F, 0.89F, 0.0F, 1.0F), true);
 /*     */ 
 /*     */     
 /* 188 */     public String niceName = "";
@@ -203,22 +203,11 @@
 /* 203 */       System.out.println(this.niceName);
 /*     */     }
 /*     */ 
+/*     */     // Overloaded constructor to accept String statTypeName
+/*     */     TrackingStat(String niceName, String statTypeName, int width, ColorRGBA color, boolean timed) {
+/* 207 */       this(niceName, new StatType(statTypeName), width, color, timed);
+/*     */     }
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */     
 /*     */     TrackingStat(String niceName, StatType statType, int width, ColorRGBA color, boolean timed) {
 /* 223 */       this.niceName = niceName;
 /* 224 */       this.statType = statType;

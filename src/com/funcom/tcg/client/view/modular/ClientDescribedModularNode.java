@@ -104,7 +104,7 @@
 /* 104 */     return this.petNode;
 /*     */   }
 /*     */   private class ClientModularAnimationPlayer extends ModularNode.ModularAnimationPlayer { private ClientModularAnimationPlayer() {
-/* 107 */       super(ClientDescribedModularNode.this);
+/* 107 */       super();
 /*     */     }
 /*     */     
 /*     */     protected void runAnimation(String animationName) {

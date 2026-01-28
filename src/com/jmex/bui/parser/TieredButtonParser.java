@@ -10,9 +10,9 @@
 /*    */ public class TieredButtonParser
 /*    */   implements BStyleSheetParser
 /*    */ {
-/*    */   public Object parse(String name, ArrayList<String> args, BStyleSheet styleSheet) {
+/*    */   public Object parse(String name, ArrayList args, BStyleSheet styleSheet) {
 /* 14 */     if (name.equals("empty_star") || name.equals("filled_star")) {
-/* 15 */       return new ImageProperty(args.get(0));
+/* 15 */       return new ImageProperty((String)args.get(0));
 /*    */     }
 /* 17 */     throw new IllegalArgumentException("Unknown property '" + name + "'");
 /*    */   }

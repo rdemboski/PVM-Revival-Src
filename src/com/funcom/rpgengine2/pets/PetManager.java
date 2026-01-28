@@ -1,7 +1,9 @@
 /*    */ package com.funcom.rpgengine2.pets;
+import com.funcom.rpgengine2.equipment.PetArchType;
 /*    */ import com.funcom.rpgengine2.items.ItemManager;
 /*    */ import com.funcom.rpgengine2.loader.ConfigErrors;
 /*    */ import java.util.HashMap;
+import java.util.HashSet;
 /*    */ import java.util.List;
 /*    */ import java.util.Map;
 /*    */ import java.util.Set;

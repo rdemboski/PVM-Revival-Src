@@ -17,12 +17,13 @@
 /* 17 */     super(MapConnectivityGraph.class);
 /*    */   }
 /*    */   
+           @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 21 */     BufferedInputStream bis = null;
 /*    */     try {
 /* 23 */       bis = new BufferedInputStream(getFileInputStream(managedResource.getName()));
 /* 24 */       MapConnectivityGraph mapConnectivityGraph = MapConnectivityGraphSerializer.load(bis);
-/* 25 */       managedResource.setResource(mapConnectivityGraph);
+/* 25 */       ((ManagedResource<MapConnectivityGraph>)managedResource).setResource(mapConnectivityGraph);
 /* 26 */     } catch (IOException e) {
 /* 27 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*    */     } finally {

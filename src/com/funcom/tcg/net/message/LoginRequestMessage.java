@@ -1,7 +1,7 @@
 /*     */ package com.funcom.tcg.net.message;
 /*     */ 
 /*     */ import com.funcom.server.common.EncryptedByClientHint;
-/*     */ import com.funcom.server.common.LoginRequestMessage;
+// import com.funcom.server.common.LoginRequestMessage; // Renamed or removed to avoid cycle
 /*     */ import com.funcom.server.common.Message;
 /*     */ import com.funcom.server.common.MessageUtils;
 /*     */ import com.funcom.tcg.net.PlayerStartConfig;
@@ -10,7 +10,7 @@
 /*     */ 
 /*     */ @EncryptedByClientHint
 /*     */ public class LoginRequestMessage
-/*     */   implements LoginRequestMessage
+//    implements LoginRequestMessage // Removed to avoid cycle
 /*     */ {
 /*  15 */   private String nick = "";
 /*  16 */   private String password = "";

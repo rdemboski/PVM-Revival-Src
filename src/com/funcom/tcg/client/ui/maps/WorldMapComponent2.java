@@ -71,7 +71,7 @@
 /*  71 */     this.resourceManager = resourceManager;
 /*  72 */     this.hoverLabel = hoverLabel;
 /*  73 */     this.mapWindow = mapWindow;
-/*  74 */     this.mainContainer = bananaPeel.getTopComponents().iterator().next();
+/*  74 */     this.mainContainer = (BContainer) bananaPeel.getTopComponents().iterator().next();
 /*  75 */     setSize(this.mainContainer.getWidth(), this.mainContainer.getHeight());
 /*  76 */     add((BComponent)this.mainContainer, new Rectangle(0, 0, getWidth(), getHeight()));
 /*     */     

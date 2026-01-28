@@ -1,7 +1,4 @@
 /*     */ package com.funcom.commons;
-/*     */ import com.sun.image.codec.jpeg.JPEGCodec;
-/*     */ import com.sun.image.codec.jpeg.JPEGEncodeParam;
-/*     */ import com.sun.image.codec.jpeg.JPEGImageEncoder;
 /*     */ import java.awt.Color;
 /*     */ import java.awt.Graphics2D;
 /*     */ import java.awt.image.BufferedImage;
@@ -14,7 +11,15 @@
 /*     */ import java.io.FileOutputStream;
 /*     */ import java.io.IOException;
 /*     */ import java.io.InputStream;
+import java.util.Arrays;
+import java.util.Iterator;
+import javax.imageio.ImageWriteParam;
+import javax.imageio.ImageWriter;
+import javax.imageio.plugins.jpeg.JPEGImageWriteParam;
+import javax.imageio.stream.ImageOutputStream;
+
 /*     */ import javax.imageio.ImageIO;
+/*     */ import javax.swing.ImageIcon;
 /*     */ import javax.swing.JFrame;
 /*     */ import javax.swing.JLabel;
 /*     */ 
@@ -135,12 +140,23 @@
 /*     */     
 /* 136 */     File file = new File(filename + ".jpeg");
 /* 137 */     FileOutputStream fileOutputStream = new FileOutputStream(file);
-/* 138 */     JPEGImageEncoder jpeegEncoder = JPEGCodec.createJPEGEncoder(fileOutputStream);
-/* 139 */     JPEGEncodeParam params = jpeegEncoder.getDefaultJPEGEncodeParam(destImage);
-/* 140 */     params.setQuality(qualityLevel, false);
-/* 141 */     jpeegEncoder.setJPEGEncodeParam(params);
-/* 142 */     jpeegEncoder.encode(destImage);
-/* 143 */     fileOutputStream.close();
+/* 138 */     
+/* 139 */     // Use modern ImageIO API instead of deprecated JPEGCodec
+/* 140 */     Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpeg");
+/* 141 */     if (!writers.hasNext()) {
+/* 142 */       throw new IllegalStateException("No JPEG writers found");
+/* 143 */     }
+/* 144 */     ImageWriter writer = writers.next();
+/* 145 */     JPEGImageWriteParam param = new JPEGImageWriteParam(null);
+/* 146 */     param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
+/* 147 */     param.setCompressionQuality(qualityLevel);
+/* 148 */     
+/* 149 */     ImageOutputStream ios = ImageIO.createImageOutputStream(fileOutputStream);
+/* 150 */     writer.setOutput(ios);
+/* 151 */     writer.write(null, new javax.imageio.IIOImage(destImage, null, null), param);
+/* 152 */     writer.dispose();
+/* 153 */     ios.close();
+/* 154 */     fileOutputStream.close();
 /*     */   }
 /*     */ 
 /*     */   

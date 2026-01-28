@@ -19,7 +19,7 @@
 /*    */   public ItemCard(InventoryItem item) {
 /* 20 */     super((BLayoutManager)new AbsoluteLayout());
 /* 21 */     BananaPeel bananaPeel = (BananaPeel)TcgGame.getResourceManager().getResource(BananaPeel.class, "gui/peeler/card_misc_item.xml", CacheType.NOT_CACHED);
-/* 22 */     BContainer mainContainer = bananaPeel.getTopComponents().iterator().next();
+/* 22 */     BContainer mainContainer = (BContainer)bananaPeel.getTopComponents().iterator().next();
 /* 23 */     setSize(mainContainer.getWidth(), mainContainer.getHeight());
 /* 24 */     add((BComponent)mainContainer, mainContainer.getBounds());
 /*    */     

@@ -1,9 +1,11 @@
 /*     */ package com.funcom.tcg.client.net.processors;
+import com.funcom.commons.dfx.AnimationEffectDescription;
 /*     */ import com.funcom.commons.dfx.DireEffect;
 /*     */ import com.funcom.commons.dfx.DireEffectDescription;
 /*     */ import com.funcom.commons.dfx.NoSuchDFXException;
 /*     */ import com.funcom.gameengine.model.command.Command;
 /*     */ import com.funcom.gameengine.model.props.Creature;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.view.PropNode;
 /*     */ import com.funcom.gameengine.view.RepresentationalNode;
 /*     */ import com.funcom.rpgengine2.combat.Element;
@@ -15,7 +17,9 @@
 /*     */ import com.jme.bounding.BoundingVolume;
 /*     */ import com.jme.intersection.CollisionResults;
 /*     */ import com.jme.intersection.PickResults;
+import com.jme.math.Ray;
 /*     */ import com.jme.math.Vector3f;
+import com.jme.renderer.Renderer;
 /*     */ import com.jme.scene.Spatial;
 /*     */ 
 /*     */ public abstract class AbstractDeathHandler {

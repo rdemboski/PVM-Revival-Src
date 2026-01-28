@@ -1,11 +1,14 @@
 /*     */ package com.funcom.gameengine.resourcemanager.loaders;
 /*     */ import com.funcom.gameengine.resourcemanager.LoadException;
 /*     */ import com.funcom.gameengine.resourcemanager.ManagedResource;
+/*     */ import java.io.IOException;
 /*     */ import java.io.InputStream;
 /*     */ import java.util.List;
 /*     */ import java.util.zip.ZipInputStream;
 /*     */ import org.apache.log4j.Level;
 /*     */ import org.apache.log4j.Priority;
+import org.jibx.runtime.BindingDirectory;
+import org.jibx.runtime.IBindingFactory;
 /*     */ import org.jibx.runtime.IUnmarshallingContext;
 /*     */ import org.jibx.runtime.JiBXException;
 /*     */ import org.softmed.jops.Generator;
@@ -34,7 +37,7 @@
 /*     */     } 
 /*     */   }
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*  39 */     InputStream inputStream = null;
 /*     */     try {
@@ -42,7 +45,7 @@
 /*  42 */       ZipInputStream zipStream = new ZipInputStream(inputStream);
 /*  43 */       zipStream.getNextEntry();
 /*  44 */       ParticleSystem system = getParticleSystemFromInputStream(zipStream);
-/*  45 */       managedResource.setResource(system);
+/*  45 */       ((ManagedResource<ParticleSystem>)managedResource).setResource(system);
 /*  46 */     } catch (Exception e) {
 /*  47 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*     */     } finally {

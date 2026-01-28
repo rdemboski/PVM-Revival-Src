@@ -1,10 +1,12 @@
 /*     */ package com.funcom.tcg.rpg;
+import com.funcom.commons.geom.RectangleWC;
 /*     */ import com.funcom.gameengine.WorldCoordinate;
 /*     */ import com.funcom.rpgengine2.StatEffect;
 /*     */ import com.funcom.rpgengine2.abilities.TargetProvider;
 /*     */ import com.funcom.rpgengine2.combat.RpgStatus;
 /*     */ import com.funcom.rpgengine2.creatures.ImmunitySupport;
 /*     */ import com.funcom.rpgengine2.creatures.MapSupport;
+import com.funcom.rpgengine2.creatures.OwnedRpgObject;
 /*     */ import com.funcom.rpgengine2.creatures.RpgEntity;
 /*     */ import com.funcom.rpgengine2.creatures.RpgSourceProviderEntity;
 /*     */ import com.funcom.rpgengine2.creatures.StatEffectSupport;

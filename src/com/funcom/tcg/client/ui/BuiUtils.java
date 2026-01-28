@@ -22,6 +22,7 @@
 /*     */ import java.io.InputStreamReader;
 /*     */ import java.io.StringReader;
 /*     */ import java.util.ArrayList;
+import java.util.List;
 /*     */ 
 /*     */ public abstract class BuiUtils {
 /*  27 */   private static List<BStyleSheetParser> parsers = new ArrayList<BStyleSheetParser>();
@@ -63,7 +64,7 @@
 /*  63 */     parsers.add(parser);
 /*     */   }
 /*     */   
-/*     */   private static void appendClassStyleSheet(Class<BWindow> aClass, StringBuilder stringBuf) {
+/*     */   private static void appendClassStyleSheet(Class<?> aClass, StringBuilder stringBuf) {
 /*  67 */     if (aClass == BWindow.class) {
 /*     */       return;
 /*     */     }

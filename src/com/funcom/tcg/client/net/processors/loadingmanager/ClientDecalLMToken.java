@@ -50,7 +50,7 @@
 /*  50 */   Point tileCoord = null;
 /*  51 */   ResourceGetter resourceGetter = null;
 /*  52 */   DireEffectDescriptionFactory direEffectDescriptionFactory = null;
-/*  53 */   private Future<RepresentationalNode> LoadDecalQuadFuture = null;
+/*  53 */   private Future LoadDecalQuadFuture = null;
 /*     */ 
 /*     */ 
 /*     */   
@@ -71,7 +71,7 @@
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
 /*  73 */     Callable<RepresentationalNode> callable = new LoadDecalQuadCallable(this.resourceName, this.resourceGetter);
-/*  74 */     this.LoadDecalQuadFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/*  74 */     this.LoadDecalQuadFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*  75 */     return true;
 /*     */   }
 /*     */ 
@@ -86,7 +86,7 @@
 /*  86 */     RepresentationalNode representationalNode = null;
 /*  87 */     DecalQuad decalQuad = null;
 /*  88 */     if (this.LoadDecalQuadFuture != null && !this.LoadDecalQuadFuture.isCancelled()) {
-/*  89 */       representationalNode = this.LoadDecalQuadFuture.get();
+/*  89 */       representationalNode = (RepresentationalNode)this.LoadDecalQuadFuture.get();
 /*     */     } else {
 /*     */       
 /*  92 */       Callable<RepresentationalNode> callable = new LoadDecalQuadCallable(this.resourceName, this.resourceGetter);
@@ -121,7 +121,7 @@
 /*     */   }
 /*     */   
 /*     */   public class LoadDecalQuadCallable
-/*     */     implements Callable
+/*     */     implements Callable<RepresentationalNode>
 /*     */   {
 /* 126 */     String resourceName = "";
 /* 127 */     ResourceGetter resourceGetter = null;

@@ -1,18 +1,26 @@
 /*    */ package com.funcom.rpgengine2.buffs;
+import java.util.List;
+
 /*    */ import com.funcom.rpgengine2.abilities.AbilityContainer;
+import com.funcom.rpgengine2.abilities.AbstractAbility;
+import com.funcom.rpgengine2.abilities.ActiveAbility;
 /*    */ import com.funcom.rpgengine2.abilities.BuffCreator;
 /*    */ import com.funcom.rpgengine2.abilities.BuffType;
+import com.funcom.rpgengine2.abilities.ShapedAbility;
 /*    */ import com.funcom.rpgengine2.abilities.SourceProvider;
 /*    */ import com.funcom.rpgengine2.abilities.TargetProvider;
 /*    */ import com.funcom.rpgengine2.abilities.valueaccumulator.ValueAccumulatorFactory;
 /*    */ import com.funcom.rpgengine2.combat.Element;
 /*    */ import com.funcom.rpgengine2.combat.Shape;
 /*    */ import com.funcom.rpgengine2.combat.ShapeDataEvaluator;
+import com.funcom.rpgengine2.combat.ShapeListener;
 /*    */ import com.funcom.rpgengine2.combat.UsageParams;
 /*    */ import com.funcom.rpgengine2.creatures.BuffQueue;
 /*    */ import com.funcom.rpgengine2.creatures.RpgEntity;
 /*    */ import com.funcom.rpgengine2.items.Item;
+import com.funcom.rpgengine2.items.ItemDescription;
 /*    */ import com.funcom.rpgengine2.loader.AbilityParams;
+import com.funcom.rpgengine2.loader.LoaderUtils;
 /*    */ import com.funcom.rpgengine2.loader.RpgLoader;
 /*    */ 
 /*    */ public class RemoveInfiniteBuffCreator extends AbstractAbility implements ActiveAbility, ShapeListener, ShapedAbility {

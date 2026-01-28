@@ -1,5 +1,6 @@
 /*     */ package com.funcom.tcg.client.ui.hud;
 /*     */ import com.funcom.gameengine.WorldCoordinate;
+import com.funcom.gameengine.model.props.InteractibleProp;
 /*     */ import com.funcom.gameengine.model.props.UpdateListener;
 /*     */ import com.funcom.gameengine.resourcemanager.ResourceManager;
 /*     */ import com.funcom.gameengine.utils.BananaResourceProvider;
@@ -12,6 +13,7 @@
 /*     */ import com.funcom.tcg.client.model.rpg.ClientPetDescription;
 /*     */ import com.funcom.tcg.client.state.MainGameState;
 /*     */ import com.funcom.tcg.client.ui.BPeelWindow;
+import com.funcom.tcg.client.ui.BuiUtils;
 /*     */ import com.funcom.tcg.client.ui.GeneralCloseWindowListener;
 /*     */ import com.funcom.tcg.client.ui.PeelWindowEvent;
 /*     */ import com.funcom.tcg.client.ui.TCGToolTipManager;
@@ -29,9 +31,15 @@
 /*     */ import com.jmex.bui.BImage;
 /*     */ import com.jmex.bui.BLabel;
 /*     */ import com.jmex.bui.BWindow;
+import com.jmex.bui.BuiSystem;
+import com.jmex.bui.background.BBackground;
 /*     */ import com.jmex.bui.background.ImageBackground;
+import com.jmex.bui.enumeratedConstants.ImageBackgroundMode;
 /*     */ import com.jmex.bui.layout.BLayoutManager;
 /*     */ import com.jmex.bui.layout.CenterLayout;
+import com.jmex.bui.layout.HGroupLayout;
+
+import java.util.HashMap;
 /*     */ import java.util.List;
 /*     */ import java.util.Map;
 /*     */ 
@@ -181,7 +189,7 @@
 /*     */   private void setQuestRewardCards(List<QuestRewardData> questRewards) {
 /* 182 */     for (QuestRewardData questReward : questRewards) {
 /* 183 */       if (questReward.getType() == QuestRewardType.ITEM_REWARD.getId()) {
-/* 184 */         ItemCard itemCard; if (questReward.getRewardId().equals("coin")) {
+/* 184 */         ItemCard itemCard = null; if (questReward.getRewardId().equals("coin")) {
 /* 185 */           setCurrencyVisible(true);
 /* 186 */           this.currencyLabel.setText(String.valueOf(questReward.getAmount())); continue;
 /* 187 */         }  if (questReward.getRewardId().equals("pet-token")) {

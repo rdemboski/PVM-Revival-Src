@@ -136,6 +136,7 @@
 /*     */ 
 /*     */       
 /* 138 */       int end = line.indexOf('>');
+String index;
 /*     */ 
 /*     */       
 /* 141 */       if (end == -1) {
@@ -156,7 +157,7 @@
 /* 156 */         result.append('>');
 /*     */         continue;
 /*     */       } 
-/* 159 */       String index = formatString(index, data, missingElements);
+/* 159 */       index = formatString(index, data, missingElements);
 /*     */       
 /* 161 */       if (index != null) {
 /* 162 */         result.append(index); continue;

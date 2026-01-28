@@ -3,7 +3,9 @@
 /*     */ import com.funcom.commons.dfx.DireEffect;
 /*     */ import com.funcom.commons.dfx.DireEffectDescription;
 /*     */ import com.funcom.commons.dfx.NoSuchDFXException;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*     */ import com.funcom.gameengine.jme.modular.XmlModularDescription;
+import com.funcom.gameengine.model.ResourceGetter;
 /*     */ import com.funcom.gameengine.model.ResourceGetterImpl;
 /*     */ import com.funcom.gameengine.model.action.Action;
 /*     */ import com.funcom.gameengine.model.input.ActionDependentMouseOver;
@@ -12,11 +14,13 @@
 /*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
 /*     */ import com.funcom.gameengine.model.props.InteractibleProp;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManagerToken;
 /*     */ import com.funcom.gameengine.view.AnimationMapper;
 /*     */ import com.funcom.gameengine.view.PropNode;
 /*     */ import com.funcom.gameengine.view.RepresentationalNode;
+import com.funcom.rpgengine2.combat.UsageParams;
 /*     */ import com.funcom.rpgengine2.waypoints.WaypointDescription;
 /*     */ import com.funcom.server.common.GameIOHandler;
 /*     */ import com.funcom.server.common.Message;
@@ -25,6 +29,7 @@
 /*     */ import com.funcom.tcg.client.actions.WaypointWindowAction;
 /*     */ import com.funcom.tcg.client.net.CreatureData;
 /*     */ import com.funcom.tcg.client.net.MessageProcessor;
+import com.funcom.tcg.client.net.processors.loadingmanager.ActivateWaypointLMToken;
 /*     */ import com.funcom.tcg.client.state.MainGameState;
 /*     */ import com.funcom.tcg.client.view.modular.ClientDescribedModularNode;
 /*     */ import com.funcom.tcg.net.message.ActivateWaypointMessage;

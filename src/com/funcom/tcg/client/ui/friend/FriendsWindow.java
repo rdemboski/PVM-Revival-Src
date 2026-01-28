@@ -3,6 +3,7 @@
 /*     */ import com.funcom.commons.jme.bui.HighlightedButton;
 /*     */ import com.funcom.commons.jme.bui.HighlightedRegularToggleButton;
 /*     */ import com.funcom.commons.jme.bui.HighlightedToggleButton;
+import com.funcom.gameengine.resourcemanager.CacheType;
 /*     */ import com.funcom.gameengine.resourcemanager.ResourceManager;
 /*     */ import com.funcom.gameengine.utils.BananaResourceProvider;
 /*     */ import com.funcom.peeler.BananaPeel;

@@ -1,10 +1,18 @@
 /*    */ package com.funcom.tcg.rpg;
 /*    */ import com.funcom.rpgengine2.abilities.BuffType;
 /*    */ import com.funcom.rpgengine2.buffs.Buff;
+import com.funcom.rpgengine2.creatures.AbstractBuffSupport;
 /*    */ import com.funcom.rpgengine2.creatures.ImmunitySupport;
+import com.funcom.rpgengine2.creatures.PassiveAbilityHandlingSupport;
+import com.funcom.rpgengine2.creatures.RpgEntity;
+import com.funcom.rpgengine2.creatures.StatSupport;
 /*    */ import com.funcom.rpgengine2.creatures.StatusSupport;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 /*    */ import java.util.Iterator;
 /*    */ import java.util.List;
+import java.util.Map;
 /*    */ import java.util.Set;
 /*    */ 
 /*    */ public class TCGBuffSupport extends AbstractBuffSupport {

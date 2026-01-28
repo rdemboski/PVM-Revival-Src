@@ -15,7 +15,7 @@
 /* 15 */     super(resourceType);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 20 */     BufferedInputStream bis = null;
 /*    */     try {
@@ -28,7 +28,7 @@
 /* 28 */       frag.load(new String(data));
 /* 29 */       frag.setEnabled(true);
 /*    */       
-/* 31 */       managedResource.setResource(frag);
+/* 31 */       ((ManagedResource<FragmentProgramState>)managedResource).setResource(frag);
 /* 32 */     } catch (MalformedURLException e) {
 /* 33 */       throw new LoadException(getResourceManager(), managedResource, e);
 /* 34 */     } catch (IOException e) {

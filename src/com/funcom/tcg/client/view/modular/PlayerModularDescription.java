@@ -26,7 +26,7 @@
 /*     */   private final ModularEventListener eventListener;
 /*     */   
 /*     */   public PlayerModularDescription(ClientPlayer clientPlayer, VisualRegistry visualRegistry) {
-/*  29 */     this(clientPlayer, visualRegistry, new DefaultPlayerVisualFactory(clientPlayer, visualRegistry, null));
+/*  29 */     this(clientPlayer, visualRegistry, new DefaultPlayerVisualFactory(clientPlayer, visualRegistry));
 /*     */   }
 /*     */ 
 /*     */ 

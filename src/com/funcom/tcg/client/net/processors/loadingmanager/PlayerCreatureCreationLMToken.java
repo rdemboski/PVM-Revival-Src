@@ -1,12 +1,16 @@
 /*     */ package com.funcom.tcg.client.net.processors.loadingmanager;
+import com.funcom.commons.jme.TcgFont3D;
 /*     */ import com.funcom.gameengine.WorldCoordinate;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*     */ import com.funcom.gameengine.model.ResourceGetter;
 /*     */ import com.funcom.gameengine.model.ResourceGetterImpl;
 /*     */ import com.funcom.gameengine.model.input.MouseOver;
 /*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManagerToken;
 /*     */ import com.funcom.gameengine.utils.SpatialUtils;
+import com.funcom.gameengine.view.AnimationMapper;
 /*     */ import com.funcom.gameengine.view.PropNode;
 /*     */ import com.funcom.gameengine.view.RepresentationalNode;
 /*     */ import com.funcom.rpgengine2.Stat;
@@ -22,6 +26,7 @@
 /*     */ import com.funcom.tcg.client.model.rpg.ClientPet;
 /*     */ import com.funcom.tcg.client.model.rpg.ClientPetDescription;
 /*     */ import com.funcom.tcg.client.model.rpg.ClientPlayer;
+import com.funcom.tcg.client.model.rpg.EquipChangeListener;
 /*     */ import com.funcom.tcg.client.model.rpg.EquipedItemDfxHandler;
 /*     */ import com.funcom.tcg.client.model.rpg.PlayerEventsListener;
 /*     */ import com.funcom.tcg.client.net.CreatureData;
@@ -39,8 +44,11 @@
 /*     */ import com.funcom.tcg.rpg.InventoryItem;
 /*     */ import com.jme.renderer.ColorRGBA;
 /*     */ import com.jme.scene.Controller;
+import com.jme.scene.Spatial;
 /*     */ import com.jmex.font3d.Font3D;
 /*     */ import com.jmex.font3d.Text3D;
+
+import java.util.HashSet;
 /*     */ import java.util.Map;
 /*     */ import java.util.Set;
 /*     */ 

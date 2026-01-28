@@ -163,7 +163,7 @@
 /*     */   
 /*     */   public void removeAllBoneParticles() {
 /* 165 */     if (this.target.getChildren() != null)
-/* 166 */       for (Spatial spatial : new ArrayList(this.target.getChildren())) {
+/* 166 */       for (Spatial spatial : new ArrayList<Spatial>(this.target.getChildren())) {
 /* 167 */         if (spatial.getName().equals("bone-following-particle-node") && 
 /* 168 */           spatial instanceof JopsNode) {
 /* 169 */           JopsNode jopsNode = (JopsNode)spatial;
@@ -173,7 +173,7 @@
 /*     */   }
 /*     */   public void removeAllGroundParticles() {
 /* 175 */     if (this.target.getChildren() != null)
-/* 176 */       for (Spatial spatial : new ArrayList(this.target.getChildren())) {
+/* 176 */       for (Spatial spatial : new ArrayList<Spatial>(this.target.getChildren())) {
 /* 177 */         if (spatial.getName().equals("ground-particle-node") && 
 /* 178 */           spatial instanceof JopsNode) {
 /* 179 */           JopsNode jopsNode = (JopsNode)spatial;
@@ -183,7 +183,7 @@
 /*     */   }
 /*     */   public void removeAllParticles() {
 /* 185 */     if (this.target.getChildren() != null)
-/* 186 */       for (Spatial spatial : new ArrayList(this.target.getChildren())) {
+/* 186 */       for (Spatial spatial : new ArrayList<Spatial>(this.target.getChildren())) {
 /* 187 */         if (spatial instanceof JopsNode) {
 /* 188 */           JopsNode jopsNode = (JopsNode)spatial;
 /* 189 */           removeParticle(jopsNode);
@@ -192,7 +192,7 @@
 /*     */   }
 /*     */   public void killAllParticles() {
 /* 194 */     if (this.target.getChildren() != null)
-/* 195 */       for (Spatial spatial : new ArrayList(this.target.getChildren())) {
+/* 195 */       for (Spatial spatial : new ArrayList<Spatial>(this.target.getChildren())) {
 /* 196 */         if (spatial instanceof JopsNode) {
 /* 197 */           JopsNode jopsNode = (JopsNode)spatial;
 /* 198 */           jopsNode.kill();
@@ -201,7 +201,7 @@
 /*     */   }
 /*     */   public void removeVisibleParticles() {
 /* 203 */     if (this.target.getChildren() != null)
-/* 204 */       for (Spatial spatial : new ArrayList(this.target.getChildren())) {
+/* 204 */       for (Spatial spatial : new ArrayList<Spatial>(this.target.getChildren())) {
 /* 205 */         if (spatial instanceof JopsNode) {
 /* 206 */           JopsNode jopsNode = (JopsNode)spatial;
 /* 207 */           Collection<Generator> generators = jopsNode.getParticleSystem().getGenerators();

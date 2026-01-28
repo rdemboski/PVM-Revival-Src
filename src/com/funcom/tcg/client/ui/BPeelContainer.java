@@ -20,7 +20,7 @@
 /*    */   public BPeelContainer(String windowName, BananaPeel bananaPeel) {
 /* 21 */     super(windowName);
 /*    */     
-/* 23 */     this.mainContainer = bananaPeel.getTopComponents().iterator().next();
+/* 23 */     this.mainContainer = (BContainer) bananaPeel.getTopComponents().iterator().next();
 /* 24 */     setSize(this.mainContainer.getWidth(), this.mainContainer.getHeight());
 /*    */   }
 /*    */   

@@ -20,7 +20,7 @@
 /* 20 */     super(Image.class);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 25 */     InputStream inputStream = null;
 /*    */     try {
@@ -51,7 +51,7 @@
 /*    */       
 /* 52 */       Image jmeImage = TextureManager.loadImage(image, true);
 /*    */       
-/* 54 */       managedResource.setResource(jmeImage);
+/* 54 */       ((ManagedResource<Image>)managedResource).setResource(jmeImage);
 /* 55 */     } catch (MalformedURLException e) {
 /* 56 */       throw new LoadException(getResourceManager(), managedResource, e);
 /* 57 */     } catch (IOException e) {

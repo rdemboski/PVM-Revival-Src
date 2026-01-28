@@ -2,6 +2,8 @@
 /*     */ import com.funcom.gameengine.model.props.InteractibleProp;
 /*     */ import com.funcom.gameengine.view.PropNode;
 /*     */ import com.funcom.util.DebugManager;
+
+import java.util.ArrayList;
 /*     */ import java.util.Collections;
 /*     */ import java.util.List;
 /*     */ import java.util.Map;

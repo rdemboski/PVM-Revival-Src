@@ -44,7 +44,7 @@
 /*  44 */   WaypointDestinationPortalDescription waypointDestinationPortalDescription = null;
 /*  45 */   Creature creature = null;
 /*  46 */   ActivateWaypointDestianationportalMessage Message = null;
-/*  47 */   private Future<PropNode> LoadModelFuture = null;
+/*  47 */   private Future LoadModelFuture = null;
 /*     */   
 /*     */   public ActivateWaypointDestinationPortalLMToken(ActivateWaypointDestianationportalMessage Message) {
 /*  50 */     this.Message = Message;
@@ -63,7 +63,7 @@
 /*     */ 
 /*     */     
 /*  65 */     Callable<PropNode> callable = new LoadModelCallable(this.Message, this.waypointDestinationPortalDescription, this.creature);
-/*  66 */     this.LoadModelFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/*  66 */     this.LoadModelFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*  67 */     return true;
 /*     */   }
 /*     */   
@@ -76,7 +76,7 @@
 /*     */   public boolean processGame() throws Exception {
 /*  77 */     PropNode propNode = null;
 /*  78 */     if (this.LoadModelFuture != null && !this.LoadModelFuture.isCancelled()) {
-/*  79 */       propNode = this.LoadModelFuture.get();
+/*  79 */       propNode = (PropNode)this.LoadModelFuture.get();
 /*     */     } else {
 /*     */       
 /*  82 */       Callable<PropNode> callable = new LoadModelCallable(this.Message, this.waypointDestinationPortalDescription, this.creature);
@@ -168,7 +168,7 @@
 /* 168 */     propNode.updateRenderState();
 /*     */   }
 /*     */   
-/*     */   public class LoadModelCallable implements Callable {
+/*     */   public class LoadModelCallable implements Callable<PropNode> {
 /*     */     ActivateWaypointDestianationportalMessage activateWaypointDestianationportalMessage;
 /*     */     WaypointDestinationPortalDescription waypointDestinationPortalDescription;
 /*     */     Creature creature;

@@ -62,52 +62,51 @@
 /*  62 */     return (this.Step >= 3);
 /*     */   }
 /*     */   
-/*     */   public int update() throws Exception {
-/*  66 */     switch (getCurrentStep()) {
-/*     */       
-/*     */       case 0:
-/*  69 */         this.previousTick = this.timer.getTime();
-/*  70 */         if (processRequestAssets()) {
-/*  71 */           nextStep();
-/*     */           
-/*  73 */           if (processWaitingAssets()) {
-/*  74 */             nextStep();
-/*  75 */             if (processGame()) {
-/*  76 */               nextStep();
-/*     */             }
-/*     */           } 
-/*     */         } 
-/*     */       
-/*     */       case 1:
-/*  82 */         if (processWaitingAssets()) {
-/*  83 */           nextStep();
-/*     */         } else {
-/*  85 */           long currentTick = this.timer.getTime();
-/*  86 */           this.ElapsedTime = Double.valueOf(this.ElapsedTime.doubleValue() + Double.longBitsToDouble(currentTick - this.previousTick) / Double.longBitsToDouble(this.timer.getResolution()));
-/*  87 */           this.previousTick = currentTick;
-/*     */ 
-/*     */           
-/*  90 */           if (this.ElapsedTime.doubleValue() >= LoadingManager.LOADING_TIMEOUT.doubleValue()) {
-/*  91 */             if (LoadingManager.DEBUG_INFO)
-/*  92 */               System.out.printf("CreateMeshObjectLMToken::processWaitingAssets - Warning - taking too much time loading the mesh object, cancelling it.", new Object[0]); 
-/*  93 */             this.Step = 3;
-/*     */           } 
-/*     */         } 
-/*     */       
-/*     */       case 2:
-/*  98 */         if (processGame()) {
-/*  99 */           nextStep();
-/*     */         }
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */       
-/*     */       case 3:
-/* 107 */         return getCurrentStep();
-/*     */     } 
-/*     */     this.Step = 3;
-/*     */   }
+            public int update() throws Exception {
+                switch (getCurrentStep()) {
+                
+                case 0:
+                    this.previousTick = this.timer.getTime();
+                    if (processRequestAssets()) {
+                    nextStep();
+                    
+                    if (processWaitingAssets()) {
+                        nextStep();
+                        if (processGame()) {
+                        nextStep();
+                        }
+                    } 
+                    } 
+                    break;
+                
+                case 1:
+                    if (processWaitingAssets()) {
+                    nextStep();
+                    } else {
+                    long currentTick = this.timer.getTime();
+                    this.ElapsedTime = Double.valueOf(this.ElapsedTime.doubleValue() + Double.longBitsToDouble(currentTick - this.previousTick) / Double.longBitsToDouble(this.timer.getResolution()));
+                    this.previousTick = currentTick;
+
+                    
+                    if (this.ElapsedTime.doubleValue() >= LoadingManager.LOADING_TIMEOUT.doubleValue()) {
+                        if (LoadingManager.DEBUG_INFO)
+                        System.out.printf("CreateMeshObjectLMToken::processWaitingAssets - Warning - taking too much time loading the mesh object, cancelling it.", new Object[0]); 
+                        this.Step = 3;
+                    } 
+                    } 
+                    break;
+                
+                case 2:
+                    if (processGame()) {
+                    nextStep();
+                    }
+                    break;
+
+                case 3:
+                    return getCurrentStep();
+                } 
+                return getCurrentStep();
+            }
 /* 111 */   public boolean processRequestAssets() throws Exception { return true; }
 /* 112 */   public boolean processWaitingAssets() throws Exception { return true; } public boolean processGame() throws Exception {
 /* 113 */     return true;

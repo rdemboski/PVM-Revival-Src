@@ -22,7 +22,7 @@
 /* 22 */     super(resourceType);
 /*    */   }
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 27 */     BufferedReader bufferedReader = null;
 /*    */     try {
@@ -39,7 +39,7 @@
 /* 39 */       GLSLShaderObjectsState so = DisplaySystem.getDisplaySystem().getRenderer().createGLSLShaderObjectsState();
 /*    */ 
 /*    */       
-/* 42 */       managedResource.setResource(so);
+/* 42 */       ((ManagedResource<GLSLShaderObjectsState>)managedResource).setResource(so);
 /*    */     }
 /* 44 */     catch (MalformedURLException e) {
 /* 45 */       throw new LoadException(getResourceManager(), managedResource, e);

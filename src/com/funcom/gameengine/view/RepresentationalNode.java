@@ -274,7 +274,7 @@
 /*     */     
 /* 275 */     switch (drawPassState.getType()) {
 /*     */       case TRANSPARENT_CONTENT:
-/* 277 */         for (i = 0, cSize = this.children.size(); i < cSize; i++) {
+/* 277 */         for (int i = 0, cSize = this.children.size(); i < cSize; i++) {
 /* 278 */           Spatial child = this.children.get(i);
 /* 279 */           if (child instanceof com.turborilla.jops.jme.JopsNode) {
 /* 280 */             child.onDraw(r);

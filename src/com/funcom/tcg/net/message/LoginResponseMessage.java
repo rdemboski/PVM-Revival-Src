@@ -3,7 +3,6 @@
 /*     */ import com.funcom.gameengine.WorldCoordinate;
 /*     */ import com.funcom.rpgengine2.Stat;
 /*     */ import com.funcom.rpgengine2.items.PlayerDescription;
-/*     */ import com.funcom.server.common.LoginResponseMessage;
 /*     */ import com.funcom.server.common.Message;
 /*     */ import com.funcom.server.common.MessageUtils;
 /*     */ import com.funcom.tcg.net.DefaultSubscriptionState;
@@ -19,7 +18,6 @@
 /*     */ 
 /*     */ public class LoginResponseMessage
 /*     */   extends AbstractFactionMessage
-/*     */   implements LoginResponseMessage
 /*     */ {
 /*  24 */   private static final Logger LOGGER = Logger.getLogger(LoginResponseMessage.class.getName());
 /*     */   
@@ -329,7 +327,7 @@
 /*     */ 
 /*     */   
 /*     */   public String toString() {
-/* 332 */     return "LoginResponseMessage{result=" + this.result + ", acceptedId=" + this.acceptedId + ", nick='" + this.nick + '\'' + ", email='" + this.email + '\'' + ", position=" + this.position + ", angle=" + this.angle + ", stats=" + this.stats + ", inventoryId=" + this.inventoryId + ", selectedPetClassIds=" + ((this.selectedPetClassIds == null) ? null : (String)Arrays.<String>asList(this.selectedPetClassIds)) + ", activePetClassId='" + this.activePetClassId + '\'' + ", playerDescription=" + this.playerDescription + ", mapId='" + this.mapId + '\'' + ", chatClientId=" + this.chatClientId + ", chatClientCookie=" + this.chatClientCookie + ", serverDomain=" + this.serverDomain + ", mapsVisited=" + this.mapsVisited + '}';
+/* 332 */     return "LoginResponseMessage{result=" + this.result + ", acceptedId=" + this.acceptedId + ", nick='" + this.nick + '\'' + ", email='" + this.email + '\'' + ", position=" + this.position + ", angle=" + this.angle + ", stats=" + this.stats + ", inventoryId=" + this.inventoryId + ", selectedPetClassIds=" + ((this.selectedPetClassIds == null) ? null : Arrays.asList(this.selectedPetClassIds)) + ", activePetClassId='" + this.activePetClassId + '\'' + ", playerDescription=" + this.playerDescription + ", mapId='" + this.mapId + '\'' + ", chatClientId=" + this.chatClientId + ", chatClientCookie=" + this.chatClientCookie + ", serverDomain=" + this.serverDomain + ", mapsVisited=" + this.mapsVisited + '}';
 /*     */   }
 /*     */ 
 /*     */ 

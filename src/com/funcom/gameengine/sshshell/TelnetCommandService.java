@@ -7,6 +7,7 @@
 /*     */ import com.funcom.gameengine.sshshell.processors.TelnetSaveProcessor;
 /*     */ import com.funcom.server.common.UnknownMessageTypeException;
 /*     */ import java.io.IOException;
+import java.net.InetSocketAddress;
 /*     */ import java.nio.ByteBuffer;
 /*     */ import java.nio.channels.SelectionKey;
 /*     */ import java.nio.channels.Selector;
@@ -188,7 +189,7 @@
 /*     */     TelnetMessageProcessor telnetMessageProcessor;
 /*     */     TelnetQuitProcessor telnetQuitProcessor;
 /*     */     TelnetCompleteRefreshProcessor telnetCompleteRefreshProcessor;
-/*     */     TelnetSaveProcessor telnetSaveProcessor;
+/*     */     TelnetSaveProcessor telnetSaveProcessor = null;
 /* 192 */     SSHCommandType enumValue = SSHCommandType.valueForId(message[0].trim());
 /* 193 */     if (enumValue == null) {
 /* 194 */       LOGGER.warn("Invalid command: " + message[0]);

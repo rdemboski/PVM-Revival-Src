@@ -14,7 +14,7 @@
 /*    */ 
 /*    */ 
 /*    */ 
-/*    */ public class PrioritizedLoadingTokenQueue<E>
+/*    */ public class PrioritizedLoadingTokenQueue<LoadingManagerToken>
 /*    */ {
 /*    */   public enum TokenPriority
 /*    */   {
@@ -23,7 +23,7 @@
 /* 23 */     PRIORITY_MAP,
 /* 24 */     PRIORITY_UNSET;
 /*    */   }
-/* 26 */   private AbstractQueue[] mQueues = new AbstractQueue[] { new ConcurrentLinkedQueue(), new ConcurrentLinkedQueue(), new ConcurrentLinkedQueue(), new ConcurrentLinkedQueue() };
+/* 26 */   private AbstractQueue<LoadingManagerToken>[] mQueues = new AbstractQueue[] { new ConcurrentLinkedQueue<LoadingManagerToken>(), new ConcurrentLinkedQueue<LoadingManagerToken>(), new ConcurrentLinkedQueue<LoadingManagerToken>(), new ConcurrentLinkedQueue<LoadingManagerToken>() };
 /*    */ 
 /*    */ 
 /*    */ 
@@ -34,17 +34,17 @@
 /*    */ 
 /*    */ 
 /*    */   
-/*    */   public E getToken() {
-/* 38 */     E token = null;
-/* 39 */     for (int n = 0; n < this.mQueues.length; n++) {
-/* 40 */       token = this.mQueues[n].peek();
-/* 41 */       if (token != null) {
-/* 42 */         this.mQueues[n].remove(token);
-/*    */         break;
-/*    */       } 
-/*    */     } 
-/* 46 */     return token;
-/*    */   }
+            public LoadingManagerToken getToken() {
+                LoadingManagerToken token = null;
+                for (int n = 0; n < this.mQueues.length; n++) {
+                token = this.mQueues[n].peek();
+                if (token != null) {
+                    this.mQueues[n].remove(token);
+                    break;
+                } 
+                } 
+                return token;
+           }
 /*    */   
 /*    */   public int size() {
 /* 50 */     int size = 0;

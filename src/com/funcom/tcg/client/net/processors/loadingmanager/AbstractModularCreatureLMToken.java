@@ -49,7 +49,7 @@
 /*     */   extends LoadingManagerToken
 /*     */ {
 /*  51 */   protected CreatureCreationMessage creatureMessage = null;
-/*  52 */   protected Future<PropNode> LoadModelFuture = null;
+/*  52 */   protected Future LoadModelFuture = null;
 /*  53 */   protected Creature monster = null;
 /*  54 */   protected CreatureVisualDescription monsterVisuals = null;
 /*  55 */   protected PropNode propNode = null;
@@ -60,7 +60,7 @@
 /*     */   
 /*     */   public boolean processRequestAssets() throws Exception {
 /*  62 */     Callable<PropNode> callable = new LoadModelCallable(this.monster, this.monsterVisuals);
-/*  63 */     this.LoadModelFuture = LoadingManager.INSTANCE.submitCallable(callable);
+/*  63 */     this.LoadModelFuture = (Future)LoadingManager.INSTANCE.submitCallable(callable);
 /*     */     
 /*  65 */     if (this.LoadModelFuture == null) {
 /*  66 */       throw new Exception("processWaitingAssets: the LoadModelFuture is null.");
@@ -80,7 +80,7 @@
 /*     */   
 /*     */   public boolean processGame() throws Exception {
 /*  82 */     if (this.LoadModelFuture != null && !this.LoadModelFuture.isCancelled()) {
-/*  83 */       this.propNode = this.LoadModelFuture.get();
+/*  83 */       this.propNode = (PropNode)this.LoadModelFuture.get();
 /*     */     } else {
 /*     */       
 /*  86 */       Callable<PropNode> callable = new LoadModelCallable(this.monster, this.monsterVisuals);
@@ -203,7 +203,7 @@
 /*     */   
 /*     */   protected abstract UserActionHandler createActionHandler(Creature paramCreature, CreatureCreationMessage paramCreatureCreationMessage, PropNode paramPropNode);
 /*     */   
-/* 206 */   public class LoadModelCallable implements Callable { Creature creature = null;
+/* 206 */   public class LoadModelCallable implements Callable<PropNode> { Creature creature = null;
 /* 207 */     CreatureVisualDescription monsterVisuals = null;
 /*     */     
 /*     */     public LoadModelCallable(Creature creature, CreatureVisualDescription monsterVisuals) {

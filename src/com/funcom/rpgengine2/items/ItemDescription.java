@@ -7,11 +7,18 @@
 /*     */ import com.funcom.rpgengine2.abilities.AbilityContainer;
 /*     */ import com.funcom.rpgengine2.abilities.ActiveAbility;
 /*     */ import com.funcom.rpgengine2.abilities.BuffCreator;
+import com.funcom.rpgengine2.abilities.EffectFilter;
+import com.funcom.rpgengine2.abilities.ElementAbility;
+import com.funcom.rpgengine2.abilities.ImmunityModifier;
+import com.funcom.rpgengine2.abilities.StatModifier;
+import com.funcom.rpgengine2.abilities.StatusModifier;
 /*     */ import com.funcom.rpgengine2.combat.Element;
 /*     */ import com.funcom.rpgengine2.creatures.RpgEntity;
 /*     */ import com.funcom.rpgengine2.dfx.DFXValidity;
 /*     */ import com.funcom.rpgengine2.equipment.ArchType;
 /*     */ import com.funcom.util.DebugManager;
+
+import java.util.ArrayDeque;
 /*     */ import java.util.ArrayList;
 /*     */ import java.util.Deque;
 /*     */ import java.util.List;

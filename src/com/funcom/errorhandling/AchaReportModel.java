@@ -2,9 +2,9 @@
 /*     */ 
 /*     */ import java.util.ArrayList;
 /*     */ import java.util.Arrays;
+import java.util.Base64;
 /*     */ import java.util.LinkedList;
 /*     */ import java.util.List;
-/*     */ import sun.misc.BASE64Encoder;
 /*     */ 
 /*     */ 
 /*     */ 
@@ -150,8 +150,8 @@
 /*     */     }
 /*     */     
 /*     */     public String getBase64Value() {
-/* 153 */       return (new BASE64Encoder()).encode(this.value.getBytes());
-/*     */     }
+                return Base64.getEncoder().encodeToString(this.value.getBytes());
+              }
 /*     */   }
 /*     */ }
 

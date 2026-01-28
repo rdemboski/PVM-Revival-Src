@@ -1,21 +1,31 @@
 /*     */ package com.funcom.gameengine.conanchat;
 /*     */ import com.funcom.gameengine.conanchat.datatypes.Data;
 /*     */ import com.funcom.gameengine.conanchat.datatypes.Integer32;
+import com.funcom.gameengine.conanchat.datatypes.Integer40;
+import com.funcom.gameengine.conanchat.datatypes.StringDatatype;
 /*     */ import com.funcom.gameengine.conanchat.handlers.ConanChatMessageHandler;
 /*     */ import com.funcom.gameengine.conanchat.handlers.NotHandledException;
 /*     */ import com.funcom.gameengine.conanchat.handlers.ReflectiveCallMessageHandler;
+import com.funcom.gameengine.conanchat.packets2.BuddyAdd;
 /*     */ import com.funcom.gameengine.conanchat.packets2.BuddyAdded;
 /*     */ import com.funcom.gameengine.conanchat.packets2.BuddyRem;
 /*     */ import com.funcom.gameengine.conanchat.packets2.ChatMessage;
 /*     */ import com.funcom.gameengine.conanchat.packets2.ClientName;
 /*     */ import com.funcom.gameengine.conanchat.packets2.GroupJoin;
+import com.funcom.gameengine.conanchat.packets2.GroupMessage;
 /*     */ import com.funcom.gameengine.conanchat.packets2.GroupMessageServer;
 /*     */ import com.funcom.gameengine.conanchat.packets2.GroupPart;
+import com.funcom.gameengine.conanchat.packets2.LoginFailure;
 /*     */ import com.funcom.gameengine.conanchat.packets2.LoginResponse;
 /*     */ import com.funcom.gameengine.conanchat.packets2.MessageAnonVicinity;
 /*     */ import com.funcom.gameengine.conanchat.packets2.MessagePrivate;
 /*     */ import com.funcom.gameengine.conanchat.packets2.MessageSystemLocal;
+import com.funcom.gameengine.conanchat.packets2.Ping;
+
 /*     */ import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+
 /*     */ import org.apache.log4j.Level;
 /*     */ import org.apache.log4j.Logger;
 /*     */ import org.apache.log4j.Priority;

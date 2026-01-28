@@ -194,7 +194,7 @@
 /*     */   }
 /*     */   
 /*     */   public String toString() {
-/* 197 */     return "Frame{baseframe=" + this.baseframe + ", parents=" + this.parents + ", translations=" + ((this.translations == null) ? null : (String)Arrays.<Vector3f>asList(this.translations)) + ", orientations=" + ((this.orientations == null) ? null : (String)Arrays.<Quaternion>asList(this.orientations)) + '}';
+/* 197 */     return "Frame{baseframe=" + this.baseframe + ", parents=" + this.parents + ", translations=" + ((this.translations == null) ? null : Arrays.asList(this.translations)) + ", orientations=" + ((this.orientations == null) ? null : Arrays.asList(this.orientations)) + '}';
 /*     */   }
 /*     */ }
 

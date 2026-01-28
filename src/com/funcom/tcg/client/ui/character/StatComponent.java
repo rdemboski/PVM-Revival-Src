@@ -149,7 +149,7 @@
 /*     */   
 /*     */   enum InfoMode
 /*     */   {
-/* 152 */     ITEM_STAT((String)new Rectangle(0, 44, 58, 46), new Rectangle(47, 44, 133, 46), new Rectangle(0, 24, 58, 26), new Rectangle(0, 4, 58, 26))
+/* 152 */     ITEM_STAT(new Rectangle(0, 44, 58, 46), new Rectangle(47, 44, 133, 46), new Rectangle(0, 24, 58, 26), new Rectangle(0, 4, 58, 26))
 /*     */     {
 /*     */ 
 /*     */ 
@@ -167,7 +167,7 @@
 /*     */         
 /* 168 */         return "";
 /*     */       } },
-/* 170 */     CHARACTER_STAT((String)new Rectangle(0, 44, 58, 46), null, new Rectangle(0, 24, 58, 26), new Rectangle(0, 4, 58, 26))
+/* 170 */     CHARACTER_STAT(new Rectangle(0, 44, 58, 46), null, new Rectangle(0, 24, 58, 26), new Rectangle(0, 4, 58, 26))
 /*     */     {
 /*     */ 
 /*     */ 
@@ -182,7 +182,7 @@
 /*     */         }
 /*     */         
 /* 184 */         return ""; } },
-/* 185 */     LEVEL_STAT((String)new Rectangle(0, 0, 58, 46), null, new Rectangle(0, 9, 58, 26), new Rectangle(0, 4, 58, 26))
+/* 185 */     LEVEL_STAT(new Rectangle(0, 0, 58, 46), null, new Rectangle(0, 9, 58, 26), new Rectangle(0, 4, 58, 26))
 /*     */     {
 /*     */ 
 /*     */ 

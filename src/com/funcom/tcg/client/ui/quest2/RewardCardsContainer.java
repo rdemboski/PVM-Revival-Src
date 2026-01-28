@@ -13,10 +13,8 @@
 /*     */ import com.funcom.tcg.client.ui.hud.ItemCard;
 /*     */ import com.funcom.tcg.client.ui.inventory.InventoryItem;
 /*     */ import com.funcom.tcg.client.ui.pets3.AbstractPetButton;
-/*     */ import com.funcom.tcg.client.ui.pets3.PetViewSelectionModel;
 /*     */ import com.funcom.tcg.client.ui.pets3.PetWindowButtonModel;
 /*     */ import com.funcom.tcg.client.ui.pets3.PetWindowPet;
-/*     */ import com.funcom.tcg.client.ui.pets3.PetsWindowModel;
 /*     */ import com.jmex.bui.BComponent;
 /*     */ import com.jmex.bui.BContainer;
 /*     */ import com.jmex.bui.layout.AbsoluteLayout;
@@ -44,7 +42,7 @@
 /*     */   private void setQuestRewardCards(List<QuestRewardData> questRewards) {
 /*  45 */     for (QuestRewardData questReward : questRewards) {
 /*  46 */       if (questReward.getType() == QuestRewardType.ITEM_REWARD.getId()) {
-/*     */         ItemCard itemCard;
+/*     */         ItemCard itemCard = null;
 /*  48 */         ClientItem clientItem = MainGameState.getItemRegistry().getItemForClassID(questReward.getRewardId(), questReward.getTier());
 /*     */         
 /*  50 */         clientItem.setAmount(questReward.getAmount());

@@ -32,7 +32,7 @@
 /* 32 */       creationMessage.setExtraParam(creatureDataMap);
 /*    */       
 /*    */       try {
-/*    */         MCQuestInteractibleLoadingToken mCQuestInteractibleLoadingToken;
+/*    */         MCQuestInteractibleLoadingToken mCQuestInteractibleLoadingToken = null;
 /* 36 */         Faction faction = creationMessage.getFaction();
 /* 37 */         LoadingManagerToken token = null;
 /* 38 */         if (MCMonsterLMToken.canBuild(faction)) {

@@ -1,21 +1,26 @@
 /*     */ package com.funcom.rpgengine2.quests;
 /*     */ import com.funcom.gameengine.WorldCoordinate;
 /*     */ import com.funcom.rpgengine2.creatures.RpgEntity;
+import com.funcom.rpgengine2.creatures.RpgObject;
 /*     */ import com.funcom.rpgengine2.loader.FieldMap;
 /*     */ import com.funcom.rpgengine2.loader.QuestFields;
 /*     */ import com.funcom.rpgengine2.monsters.MonsterDescription;
 /*     */ import com.funcom.rpgengine2.monsters.MonsterManager;
 /*     */ import com.funcom.rpgengine2.quests.acquire.AcquireQuestCondition;
+import com.funcom.rpgengine2.quests.acquire.HasDoneQuestCondition;
 /*     */ import com.funcom.rpgengine2.quests.acquire.LevelCondition;
 /*     */ import com.funcom.rpgengine2.quests.objectives.QuestObjective;
 /*     */ import com.funcom.rpgengine2.quests.reward.QuestCategory;
 /*     */ import java.util.ArrayList;
+import java.util.Collections;
 /*     */ import java.util.HashMap;
+import java.util.HashSet;
 /*     */ import java.util.List;
 /*     */ import java.util.Map;
 /*     */ import java.util.Set;
 /*     */ import org.apache.log4j.Level;
 /*     */ import org.apache.log4j.Logger;
+import org.apache.log4j.Priority;
 /*     */ 
 /*     */ public class QuestManager {
 /*  21 */   public static final Logger LOG = Logger.getLogger(QuestManager.class.getName());

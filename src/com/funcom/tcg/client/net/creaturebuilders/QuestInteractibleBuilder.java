@@ -5,11 +5,13 @@
 /*    */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*    */ import com.funcom.gameengine.model.props.Creature;
 /*    */ import com.funcom.gameengine.model.props.InteractibleProp;
+import com.funcom.gameengine.view.Effects;
 /*    */ import com.funcom.gameengine.view.PropNode;
 /*    */ import com.funcom.rpgengine2.monsters.MonsterManager;
 /*    */ import com.funcom.tcg.client.actions.QuestUpdateAction;
 /*    */ import com.funcom.tcg.client.net.NetworkHandler;
 /*    */ import com.funcom.tcg.client.state.MainGameState;
+import com.funcom.tcg.net.message.CreatureCreationMessage;
 /*    */ import com.funcom.tcg.rpg.BaseFaction;
 /*    */ import com.funcom.tcg.rpg.Faction;
 /*    */ import com.jme.renderer.ColorRGBA;

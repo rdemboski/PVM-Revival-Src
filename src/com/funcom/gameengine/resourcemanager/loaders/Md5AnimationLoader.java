@@ -28,7 +28,7 @@
 /*    */   private static void endTiming() {}
 /*    */ 
 /*    */ 
-/*    */   
+/*    */   @SuppressWarnings("unchecked")
 /*    */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /* 33 */     startTiming();
 /* 34 */     MD5Importer importer = MD5Importer.getInstance();
@@ -36,7 +36,7 @@
 /*    */     try {
 /* 37 */       inputStream = getFileInputStream(managedResource.getName());
 /* 38 */       importer.loadAnim(inputStream, managedResource.getName());
-/* 39 */       managedResource.setResource(importer.getAnimation());
+/* 39 */       ((ManagedResource<JointAnimation>)managedResource).setResource(importer.getAnimation());
 /* 40 */       importer.cleanup();
 /* 41 */     } catch (MalformedURLException e) {
 /* 42 */       throw new LoadException(getResourceManager(), managedResource, e);

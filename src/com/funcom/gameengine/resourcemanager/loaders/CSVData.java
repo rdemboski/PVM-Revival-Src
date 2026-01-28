@@ -21,9 +21,9 @@
 /*    */   }
 /*    */ 
 /*    */   
-/*    */   public String toString() {
-/* 25 */     return "CSVData{dataRows=" + ((this.data == null) ? null : (String)Integer.valueOf(this.data.size())) + '}';
-/*    */   }
+            public String toString() {
+                return "CSVData{dataRows=" + ((this.data == null) ? null : String.valueOf(this.data.size())) + '}';
+            }
 /*    */ }
 
 

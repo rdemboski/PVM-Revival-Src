@@ -1,10 +1,13 @@
 /*     */ package com.funcom.tcg.client.net.processors;
+import com.funcom.commons.jme.TcgFont3D;
 /*     */ import com.funcom.gameengine.WorldCoordinate;
+import com.funcom.gameengine.jme.modular.ModularDescription;
 /*     */ import com.funcom.gameengine.model.ResourceGetter;
 /*     */ import com.funcom.gameengine.model.ResourceGetterImpl;
 /*     */ import com.funcom.gameengine.model.input.MouseOver;
 /*     */ import com.funcom.gameengine.model.input.UserActionHandler;
 /*     */ import com.funcom.gameengine.model.props.Creature;
+import com.funcom.gameengine.model.props.Prop;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManager;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.LoadingManagerToken;
 /*     */ import com.funcom.gameengine.resourcemanager.loadingmanager.PrioritizedLoadingTokenQueue;
@@ -45,6 +48,7 @@
 /*     */ import com.funcom.tcg.rpg.InventoryItem;
 /*     */ import com.jme.renderer.ColorRGBA;
 /*     */ import com.jme.scene.Controller;
+import com.jme.scene.Spatial;
 /*     */ import com.jmex.font3d.Font3D;
 /*     */ import com.jmex.font3d.Text3D;
 /*     */ import java.util.HashSet;

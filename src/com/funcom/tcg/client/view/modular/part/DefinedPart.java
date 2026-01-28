@@ -49,7 +49,7 @@
 /*    */             }
 /*    */             
 /*    */             public List<String> getTextureLayers() {
-/* 52 */               return Arrays.asList(new String[] { DefinedPart.access$100(this.this$0) });
+/* 52 */               return Arrays.asList(new String[] { DefinedPart.this.texturePath });
 /*    */             }
 /*    */ 
 /*    */             

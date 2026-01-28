@@ -30,7 +30,7 @@
 /*  30 */     return originalName + newExtension;
 /*     */   }
 /*     */ 
-/*     */   
+/*     */   @SuppressWarnings("unchecked")
 /*     */   public void loadData(ManagedResource<?> managedResource) throws LoadException {
 /*  35 */     if (!getResourceManager().isUseJars()) {
 /*  36 */       CSVReader reader = null;
@@ -45,7 +45,7 @@
 /*  45 */           CSVDataLIP csvData = new CSVDataLIP();
 /*  46 */           bLoaded = csvData.addFile(files);
 /*  47 */           if (bLoaded) {
-/*  48 */             managedResource.setResource(csvData);
+/*  48 */             ((ManagedResource<CSVDataLIP>)managedResource).setResource(csvData);
 /*     */           }
 /*     */         } 
 /*  51 */         if (!bLoaded) {
@@ -60,7 +60,7 @@
 /*  60 */             reader.close();
 /*     */           } 
 /*     */           
-/*  63 */           managedResource.setResource(csvData);
+/*  63 */           ((ManagedResource<CSVData>)managedResource).setResource(csvData);
 /*     */         } 
 /*  65 */       } catch (IOException e) {
 /*  66 */         throw new LoadException(getResourceManager(), managedResource, e);
@@ -89,6 +89,7 @@
 /*  89 */       readAndAddFile(filepath, csvReader, csvData, managedResource);
 /*     */     } 
 /*     */   }
+/*     */   @SuppressWarnings("unchecked")
 /*     */   private void wildcardAdd(ManagedResource<?> managedResource, CSVReader csvReader, CSVData csvData, String filepath) throws LoadException {
 /*     */     String[] resources;
 /*     */     try {
@@ -104,17 +105,18 @@
 /*     */     } 
 /*     */     
 /* 106 */     if (resources.length == 0) {
-/* 107 */       managedResource.setResource(csvData);
+/* 107 */       ((ManagedResource<CSVData>)managedResource).setResource(csvData);
 /*     */     } else {
 /* 109 */       for (String resource : resources) {
 /* 110 */         if (resource.length() > 0) {
 /* 111 */           readAndAddFile(getRpgDir(filepath) + resource.trim(), csvReader, csvData, managedResource);
 /*     */         } else {
-/* 113 */           managedResource.setResource(csvData);
+/* 113 */           ((ManagedResource<CSVData>)managedResource).setResource(csvData);
 /*     */         } 
 /*     */       } 
 /*     */     } 
 /*     */   }
+            @SuppressWarnings("unchecked")
 /*     */   private void readAndAddFile(String filePath, CSVReader csvReader, CSVData csvData, ManagedResource<?> managedResource) throws LoadException {
 /*     */     try {
 /* 120 */       System.out.println("managedResource.getDescriptionId() = " + managedResource.getName() + " filePath = " + filePath);
@@ -124,7 +126,7 @@
 /* 124 */       while ((record = csvReader.readRecord()) != null) {
 /* 125 */         csvData.add(record);
 /*     */       }
-/* 127 */       managedResource.setResource(csvData);
+/* 127 */       ((ManagedResource<CSVData>)managedResource).setResource(csvData);
 /* 128 */     } catch (IOException e) {
 /* 129 */       throw new LoadException(getResourceManager(), managedResource, e);
 /*     */     } finally {

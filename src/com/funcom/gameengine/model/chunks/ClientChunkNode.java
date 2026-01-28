@@ -110,7 +110,7 @@
 /*     */     }
 /*     */     
 /*     */     private void initialize() {
-/* 113 */       this.children = new ChunkNode.BucketArrayList(ClientChunkNode.this, 1);
+/* 113 */       this.children = new ChunkNode.BucketArrayList(1);
 /*     */     }
 /*     */ 
 /*     */     
